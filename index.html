@@ -18,6 +18,7 @@
 --text-main:#0E1A2B;
 --text-muted:rgba(14,26,43,0.6);
 --border:rgba(14,26,43,0.08);
+--border-color:#E8E2D9;
 --border-gold:rgba(201,184,150,0.25);
 --transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
 }
@@ -27,9 +28,11 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .eyebrow{font-size:10px;letter-spacing:4px;color:var(--text-main);opacity:0.5;text-transform:uppercase;display:block;margin-bottom:16px;font-weight:500}
 .eyebrow.gold{color:var(--gold-dark);opacity:1}
 .linea-decorativa{width:60px;height:1px;background:var(--gold);margin:28px 0}
+.max-width-container{max-width:1300px;margin:0 auto}
+.grid-2{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center}
 
 /* HEADER */
-.header-principal{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(249,246,241,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.header-principal{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(249,246,241,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 .logo{display:flex;align-items:center;gap:12px}
 .logo-text{color:var(--text-main);font-family:'Cormorant Garamond',serif;letter-spacing:4px;font-size:18px;line-height:1}
 .logo-text span{font-family:'Inter';font-size:9px;letter-spacing:2px;opacity:0.5;display:block;margin-top:2px}
@@ -39,8 +42,8 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .btn-header{border:1px solid var(--text-main);padding:11px 20px;opacity:1!important}
 .btn-header:hover{background:var(--bg-dark);color:white!important}
 
-/* BARRA FLOTANTE - PASTILLA TRANSLUCIDA SUTIL PERO VISIBLE */
-.barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90;background:rgba(255,255,255,0.42);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,0.45);border-radius:28px;padding:12px 7px;box-shadow:0 12px 32px rgba(14,26,43,0.1)}
+/* BARRA FLOTANTE */
+.barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90;background:rgba(255,255,255,0.42);backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,0.45);border-radius:28px;padding:12px 7px;box-shadow:0 12px 32px rgba(14,26,43,0.1)}
 .item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.65);border-radius:50%;text-decoration:none;color:var(--text-main);font-size:14px;transition:var(--transition)}
 .item-flotante:hover{transform:scale(1.06);background:white}
 .item-flotante.item-dorado{background:rgba(201,184,150,0.28);border:1px solid rgba(201,184,150,0.35)}
@@ -57,150 +60,28 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 /* SERVICIOS */
 .seccion-servicios{padding:0 48px 80px}
 .grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E8E2D9;border:1px solid #E8E2D9}
-.card-serv{background:white;padding:36px 32px;transition:var(--transition);position:relative}
+.card-serv{background:white;padding:36px 32px;transition:var(--transition)}
 .card-serv:hover{background:#F9F6F1;transform:translateY(-2px)}
 .card-num{font-family:'Cormorant Garamond',serif;font-size:22px;color:rgba(201,184,150,0.5);margin-bottom:16px}
 .card-serv h3{margin-bottom:10px;font-size:22px}
 .card-serv p{font-size:13px;opacity:0.6;line-height:1.6}
-<!-- SECCIÓN EXCLUSIVA: FAMILY OFFICE & GESTIÓN PATRIMONIAL -->
-<section id="family-office" class="seccion-family-office">
-  <div class="max-width-container grid-2">
-    
-    <!-- Bloque de Texto Editorial -->
-    <div class="fo-texto">
-      <span class="eyebrow">Área de Élite Internacional</span>
-      <h2>Family Office <br><i>& Gobierno Patrimonial</i></h2>
-      <div class="linea-decorativa"></div>
-      <p class="fo-principal">Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.</p>
-      <p>Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.</p>
-      
-      <!-- Lista de Consultoría de Autor -->
-      <ul class="fo-lista">
-        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Protocolos Familiares:</strong> Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.</span></li>
-        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Planificación Sucesoria Compleja:</strong> Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.</span></li>
-        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Estructuras de Blindaje:</strong> Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.</span></li>
-      </ul>
-    </div>
 
-    <!-- Bloque Visual de Confort y Discreción -->
-    <div class="fo-visual-box">
-      <div class="fo-card-interior">
-        <span class="fo-tag-studio">CONFIDENCIALIDAD ABSOLUTA</span>
-        <h3>Atención Privada</h3>
-        <p>Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado del Palacio Riganti, garantizando un entorno aislado, exclusivo y sin intermediarios.</p>
-        <div class="fo-signature">Escribano Titular</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ESTILOS ESPECÍFICOS PARA LA SECCIÓN FAMILY OFFICE -->
-<style>
-.seccion-family-office {
-    padding: 140px 8%;
-    background: radial-gradient(circle at 15% 50%, rgba(197, 168, 128, 0.05) 0%, transparent 60%);
-    border-top: 1px solid var(--border-color);
-}
-.fo-texto h2 {
-    font-size: 54px;
-    line-height: 1.1;
-    color: var(--text-main);
-    margin-bottom: 24px;
-}
-.fo-texto h2 i {
-    font-style: italic;
-    color: var(--gold);
-}
-.fo-principal {
-    font-size: 18px !important;
-    color: var(--text-main) !important;
-    font-weight: 400 !important;
-    margin-bottom: 24px;
-    line-height: 1.6;
-}
-.fo-texto p {
-    color: var(--text-muted);
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-.fo-lista {
-    list-style: none;
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.fo-lista li {
-    display: flex;
-    gap: 16px;
-    align-items: start;
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-weight: 300;
-}
-.fo-lista li i {
-    color: var(--gold);
-    font-size: 12px;
-    margin-top: 6px;
-}
-.fo-lista li strong {
-    color: var(--text-main);
-    font-weight: 500;
-}
-
-/* Caja Visual Premium Derecha */
-.fo-visual-box {
-    background: linear-gradient(135deg, #0d1527 0%, #060a14 100%);
-    border: 1px solid var(--border-color);
-    padding: 60px;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-}
-.fo-card-interior {
-    border-left: 2px solid var(--gold);
-    padding-left: 32px;
-    max-width: 440px;
-}
-.fo-tag-studio {
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-.fo-card-interior h3 {
-    font-size: 32px;
-    color: var(--text-main);
-    margin-bottom: 16px;
-}
-.fo-card-interior p {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 28px;
-}
-.fo-signature {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 20px;
-    color: var(--gold);
-}
-
-@media(max-width:900px){
-    .fo-texto h2 { font-size: 38px; }
-    .fo-visual-box { padding: 40px 24px; min-height: auto; }
-    .fo-card-interior h3 { font-size: 26px; }
-}
-</style>
+/* FAMILY OFFICE - CORREGIDO */
+.seccion-family-office{padding:120px 48px;background:radial-gradient(circle at 15% 50%,rgba(197,168,128,0.07) 0%,transparent 60%);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+.fo-texto h2{font-size:52px;line-height:0.95;color:var(--text-main);margin-bottom:24px}
+.fo-texto h2 i{font-style:italic;color:var(--gold-dark)}
+.fo-principal{font-size:18px!important;color:var(--text-main)!important;font-weight:400!important;margin-bottom:24px;line-height:1.6}
+.fo-texto p{color:var(--text-muted);font-size:15px;font-weight:300;margin-bottom:20px}
+.fo-lista{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.fo-lista li{display:flex;gap:16px;align-items:start;font-size:14px;color:var(--text-muted);line-height:1.6;font-weight:300}
+.fo-lista li i{color:var(--gold);font-size:12px;margin-top:6px}
+.fo-lista li strong{color:var(--text-main);font-weight:500}
+.fo-visual-box{background:linear-gradient(135deg,#0d1527 0%,#060a14 100%);border:1px solid var(--border-color);padding:50px;min-height:460px;display:flex;align-items:center;justify-content:center;box-shadow:0 30px 60px rgba(0,0,0,0.2)}
+.fo-card-interior{border-left:2px solid var(--gold);padding-left:28px;max-width:440px}
+.fo-tag-studio{font-size:9px;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:16px;font-weight:600}
+.fo-card-interior h3{font-size:32px;color:#F9F6F1;margin-bottom:16px}
+.fo-card-interior p{color:rgba(249,246,241,0.6);font-size:14px;line-height:1.7;font-weight:300;margin-bottom:28px}
+.fo-signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold)}
 
 /* ESTUDIO */
 .section-estudio{padding:80px 48px;background:white}
@@ -217,10 +98,10 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .tarjeta-valor h4{font-size:11px;letter-spacing:2px;margin-bottom:8px}
 .tarjeta-valor p{font-size:13px;opacity:0.7;line-height:1.4}
 
-/* CIERRE - SUTIL PERO QUE SE VE 0.42 */
+/* CIERRE */
 .seccion-cierre-premium{position:relative;height:76vh;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-primary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .capa-fondo-imagen{position:absolute;inset:0}
-.imagen-boceto-blur{width:100%;height:100%;object-fit:cover;opacity:0.42;display:block;filter:contrast(1.1) brightness(1.02)}
+.imagen-boceto-blur{width:100%;height:100%;object-fit:cover;opacity:0.48;display:block;filter:contrast(1.1) brightness(1.02)}
 .overlay-marfil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(249,246,241,0.15) 0%,rgba(249,246,241,0.88) 85%)}
 .contenido-cierre{position:relative;z-index:2;text-align:center;max-width:560px;padding:24px}
 .contenido-cierre h2{font-size:56px;margin-bottom:12px}
@@ -239,7 +120,7 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .form-premium button{background:var(--bg-dark);color:white;border:0;padding:16px;letter-spacing:2px;font-size:11px;cursor:pointer;transition:var(--transition)}
 .form-premium button:hover{background:#1a2d4a}
 
-/* FOOTER SIN COOKIES */
+/* FOOTER */
 .footer-premium{background:var(--bg-dark);color:#F9F6F1;padding:80px 48px 24px}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
 .logo-footer{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:6px;color:var(--gold);margin:0;font-size:28px}
@@ -252,13 +133,13 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .btn-footer:hover{background:var(--gold);color:var(--bg-dark)}
 .footer-bottom{margin-top:80px;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;opacity:0.3;max-width:1300px;margin-left:auto;margin-right:auto}
 #cookies-banner,.cookies-premium,div[class*="cookie"],div[id*="cookie"]{display:none!important}
-
 @media(max-width:900px){
-.header-principal,.hero,.seccion-servicios,.section-estudio,.seccion-contacto,.footer-premium{padding-left:20px;padding-right:20px}
+.header-principal,.hero,.seccion-servicios,.seccion-family-office,.section-estudio,.seccion-contacto,.footer-premium{padding-left:20px;padding-right:20px}
 .grid-servicios{grid-template-columns:1fr 1fr}
-.estudio-grid,.contacto-grid,.footer-grid{grid-template-columns:1fr;gap:40px}
+.estudio-grid,.contacto-grid,.footer-grid,.grid-2{grid-template-columns:1fr;gap:40px}
 .hero h1{font-size:48px}
 .barra-flotante-contacto{right:10px}
+.fo-texto h2{font-size:38px}
 }
 </style>
 </head>
@@ -266,45 +147,45 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 
 <header class="header-principal">
   <div class="logo">
-    <svg width="32" height="36" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.3" fill="none"/>
-      <path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.3"/>
-      <circle cx="40" cy="48" r="3.5" stroke="#C9B896" stroke-width="1" fill="none"/>
-      <path d="M40 51 L40 67" stroke="#C9B896" stroke-width="0.8"/>
-      <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8 C 58 6, 50 7, 46 12 C 42 18, 40 26, 40 32" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-    </svg>
+    <svg width="32" height="36" viewBox="0 0 80 100" fill="none"><path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.3" fill="none"/><path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.3"/><circle cx="40" cy="48" r="3.5" stroke="#C9B896" stroke-width="1" fill="none"/><path d="M40 51 L40 67" stroke="#C9B896" stroke-width="0.8"/><path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8 C 58 6, 50 7, 46 12 C 42 18, 40 26, 40 32" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/></svg>
     <div class="logo-text">RIGANTI <span>ESCRIBANÍA & ASOCIADOS</span></div>
   </div>
-  <nav class="nav-principal">
-    <a href="#servicios">SERVICIOS</a>
-    <a href="#estudio">ESTUDIO</a>
-    <a href="#contacto">CONTACTO</a>
-    <a href="#contacto" class="btn-header">SOLICITAR TURNO</a>
-  </nav>
+  <nav class="nav-principal"><a href="#servicios">SERVICIOS</a><a href="#family-office">FAMILY OFFICE</a><a href="#estudio">ESTUDIO</a><a href="#contacto">CONTACTO</a><a href="#contacto" class="btn-header">SOLICITAR TURNO</a></nav>
 </header>
 
 <div class="barra-flotante-contacto">
-  <a href="#" class="item-flotante" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-  <a href="#" class="item-flotante" title="Email"><i class="fa-regular fa-envelope"></i></a>
-  <a href="#" class="item-flotante" title="Teléfono"><i class="fa-solid fa-phone"></i></a>
+  <a href="#" class="item-flotante"><i class="fa-brands fa-whatsapp"></i></a>
+  <a href="#" class="item-flotante"><i class="fa-regular fa-envelope"></i></a>
+  <a href="#" class="item-flotante"><i class="fa-solid fa-phone"></i></a>
   <a href="#contacto" class="item-flotante item-dorado">→</a>
 </div>
 
-<section class="hero">
-  <div class="hero-wrapper">
-    <span class="eyebrow">Seguridad jurídica · CABA</span>
-    <h1>Escribanía Riganti<br><i>& Asociados</i></h1>
-    <p>90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p>
-    <a href="#contacto" class="btn-hero">SOLICITAR TURNO →</a>
-  </div>
-</section>
+<section class="hero"><div class="hero-wrapper"><span class="eyebrow">Seguridad jurídica · CABA</span><h1>Escribanía Riganti<br><i>& Asociados</i></h1><p>90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p><a href="#contacto" class="btn-hero">SOLICITAR TURNO →</a></div></section>
 
-<section id="servicios" class="seccion-servicios">
-  <div class="grid-servicios">
-    <div class="card-serv"><div class="card-num">01</div><h3>Compraventa</h3><p>Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div>
-    <div class="card-serv"><div class="card-num">02</div><h3>Sociedades</h3><p>Constitución, actas de directorio, poderes y reformas estatutarias.</p></div>
-    <div class="card-serv"><div class="card-num">03</div><h3>Familia y Sucesiones</h3><p>Donaciones, testamentos, protección de vivienda y declaratorias.</p></div>
-    <div class="card-serv"><div class="card-num">04</div><h3>Certificaciones</h3><p>Firmas, copias certificadas, actas de constatación y reglamentos.</p></div>
+<section id="servicios" class="seccion-servicios"><div class="grid-servicios"><div class="card-serv"><div class="card-num">01</div><h3>Compraventa</h3><p>Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div><div class="card-serv"><div class="card-num">02</div><h3>Sociedades</h3><p>Constitución, actas de directorio, poderes y reformas estatutarias.</p></div><div class="card-serv"><div class="card-num">03</div><h3>Familia y Sucesiones</h3><p>Donaciones, testamentos, protección de vivienda y declaratorias.</p></div><div class="card-serv"><div class="card-num">04</div><h3>Certificaciones</h3><p>Firmas, copias certificadas, actas de constatación y reglamentos.</p></div></div></section>
+
+<section id="family-office" class="seccion-family-office">
+  <div class="max-width-container grid-2">
+    <div class="fo-texto">
+      <span class="eyebrow gold">Área de Élite Internacional</span>
+      <h2>Family Office <br><i>& Gobierno Patrimonial</i></h2>
+      <div class="linea-decorativa"></div>
+      <p class="fo-principal">Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.</p>
+      <p>Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.</p>
+      <ul class="fo-lista">
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Protocolos Familiares:</strong> Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.</span></li>
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Planificación Sucesoria Compleja:</strong> Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.</span></li>
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Estructuras de Blindaje:</strong> Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.</span></li>
+      </ul>
+    </div>
+    <div class="fo-visual-box">
+      <div class="fo-card-interior">
+        <span class="fo-tag-studio">CONFIDENCIALIDAD ABSOLUTA</span>
+        <h3>Atención Privada</h3>
+        <p>Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado del Palacio Riganti, garantizando un entorno aislado, exclusivo y sin intermediarios.</p>
+        <div class="fo-signature">Escribano Titular</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -317,7 +198,7 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
       <p>Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
       <p>Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.</p>
       <div class="boceto-lateral-wrap">
-        <img src="boceto-mujer.jpg" alt="Detalle Escribanía Riganti" class="boceto-lateral-img">
+        <img src="sala-cuadro-PREMIUM.jpg" alt="Detalle Escribanía Riganti" class="boceto-lateral-img">
         <span class="boceto-caption">DETALLE · SEDE RECOLETA · ARCHIVO 1936</span>
       </div>
       <blockquote>"Una escritura bien hecha perdura por generaciones."</blockquote>
@@ -333,48 +214,22 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 
 <section class="seccion-cierre-premium">
   <div class="capa-fondo-imagen">
-    <img src="boceto-pasillo-sin-arbolito.jpg" alt="Palacio Riganti" class="imagen-boceto-blur">
+    <img src="pasillo-final-sutil.jpg" alt="Palacio Riganti" class="imagen-boceto-blur">
     <div class="overlay-marfil"></div>
   </div>
-  <div class="contenido-cierre">
-    <span class="eyebrow gold">NUESTRA SEDE</span>
-    <h2>Microcentro</h2>
-    <p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.</p>
-    <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
-  </div>
+  <div class="contenido-cierre"><span class="eyebrow gold">NUESTRA SEDE</span><h2>Microcentro</h2><p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.</p><a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a></div>
 </section>
 
 <section id="contacto" class="seccion-contacto">
   <div class="contacto-grid">
-    <div>
-      <span class="eyebrow gold">CONTACTO DIRECTO</span>
-      <h2>Agende su turno</h2>
-      <p style="margin-top:16px;opacity:0.6;line-height:1.6">Atención con turno previo. Escribano titular.<br><br><strong>Maipú 497, 4° Piso</strong><br>C1023AAR · CABA<br><br><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +54 11 4800-1234<br><i class="fa-regular fa-envelope" style="color:var(--gold)"></i> info@riganti.com.ar<br><br>Lunes a Viernes 10 a 18hs</p>
-    </div>
-    <form class="form-premium" onsubmit="event.preventDefault();alert('Gracias, nos contactaremos.');">
-      <input type="text" placeholder="Nombre y Apellido" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Teléfono">
-      <textarea placeholder="Cuéntenos su consulta..." required></textarea>
-      <button type="submit">ENVIAR CONSULTA</button>
-    </form>
+    <div><span class="eyebrow gold">CONTACTO DIRECTO</span><h2>Agende su turno</h2><p style="margin-top:16px;opacity:0.6;line-height:1.6">Atención con turno previo. Escribano titular.<br><br><strong>Maipú 497, 4° Piso</strong><br>C1023AAR · CABA<br><br><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +54 11 4800-1234<br><i class="fa-regular fa-envelope" style="color:var(--gold)"></i> info@riganti.com.ar<br><br>Lunes a Viernes 10 a 18hs</p></div>
+    <form class="form-premium" onsubmit="event.preventDefault();alert('Gracias, nos contactaremos.');"><input type="text" placeholder="Nombre y Apellido" required><input type="email" placeholder="Email" required><input type="tel" placeholder="Teléfono"><textarea placeholder="Cuéntenos su consulta..." required></textarea><button type="submit">ENVIAR CONSULTA</button></form>
   </div>
 </section>
 
 <footer class="footer-premium">
   <div class="footer-grid">
-    <div class="col-marca">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-        <svg width="28" height="32" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.2" fill="none"/>
-          <path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.2"/>
-          <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-        </svg>
-        <h2 class="logo-footer">RIGANTI</h2>
-      </div>
-      <p class="sub-logo">ESCRIBANÍA & ASOCIADOS · MAT. 1847</p>
-      <p class="claim-footer"><i>Tradición notarial con<br>el respaldo de siempre.</i></p>
-    </div>
+    <div class="col-marca"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><svg width="28" height="32" viewBox="0 0 80 100" fill="none"><path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.2" fill="none"/><path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.2"/><path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/></svg><h2 class="logo-footer">RIGANTI</h2></div><p class="sub-logo">ESCRIBANÍA & ASOCIADOS · MAT. 1847</p><p class="claim-footer"><i>Tradición notarial con<br>el respaldo de siempre.</i></p></div>
     <div class="col-links"><span class="footer-eyebrow">SERVICIOS NOTARIALES</span><a>Compraventa y Escrituras</a><a>Sociedades y Empresas</a><a>Sucesiones y Familia</a><a>Poderes y Actas</a><a>Hipotecas y Fideicomisos</a></div>
     <div class="col-dire"><span class="footer-eyebrow">MICROCENTRO</span><p style="font-size:13px;opacity:0.6;line-height:1.6">Maipú 497, 4° Piso<br>C1023AAR · CABA<br>Atención con turno previo.<br>Escribano Titular<br>+54 11 4800-1234</p></div>
     <div class="col-cta"><span class="footer-eyebrow">TURNOS</span><p style="font-size:13px;opacity:0.6">Atención personalizada,<br>discreta y sin demoras.</p><a href="#contacto" class="btn-footer">SOLICITAR TURNO →</a></div>
