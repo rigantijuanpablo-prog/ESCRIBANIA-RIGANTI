@@ -17,7 +17,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--tex
 h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300}
 .eyebrow{font-size:10px;letter-spacing:4px;opacity:0.5;text-transform:uppercase;display:block;margin-bottom:16px;font-weight:500}
 .eyebrow.gold{color:var(--gold-dark);opacity:1}
-/* FIX FLASH FUENTE - evita letra ancha */
 .hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:-0.02em}
 html:not(.fonts-loaded).hero h1{visibility:hidden}
 html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
@@ -80,14 +79,10 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 <style>
 .section-estudio{padding:90px 48px;background:white}
 .estudio-main{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start}
-.boceto-full-wrap{margin:36px 0 0 0;border:1px solid var(--border-color);background:var(--bg-primary);overflow:hidden;height:460px;max-height:460px}
-.boceto-full-img{width:100%;height:460px;object-fit:cover;object-position:center;display:block}
-.boceto-caption{display:block;padding:12px 16px;font-size:9px;letter-spacing:2px;opacity:.4;text-transform:uppercase;background:white}
 .valores-col{display:flex;flex-direction:column;gap:1px;background:var(--border-color);border:1px solid var(--border-color);height:fit-content}
 .tarjeta-valor{background:var(--bg-primary);padding:28px}
 .tarjeta-valor.dark{background:var(--bg-dark);color:#F9F6F1}
 .seccion-cierre{position:relative;height:72vh;min-height:560px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-dark)}
-.imagen-hall{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;filter:brightness(.95)}
 .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,43,.5),rgba(14,26,43,.15) 50%,rgba(14,26,43,.5))}
 .contenido-cierre{position:relative;z-index:2;text-align:center;color:white;max-width:620px}
 .seccion-contacto{padding:90px 48px;background:white;border-top:1px solid var(--border-color)}
@@ -101,7 +96,15 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 .footer-premium{background:var(--bg-dark);color:#F9F6F1;padding:80px 48px 24px}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
 .logo-footer-img{width:124px;height:auto;display:block;filter:brightness(0) invert(1);opacity:.9}
-@media(max-width:900px){.header-principal,.hero,.section-estudio,.seccion-contacto,.footer-premium,.seccion-family-office,.seccion-cierre{padding-left:20px;padding-right:20px}.grid-servicios{grid-template-columns:1fr 1fr}.estudio-main,.grid-2,.footer-grid,.contacto-grid{grid-template-columns:1fr;gap:32px}.boceto-full-wrap,.boceto-full-img{height:340px;max-height:340px}.logo img{height:54px!important}.header-principal{height:68px!important;padding:4px 14px!important}}
+
+/* === RIGANTI PARCHE FINAL DIAGONAL SIMETRICA 1920px === */
+.boceto-full-wrap,.imagen-hall-wrap { width:100%; overflow:hidden; background:#faf9f7; line-height:0; border:1px solid var(--border-color); }
+.boceto-full-img,.imagen-hall { width:100%; height:72vh; min-height:520px; max-height:760px; object-fit:cover; object-position:center; display:block; filter:contrast(1.02) brightness(1.02); }
+.boceto-caption{display:block;padding:12px 16px;font-size:9px;letter-spacing:2px;opacity:.4;text-transform:uppercase;background:white;line-height:1.5}
+@media(min-width:1024px){
+ .boceto-full-img,.imagen-hall { height:78vh; min-height:600px; max-height:820px; }
+}
+@media(max-width:900px){.header-principal,.hero,.section-estudio,.seccion-contacto,.footer-premium,.seccion-family-office,.seccion-cierre{padding-left:20px;padding-right:20px}.grid-servicios{grid-template-columns:1fr 1fr}.estudio-main,.grid-2,.footer-grid,.contacto-grid{grid-template-columns:1fr;gap:32px}.boceto-full-wrap,.boceto-full-img,.imagen-hall-wrap,.imagen-hall{height:52vh;min-height:380px;max-height:520px}.logo img{height:54px!important}.header-principal{height:68px!important;padding:4px 14px!important}}
 </style>
 
 <section id="estudio" class="section-estudio">
@@ -111,8 +114,8 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 <h2 style="font-size:52px;line-height:.95" data-i18n="estudio_title">Tres generaciones<br><i style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-dark)">custodiando su patrimonio.</i></h2>
 <p style="margin-top:16px;opacity:.6;max-width:520px" data-i18n="estudio_p">Somos herederos de una tradición notarial de 90 años. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
 <div class="boceto-full-wrap">
-<img src="sala-escribania.jpeg" class="boceto-full-img" alt="Mesa de acuerdos" loading="lazy">
-<span class="boceto-caption">Mesa de acuerdos · Sede Microcentro · 460px - sin efecto gigante</span>
+<img src="sala-escribania-mitad.webp" class="boceto-full-img" alt="Mesa de acuerdos - mitad boceto mitad foto" loading="lazy">
+<span class="boceto-caption">Mesa de acuerdos · Boceto → Realidad · Sede Microcentro</span>
 </div>
 <blockquote style="margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;opacity:.8" data-i18n="estudio_quote">"Una escritura bien hecha perdura por generaciones."</blockquote>
 </div>
@@ -126,7 +129,7 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </section>
 
 <section class="seccion-cierre">
-<div style="position:absolute;inset:0"><img src="hall-escribania.jpeg" class="imagen-hall" loading="lazy"><div class="overlay"></div></div>
+<div style="position:absolute;inset:0" class="imagen-hall-wrap"><img src="hall-escribania-mitad.webp" class="imagen-hall" alt="Hall escribanía - mitad foto mitad boceto" loading="lazy"><div class="overlay"></div></div>
 <div class="contenido-cierre">
 <span class="eyebrow" style="color:var(--gold);opacity:.9" data-i18n="sede_eyebrow">NUESTRA SEDE</span>
 <h2 style="font-size:58px;line-height:.9;font-family:'Cormorant Garamond',serif" data-i18n="sede_title">Microcentro</h2>
@@ -166,11 +169,8 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </footer>
 
 <script>
-// Fix flash fuente
 document.fonts.ready.then(()=>{document.documentElement.classList.add('fonts-loaded')});
 setTimeout(()=>document.documentElement.classList.add('fonts-loaded'),1200);
-
-// Traducción ES | EN real
 const T = {
 es:{
 nav_serv:"SERVICIOS",nav_fo:"FAMILY OFFICE",nav_est:"ESTUDIO",nav_cont:"CONTACTO",btn_turno_header:"SOLICITAR TURNO",
@@ -208,8 +208,6 @@ document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
 document.documentElement.lang=l;
 }
 setLang(localStorage.getItem('riganti_lang')||'es');
-
-// Form anti-spam
 document.getElementById('formContacto').addEventListener('submit',function(e){
 e.preventDefault();if(this.website.value)return;
 const s=document.getElementById('formStatus');
@@ -219,3 +217,4 @@ s.style.display='block';s.style.color='#0E1A2B';s.textContent=(localStorage.getI
 </script>
 </body>
 </html>
+
