@@ -62,6 +62,145 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .card-num{font-family:'Cormorant Garamond',serif;font-size:22px;color:rgba(201,184,150,0.5);margin-bottom:16px}
 .card-serv h3{margin-bottom:10px;font-size:22px}
 .card-serv p{font-size:13px;opacity:0.6;line-height:1.6}
+<!-- SECCIÓN EXCLUSIVA: FAMILY OFFICE & GESTIÓN PATRIMONIAL -->
+<section id="family-office" class="seccion-family-office">
+  <div class="max-width-container grid-2">
+    
+    <!-- Bloque de Texto Editorial -->
+    <div class="fo-texto">
+      <span class="eyebrow">Área de Élite Internacional</span>
+      <h2>Family Office <br><i>& Gobierno Patrimonial</i></h2>
+      <div class="linea-decorativa"></div>
+      <p class="fo-principal">Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.</p>
+      <p>Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.</p>
+      
+      <!-- Lista de Consultoría de Autor -->
+      <ul class="fo-lista">
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Protocolos Familiares:</strong> Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.</span></li>
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Planificación Sucesoria Compleja:</strong> Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.</span></li>
+        <li><i class="fa-solid fa-feather-pointed"></i> <span><strong>Estructuras de Blindaje:</strong> Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.</span></li>
+      </ul>
+    </div>
+
+    <!-- Bloque Visual de Confort y Discreción -->
+    <div class="fo-visual-box">
+      <div class="fo-card-interior">
+        <span class="fo-tag-studio">CONFIDENCIALIDAD ABSOLUTA</span>
+        <h3>Atención Privada</h3>
+        <p>Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado del Palacio Riganti, garantizando un entorno aislado, exclusivo y sin intermediarios.</p>
+        <div class="fo-signature">Escribano Titular</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ESTILOS ESPECÍFICOS PARA LA SECCIÓN FAMILY OFFICE -->
+<style>
+.seccion-family-office {
+    padding: 140px 8%;
+    background: radial-gradient(circle at 15% 50%, rgba(197, 168, 128, 0.05) 0%, transparent 60%);
+    border-top: 1px solid var(--border-color);
+}
+.fo-texto h2 {
+    font-size: 54px;
+    line-height: 1.1;
+    color: var(--text-main);
+    margin-bottom: 24px;
+}
+.fo-texto h2 i {
+    font-style: italic;
+    color: var(--gold);
+}
+.fo-principal {
+    font-size: 18px !important;
+    color: var(--text-main) !important;
+    font-weight: 400 !important;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.fo-texto p {
+    color: var(--text-muted);
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.fo-lista {
+    list-style: none;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fo-lista li {
+    display: flex;
+    gap: 16px;
+    align-items: start;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-weight: 300;
+}
+.fo-lista li i {
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 6px;
+}
+.fo-lista li strong {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Caja Visual Premium Derecha */
+.fo-visual-box {
+    background: linear-gradient(135deg, #0d1527 0%, #060a14 100%);
+    border: 1px solid var(--border-color);
+    padding: 60px;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+.fo-card-interior {
+    border-left: 2px solid var(--gold);
+    padding-left: 32px;
+    max-width: 440px;
+}
+.fo-tag-studio {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+.fo-card-interior h3 {
+    font-size: 32px;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+.fo-card-interior p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 28px;
+}
+.fo-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold);
+}
+
+@media(max-width:900px){
+    .fo-texto h2 { font-size: 38px; }
+    .fo-visual-box { padding: 40px 24px; min-height: auto; }
+    .fo-card-interior h3 { font-size: 26px; }
+}
+</style>
 
 /* ESTUDIO */
 .section-estudio{padding:80px 48px;background:white}
