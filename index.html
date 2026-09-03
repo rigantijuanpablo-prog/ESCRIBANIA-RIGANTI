@@ -9,19 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root{
---bg-primary:#F9F6F1;
---bg-secondary:#FFFFFF;
---bg-dark:#0E1A2B;
---gold:#C9B896;
---gold-dark:#8C7342;
---text-main:#0E1A2B;
---text-muted:rgba(14,26,43,0.6);
---border:rgba(14,26,43,0.08);
---border-color:#E8E2D9;
---border-gold:rgba(201,184,150,0.25);
---transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
-}
+:root{--bg-primary:#F9F6F1;--bg-secondary:#FFFFFF;--bg-dark:#0E1A2B;--gold:#C9B896;--gold-dark:#8C7342;--text-main:#0E1A2B;--text-muted:rgba(14,26,43,0.6);--border:rgba(14,26,43,0.08);--border-color:#E8E2D9;--transition:all 0.4s cubic-bezier(0.16,1,0.3,1)}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-main);line-height:1.7;overflow-x:hidden}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0.02em}
@@ -30,28 +18,22 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .linea-decorativa{width:60px;height:1px;background:var(--gold);margin:28px 0}
 .max-width-container{max-width:1300px;margin:0 auto}
 .grid-2{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center}
-
-/* HEADER CORREGIDO */
 .header-principal{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:12px 48px;background:rgba(249,246,241,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 .logo{display:flex;align-items:center;gap:16px;text-decoration:none}
 .logo img{width:58px;height:58px;object-fit:contain;background:#fff;border:1px solid var(--border-color);padding:4px;display:block;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
 .logo-text{color:var(--text-main);font-family:'Cormorant Garamond',serif;letter-spacing:5px;font-size:20px;line-height:1}
 .logo-text span{font-family:'Inter';font-size:9px;letter-spacing:3px;opacity:0.5;display:block;margin-top:4px;font-weight:600}
 .nav-principal{display:flex;gap:28px;align-items:center}
-.nav-principal a{ text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--text-main);opacity:0.7;transition:var(--transition)}
+.nav-principal a{text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--text-main);opacity:0.7;transition:var(--transition)}
 .nav-principal a:hover{opacity:1}
 .lang-switch{display:flex;gap:8px;align-items:center;margin-left:8px;padding-left:14px;border-left:1px solid var(--border)}
 .lang-switch button{background:none;border:0;font-size:10px;letter-spacing:2px;cursor:pointer;font-weight:700;color:var(--text-main);opacity:0.4;transition:var(--transition)}
 .lang-switch button.active{opacity:1;border-bottom:1px solid var(--text-main)}
 .btn-header{border:1px solid var(--text-main);padding:11px 20px;opacity:1!important}
-
-/* BARRA FLOTANTE */
 .barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90;background:rgba(255,255,255,0.42);backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,0.45);border-radius:28px;padding:12px 7px;box-shadow:0 12px 32px rgba(14,26,43,0.1)}
 .item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.65);border-radius:50%;text-decoration:none;color:var(--text-main);font-size:14px;transition:var(--transition)}
 .item-flotante:hover{transform:scale(1.06);background:white}
 .item-flotante.item-dorado{background:rgba(201,184,150,0.28);border:1px solid rgba(201,184,150,0.35)}
-
-/* HERO */
 .hero{min-height:90vh;padding:160px 48px 80px;display:flex;align-items:center;background:radial-gradient(circle at 85% 30%,rgba(201,184,150,0.12) 0%,transparent 55%)}
 .hero-wrapper{max-width:820px}
 .hero h1{font-size:72px;line-height:0.92;margin-bottom:28px}
@@ -59,8 +41,6 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .hero p{max-width:560px;color:var(--text-muted);font-size:16px;margin-bottom:8px}
 .btn-hero{display:inline-block;margin-top:32px;background:var(--bg-dark);color:white;padding:16px 32px;text-decoration:none;font-size:11px;letter-spacing:2px;transition:var(--transition)}
 .btn-hero:hover{background:#1a2d4a;transform:translateY(-1px)}
-
-/* SERVICIOS */
 .seccion-servicios{padding:0 48px 80px}
 .grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E8E2D9;border:1px solid #E8E2D9}
 .card-serv{background:white;padding:36px 32px;transition:var(--transition)}
@@ -68,8 +48,6 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .card-num{font-family:'Cormorant Garamond',serif;font-size:22px;color:rgba(140,115,66,0.45);margin-bottom:16px}
 .card-serv h3{margin-bottom:10px;font-size:22px}
 .card-serv p{font-size:13px;opacity:0.6;line-height:1.6}
-
-/* FAMILY OFFICE */
 .seccion-family-office{padding:120px 48px;background:radial-gradient(circle at 15% 50%,rgba(197,168,128,0.07) 0%,transparent 60%);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
 .fo-texto h2{font-size:52px;line-height:0.95;color:var(--text-main);margin-bottom:24px}
 .fo-texto h2 i{font-style:italic;color:var(--gold-dark)}
@@ -85,14 +63,21 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0
 .fo-card-interior h3{font-size:32px;color:#F9F6F1;margin-bottom:16px}
 .fo-card-interior p{color:rgba(249,246,241,0.6);font-size:14px;line-height:1.7;font-weight:300;margin-bottom:28px}
 .fo-signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold)}
-
-/* ESTUDIO */
+</style>
+</head>
+<body>
+<header class="header-principal"><a href="#" class="logo"><img src="logo-pluma-riganti-blanco.jpg" alt="RIGANTI Escribanía"><div class="logo-text">RIGANTI<span data-i18n="logo_sub">ESCRIBANÍA</span></div></a><nav class="nav-principal"><a href="#servicios" data-i18n="nav_serv">SERVICIOS</a><a href="#family-office" data-i18n="nav_family">FAMILY OFFICE</a><a href="#estudio" data-i18n="nav_estudio">ESTUDIO</a><a href="#contacto" data-i18n="nav_contacto">CONTACTO</a><div class="lang-switch"><button id="btn-es" class="active" onclick="setLang('es')">ES</button><span style="opacity:0.2">|</span><button id="btn-en" onclick="setLang('en')">EN</button></div><a href="#contacto" class="btn-header" data-i18n="nav_turno">SOLICITAR TURNO</a></nav></header>
+<div class="barra-flotante-contacto"><a href="https://wa.me/5491148001234" class="item-flotante"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a><a href="tel:+541148001234" class="item-flotante"><i class="fa-solid fa-phone"></i></a><a href="#contacto" class="item-flotante item-dorado">→</a></div>
+<section class="hero"><div class="hero-wrapper"><span class="eyebrow" data-i18n="hero_eye">Seguridad jurídica · CABA</span><h1><span data-i18n="hero_h1">RIGANTI</span><br><i data-i18n="hero_h2">Escribanía</i></h1><p data-i18n="hero_p">90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p><a href="#contacto" class="btn-hero" data-i18n="hero_btn">SOLICITAR TURNO →</a></div></section>
+<section id="servicios" class="seccion-servicios"><div class="grid-servicios"><div class="card-serv"><div class="card-num">01</div><h3 data-i18n="s1_t">Compraventa</h3><p data-i18n="s1_d">Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div><div class="card-serv"><div class="card-num">02</div><h3 data-i18n="s2_t">Sociedades</h3><p data-i18n="s2_d">Constitución, actas de directorio, poderes y reformas estatutarias.</p></div><div class="card-serv"><div class="card-num">03</div><h3 data-i18n="s3_t">Familia y Sucesiones</h3><p data-i18n="s3_d">Donaciones, testamentos, protección de vivienda y declaratorias.</p></div><div class="card-serv"><div class="card-num">04</div><h3 data-i18n="s4_t">Certificaciones</h3><p data-i18n="s4_d">Firmas, copias certificadas, actas de constatación y reglamentos.</p></div></div></section>
+<section id="family-office" class="seccion-family-office"><div class="max-width-container grid-2"><div class="fo-texto"><span class="eyebrow gold" data-i18n="fo_eye">Área de Élite Internacional</span><h2 data-i18n="fo_h">Family Office <br><i>& Gobierno Patrimonial</i></h2><div class="linea-decorativa"></div><p class="fo-principal" data-i18n="fo_main">Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.</p><p data-i18n="fo_p2">Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.</p><ul class="fo-lista"><li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l1"><strong>Protocolos Familiares:</strong> Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.</span></li><li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l2"><strong>Planificación Sucesoria Compleja:</strong> Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.</span></li><li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l3"><strong>Estructuras de Blindaje:</strong> Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.</span></li></ul></div><div class="fo-visual-box"><div class="fo-card-interior"><span class="fo-tag-studio" data-i18n="fo_tag">CONFIDENCIALIDAD ABSOLUTA</span><h3 data-i18n="fo_box_t">Atención Privada</h3><p data-i18n="fo_box_p">Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado, garantizando un entorno aislado, exclusivo y sin intermediarios.</p><div class="fo-signature" data-i18n="fo_sig">Escribano Titular</div></div></div></div></section>
+<style>
 .section-estudio{padding:80px 48px;background:white}
 .estudio-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;max-width:1300px;margin:0 auto}
 .texto-estudio h2{font-size:52px;line-height:0.95;margin-bottom:24px}
 .texto-estudio>p{color:var(--text-muted);margin-bottom:16px;max-width:520px;font-size:15px}
-.boceto-lateral-wrap{margin:36px 0;border:1px solid var(--border);padding:0;background:var(--bg-primary);max-width:420px;overflow:hidden}
-.boceto-lateral-img{width:100%;display:block;opacity:0.95}
+.boceto-lateral-wrap{margin:36px 0;border:1px solid var(--border);padding:0;background:var(--bg-primary);max-width:480px;overflow:hidden}
+.boceto-lateral-img{width:100%;display:block;height:auto;object-fit:contain}
 .boceto-caption{display:block;padding:10px 12px;font-size:9px;letter-spacing:2px;opacity:0.4;text-transform:uppercase}
 blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;opacity:0.8;line-height:1.2}
 .valores-col{display:flex;flex-direction:column;gap:1px;background:#E8E2D9;border:1px solid #E8E2D9;height:fit-content}
@@ -100,19 +85,17 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .tarjeta-valor.dark{background:var(--bg-dark);color:#F9F6F1}
 .tarjeta-valor h4{font-size:11px;letter-spacing:2px;margin-bottom:8px}
 .tarjeta-valor p{font-size:13px;opacity:0.7;line-height:1.4}
-
-/* CIERRE CON MESA-SALA.JPG */
-.seccion-cierre-premium{position:relative;height:76vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-primary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.seccion-cierre-premium{position:relative;height:82vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-dark)}
 .capa-fondo-imagen{position:absolute;inset:0}
-.imagen-boceto-blur{width:100%;height:100%;object-fit:cover;opacity:0.7;display:block}
-.overlay-marfil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(249,246,241,0.1) 0%,rgba(249,246,241,0.78) 70%,rgba(249,246,241,0.96) 100%)}
-.contenido-cierre{position:relative;z-index:2;text-align:center;max-width:560px;padding:24px}
-.contenido-cierre h2{font-size:56px;margin-bottom:12px}
-.contenido-cierre p{opacity:0.6;margin-bottom:28px;font-size:15px}
-.f-btn-premium{display:inline-block;background:var(--bg-dark);color:white;padding:14px 32px;text-decoration:none;font-size:11px;letter-spacing:2px;border:1px solid var(--bg-dark);transition:var(--transition)}
-.f-btn-premium:hover{background:transparent;color:var(--text-main)}
-
-/* CONTACTO */
+.imagen-hall-real{width:100%;height:100%;object-fit:cover;opacity:1;display:block}
+.overlay-elegante{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,43,0.55) 0%,rgba(14,26,43,0.2) 50%,rgba(14,26,43,0.45) 100%),linear-gradient(180deg,rgba(14,26,43,0.15) 0%,transparent 60%,rgba(14,26,43,0.6) 100%)}
+.contenido-cierre{position:relative;z-index:2;text-align:center;max-width:620px;padding:24px;color:white}
+.contenido-cierre.eyebrow{color:var(--gold);opacity:0.9}
+.contenido-cierre h2{font-size:64px;margin-bottom:16px;color:white;line-height:0.9}
+.contenido-cierre h2 i{font-style:italic;color:var(--gold)}
+.contenido-cierre p{opacity:0.85;margin-bottom:32px;font-size:16px;line-height:1.6;color:rgba(255,255,255,0.9)}
+.f-btn-premium{display:inline-block;background:white;color:var(--bg-dark);padding:16px 36px;text-decoration:none;font-size:11px;letter-spacing:2px;border:1px solid white;transition:var(--transition)}
+.f-btn-premium:hover{background:transparent;color:white}
 .seccion-contacto{padding:80px 48px;background:white}
 .contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1200px;margin:0 auto}
 .contacto-grid h2{font-size:46px;margin-bottom:16px}
@@ -122,8 +105,6 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .form-premium textarea{min-height:120px;resize:vertical}
 .form-premium button{background:var(--bg-dark);color:white;border:0;padding:16px;letter-spacing:2px;font-size:11px;cursor:pointer;transition:var(--transition)}
 .form-premium button:hover{background:#1a2d4a}
-
-/* FOOTER */
 .footer-premium{background:var(--bg-dark);color:#F9F6F1;padding:80px 48px 24px}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
 .logo-footer{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:6px;color:var(--gold);margin:0;font-size:28px}
@@ -135,217 +116,20 @@ blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;f
 .btn-footer{display:inline-block;margin-top:16px;border:1px solid rgba(201,184,150,0.4);padding:12px 24px;font-size:10px;letter-spacing:2px;color:var(--gold);text-decoration:none;transition:var(--transition)}
 .btn-footer:hover{background:var(--gold);color:var(--bg-dark)}
 .footer-bottom{margin-top:80px;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;opacity:0.3;max-width:1300px;margin-left:auto;margin-right:auto}
-#cookies-banner,.cookies-premium,div[class*="cookie"],div[id*="cookie"]{display:none!important}
-@media(max-width:900px){
-.header-principal,.hero,.seccion-servicios,.seccion-family-office,.section-estudio,.seccion-contacto,.footer-premium{padding-left:20px;padding-right:20px}
-.grid-servicios{grid-template-columns:1fr 1fr}
-.estudio-grid,.contacto-grid,.footer-grid,.grid-2{grid-template-columns:1fr;gap:40px}
-.hero h1{font-size:48px}
-.barra-flotante-contacto{right:10px}
-.fo-texto h2{font-size:38px}
-}
+@media(max-width:900px){.header-principal,.hero,.seccion-servicios,.seccion-family-office,.section-estudio,.seccion-contacto,.footer-premium{padding-left:20px;padding-right:20px}.grid-servicios{grid-template-columns:1fr 1fr}.estudio-grid,.contacto-grid,.footer-grid,.grid-2{grid-template-columns:1fr;gap:40px}.hero h1{font-size:48px}.barra-flotante-contacto{right:10px}.fo-texto h2{font-size:38px}.seccion-cierre-premium{height:70vh;min-height:520px}.contenido-cierre h2{font-size:42px}}
 </style>
-</head>
-<body>
 
-<header class="header-principal">
-  <a href="#" class="logo">
-    <img src="logo-pluma-riganti-blanco.jpg" alt="RIGANTI Escribanía">
-    <div class="logo-text">RIGANTI<span data-i18n="logo_sub">ESCRIBANÍA</span></div>
-  </a>
-  <nav class="nav-principal">
-    <a href="#servicios" data-i18n="nav_serv">SERVICIOS</a>
-    <a href="#family-office" data-i18n="nav_family">FAMILY OFFICE</a>
-    <a href="#estudio" data-i18n="nav_estudio">ESTUDIO</a>
-    <a href="#contacto" data-i18n="nav_contacto">CONTACTO</a>
-    <div class="lang-switch">
-      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
-      <span style="opacity:0.2">|</span>
-      <button id="btn-en" onclick="setLang('en')">EN</button>
-    </div>
-    <a href="#contacto" class="btn-header" data-i18n="nav_turno">SOLICITAR TURNO</a>
-  </nav>
-</header>
+<section id="estudio" class="section-estudio"><div class="estudio-grid"><div class="texto-estudio"><span class="eyebrow gold" data-i18n="est_eye">90 AÑOS DE TRADICIÓN</span><h2 data-i18n="est_h">Tres generaciones<br><i>custodiando su patrimonio.</i></h2><div class="linea-decorativa"></div><p data-i18n="est_p1">Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p><p data-i18n="est_p2">Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.</p><div class="boceto-lateral-wrap"><img src="sala-escribania.jpeg" alt="Mesa de acuerdos RIGANTI - Sala de reuniones con mesa incluida" class="boceto-lateral-img"><span class="boceto-caption" data-i18n="est_cap">Mesa de acuerdos · Sede Microcentro · 1936 - Cuadro y mesa completa</span></div><blockquote data-i18n="est_quote">"Una escritura bien hecha perdura por generaciones."</blockquote></div><div class="valores-col"><div class="tarjeta-valor"><h4 data-i18n="v1_t">SEGURIDAD JURÍDICA</h4><p data-i18n="v1_d">Control exhaustivo de títulos, inhibiciones y deudas. Estudio de 30 años.</p></div><div class="tarjeta-valor"><h4 data-i18n="v2_t">DISCRECIÓN ABSOLUTA</h4><p data-i18n="v2_d">Trato personal directo con el escribano titular. Sin intermediarios.</p></div><div class="tarjeta-valor"><h4 data-i18n="v3_t">AGILIDAD NOTARIAL</h4><p data-i18n="v3_d">Gestión integral ante registros. Usted solo firma. Nosotros hacemos el resto.</p></div><div class="tarjeta-valor dark"><h4 data-i18n="v4_t">TRADICIÓN · MAT. 1847</h4><p data-i18n="v4_d">Colegio de Escribanos CABA desde 1936. Tres generaciones.</p></div></div></div></section>
 
-<div class="barra-flotante-contacto">
-  <a href="https://wa.me/5491148001234" class="item-flotante"><i class="fa-brands fa-whatsapp"></i></a>
-  <a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a>
-  <a href="tel:+541148001234" class="item-flotante"><i class="fa-solid fa-phone"></i></a>
-  <a href="#contacto" class="item-flotante item-dorado">→</a>
-</div>
+<section class="seccion-cierre-premium"><div class="capa-fondo-imagen"><img src="hall-escribania.jpeg" alt="Hall principal Escribanía RIGANTI - Palacio Microcentro" class="imagen-hall-real"><div class="overlay-elegante"></div></div><div class="contenido-cierre"><span class="eyebrow gold" data-i18n="close_eye">NUESTRA SEDE</span><h2 data-i18n="close_h">Microcentro <i>Palacio</i></h2><p data-i18n="close_p">Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta. Mármol, roble y boiserie original de 1936.</p><a href="#contacto" class="f-btn-premium" data-i18n="close_btn">SOLICITAR TURNO →</a></div></section>
 
-<section class="hero">
-  <div class="hero-wrapper">
-    <span class="eyebrow" data-i18n="hero_eye">Seguridad jurídica · CABA</span>
-    <h1><span data-i18n="hero_h1">RIGANTI</span><br><i data-i18n="hero_h2">Escribanía</i></h1>
-    <p data-i18n="hero_p">90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p>
-    <a href="#contacto" class="btn-hero" data-i18n="hero_btn">SOLICITAR TURNO →</a>
-  </div>
-</section>
+<section id="contacto" class="seccion-contacto"><div class="contacto-grid"><div><span class="eyebrow gold" data-i18n="cont_eye">CONTACTO DIRECTO</span><h2 data-i18n="cont_h">Agende su turno</h2><p style="margin-top:16px;opacity:0.6;line-height:1.6"><span data-i18n="cont_info">Atención con turno previo. Escribano titular.</span><br><br><strong>Maipú 497, 4° Piso</strong><br>C1023AAR · CABA<br><br><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +54 11 4800-1234<br><i class="fa-regular fa-envelope" style="color:var(--gold)"></i> info@riganti.com.ar<br><br><span data-i18n="cont_hor">Lunes a Viernes 10 a 18hs</span></p></div><form class="form-premium" onsubmit="event.preventDefault();alert('Gracias, nos contactaremos.');"><input type="text" placeholder="Nombre y Apellido" data-i18n-ph="ph_name" required><input type="email" placeholder="Email" required><input type="tel" placeholder="Teléfono" data-i18n-ph="ph_tel"><textarea placeholder="Cuéntenos su consulta..." data-i18n-ph="ph_msg" required></textarea><button type="submit" data-i18n="form_btn">ENVIAR CONSULTA</button></form></div></section>
 
-<section id="servicios" class="seccion-servicios">
-  <div class="grid-servicios">
-    <div class="card-serv"><div class="card-num">01</div><h3 data-i18n="s1_t">Compraventa</h3><p data-i18n="s1_d">Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div>
-    <div class="card-serv"><div class="card-num">02</div><h3 data-i18n="s2_t">Sociedades</h3><p data-i18n="s2_d">Constitución, actas de directorio, poderes y reformas estatutarias.</p></div>
-    <div class="card-serv"><div class="card-num">03</div><h3 data-i18n="s3_t">Familia y Sucesiones</h3><p data-i18n="s3_d">Donaciones, testamentos, protección de vivienda y declaratorias.</p></div>
-    <div class="card-serv"><div class="card-num">04</div><h3 data-i18n="s4_t">Certificaciones</h3><p data-i18n="s4_d">Firmas, copias certificadas, actas de constatación y reglamentos.</p></div>
-  </div>
-</section>
-
-<section id="family-office" class="seccion-family-office">
-  <div class="max-width-container grid-2">
-    <div class="fo-texto">
-      <span class="eyebrow gold" data-i18n="fo_eye">Área de Élite Internacional</span>
-      <h2 data-i18n="fo_h">Family Office <br><i>& Gobierno Patrimonial</i></h2>
-      <div class="linea-decorativa"></div>
-      <p class="fo-principal" data-i18n="fo_main">Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.</p>
-      <p data-i18n="fo_p2">Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.</p>
-      <ul class="fo-lista">
-        <li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l1"><strong>Protocolos Familiares:</strong> Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.</span></li>
-        <li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l2"><strong>Planificación Sucesoria Compleja:</strong> Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.</span></li>
-        <li><i class="fa-solid fa-feather-pointed"></i> <span data-i18n="fo_l3"><strong>Estructuras de Blindaje:</strong> Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.</span></li>
-      </ul>
-    </div>
-    <div class="fo-visual-box">
-      <div class="fo-card-interior">
-        <span class="fo-tag-studio" data-i18n="fo_tag">CONFIDENCIALIDAD ABSOLUTA</span>
-        <h3 data-i18n="fo_box_t">Atención Privada</h3>
-        <p data-i18n="fo_box_p">Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado, garantizando un entorno aislado, exclusivo y sin intermediarios.</p>
-        <div class="fo-signature" data-i18n="fo_sig">Escribano Titular</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="estudio" class="section-estudio">
-  <div class="estudio-grid">
-    <div class="texto-estudio">
-      <span class="eyebrow gold" data-i18n="est_eye">90 AÑOS DE TRADICIÓN</span>
-      <h2 data-i18n="est_h">Tres generaciones<br><i>custodiando su patrimonio.</i></h2>
-      <div class="linea-decorativa"></div>
-      <p data-i18n="est_p1">Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
-      <p data-i18n="est_p2">Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.</p>
-      <div class="boceto-lateral-wrap">
-        <img src="mesa-sala.jpg" alt="Mesa de acuerdos RIGANTI" class="boceto-lateral-img">
-        <span class="boceto-caption" data-i18n="est_cap">Mesa de acuerdos · Sede Microcentro · 1936</span>
-      </div>
-      <blockquote data-i18n="est_quote">"Una escritura bien hecha perdura por generaciones."</blockquote>
-    </div>
-    <div class="valores-col">
-      <div class="tarjeta-valor"><h4 data-i18n="v1_t">SEGURIDAD JURÍDICA</h4><p data-i18n="v1_d">Control exhaustivo de títulos, inhibiciones y deudas. Estudio de 30 años.</p></div>
-      <div class="tarjeta-valor"><h4 data-i18n="v2_t">DISCRECIÓN ABSOLUTA</h4><p data-i18n="v2_d">Trato personal directo con el escribano titular. Sin intermediarios.</p></div>
-      <div class="tarjeta-valor"><h4 data-i18n="v3_t">AGILIDAD NOTARIAL</h4><p data-i18n="v3_d">Gestión integral ante registros. Usted solo firma. Nosotros hacemos el resto.</p></div>
-      <div class="tarjeta-valor dark"><h4 data-i18n="v4_t">TRADICIÓN · MAT. 1847</h4><p data-i18n="v4_d">Colegio de Escribanos CABA desde 1936. Tres generaciones.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="seccion-cierre-premium">
-  <div class="capa-fondo-imagen">
-    <img src="mesa-sala.jpg" alt="Sala de reuniones Riganti" class="imagen-boceto-blur">
-    <div class="overlay-marfil"></div>
-  </div>
-  <div class="contenido-cierre">
-    <span class="eyebrow gold" data-i18n="close_eye">NUESTRA SEDE</span>
-    <h2 data-i18n="close_h">Microcentro</h2>
-    <p data-i18n="close_p">Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.</p>
-    <a href="#contacto" class="f-btn-premium" data-i18n="close_btn">SOLICITAR TURNO →</a>
-  </div>
-</section>
-
-<section id="contacto" class="seccion-contacto">
-  <div class="contacto-grid">
-    <div><span class="eyebrow gold" data-i18n="cont_eye">CONTACTO DIRECTO</span><h2 data-i18n="cont_h">Agende su turno</h2><p style="margin-top:16px;opacity:0.6;line-height:1.6"><span data-i18n="cont_info">Atención con turno previo. Escribano titular.</span><br><br><strong>Maipú 497, 4° Piso</strong><br>C1023AAR · CABA<br><br><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +54 11 4800-1234<br><i class="fa-regular fa-envelope" style="color:var(--gold)"></i> info@riganti.com.ar<br><br><span data-i18n="cont_hor">Lunes a Viernes 10 a 18hs</span></p></div>
-    <form class="form-premium" onsubmit="event.preventDefault();alert('Gracias, nos contactaremos.');"><input type="text" placeholder="Nombre y Apellido" data-i18n-ph="ph_name" required><input type="email" placeholder="Email" required><input type="tel" placeholder="Teléfono" data-i18n-ph="ph_tel"><textarea placeholder="Cuéntenos su consulta..." data-i18n-ph="ph_msg" required></textarea><button type="submit" data-i18n="form_btn">ENVIAR CONSULTA</button></form>
-  </div>
-</section>
-
-<footer class="footer-premium">
-  <div class="footer-grid">
-    <div class="col-marca">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-        <img src="logo-pluma-riganti-blanco.jpg" style="width:42px;height:42px;object-fit:contain;background:white;padding:3px;border:1px solid rgba(255,255,255,0.1)">
-        <h2 class="logo-footer">RIGANTI</h2>
-      </div>
-      <p class="sub-logo" data-i18n="foot_sub">ESCRIBANÍA · MAT. 1847</p>
-      <p class="claim-footer" data-i18n="foot_claim"><i>Tradición notarial con<br>el respaldo de siempre.</i></p>
-    </div>
-    <div class="col-links"><span class="footer-eyebrow" data-i18n="foot_s1">SERVICIOS NOTARIALES</span><a data-i18n="foot_l1">Compraventa y Escrituras</a><a data-i18n="foot_l2">Sociedades y Empresas</a><a data-i18n="foot_l3">Sucesiones y Familia</a><a data-i18n="foot_l4">Poderes y Actas</a><a data-i18n="foot_l5">Hipotecas y Fideicomisos</a></div>
-    <div class="col-dire"><span class="footer-eyebrow" data-i18n="foot_s2">MICROCENTRO</span><p style="font-size:13px;opacity:0.6;line-height:1.6">Maipú 497, 4° Piso<br>C1023AAR · CABA<br><span data-i18n="foot_at">Atención con turno previo.</span><br><span data-i18n="foot_tit">Escribano Titular</span><br>+54 11 4800-1234</p></div>
-    <div class="col-cta"><span class="footer-eyebrow" data-i18n="foot_s3">TURNOS</span><p style="font-size:13px;opacity:0.6" data-i18n="foot_cta">Atención personalizada,<br>discreta y sin demoras.</p><a href="#contacto" class="btn-footer" data-i18n="foot_btn">SOLICITAR TURNO →</a></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 RIGANTI ESCRIBANÍA · REG. 2136 · CABA</span><span data-i18n="foot_col">COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES</span></div>
-</footer>
+<footer class="footer-premium"><div class="footer-grid"><div class="col-marca"><div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><img src="logo-pluma-riganti-blanco.jpg" style="width:42px;height:42px;object-fit:contain;background:white;padding:3px;border:1px solid rgba(255,255,255,0.1)"><h2 class="logo-footer">RIGANTI</h2></div><p class="sub-logo" data-i18n="foot_sub">ESCRIBANÍA · MAT. 1847</p><p class="claim-footer" data-i18n="foot_claim"><i>Tradición notarial con<br>el respaldo de siempre.</i></p></div><div class="col-links"><span class="footer-eyebrow" data-i18n="foot_s1">SERVICIOS NOTARIALES</span><a data-i18n="foot_l1">Compraventa y Escrituras</a><a data-i18n="foot_l2">Sociedades y Empresas</a><a data-i18n="foot_l3">Sucesiones y Familia</a><a data-i18n="foot_l4">Poderes y Actas</a><a data-i18n="foot_l5">Hipotecas y Fideicomisos</a></div><div class="col-dire"><span class="footer-eyebrow" data-i18n="foot_s2">MICROCENTRO</span><p style="font-size:13px;opacity:0.6;line-height:1.6">Maipú 497, 4° Piso<br>C1023AAR · CABA<br><span data-i18n="foot_at">Atención con turno previo.</span><br><span data-i18n="foot_tit">Escribano Titular</span><br>+54 11 4800-1234</p></div><div class="col-cta"><span class="footer-eyebrow" data-i18n="foot_s3">TURNOS</span><p style="font-size:13px;opacity:0.6" data-i18n="foot_cta">Atención personalizada,<br>discreta y sin demoras.</p><a href="#contacto" class="btn-footer" data-i18n="foot_btn">SOLICITAR TURNO →</a></div></div><div class="footer-bottom"><span>© 2026 RIGANTI ESCRIBANÍA · REG. 2136 · CABA</span><span data-i18n="foot_col">COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES</span></div></footer>
 
 <script>
-const dict={
-es:{
-logo_sub:"ESCRIBANÍA",
-nav_serv:"SERVICIOS",nav_family:"FAMILY OFFICE",nav_estudio:"ESTUDIO",nav_contacto:"CONTACTO",nav_turno:"SOLICITAR TURNO",
-hero_eye:"Seguridad jurídica · CABA",hero_h1:"RIGANTI",hero_h2:"Escribanía",hero_p:"90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.",hero_btn:"SOLICITAR TURNO →",
-s1_t:"Compraventa",s1_d:"Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.",
-s2_t:"Sociedades",s2_d:"Constitución, actas de directorio, poderes y reformas estatutarias.",
-s3_t:"Familia y Sucesiones",s3_d:"Donaciones, testamentos, protección de vivienda y declaratorias.",
-s4_t:"Certificaciones",s4_d:"Firmas, copias certificadas, actas de constatación y reglamentos.",
-fo_eye:"Área de Élite Internacional",fo_h:"Family Office \n& Gobierno Patrimonial",fo_main:"Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.",fo_p2:"Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.",
-fo_l1:"Protocolos Familiares: Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.",
-fo_l2:"Planificación Sucesoria Compleja: Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.",
-fo_l3:"Estructuras de Blindaje: Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.",
-fo_tag:"CONFIDENCIALIDAD ABSOLUTA",fo_box_t:"Atención Privada",fo_box_p:"Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado, garantizando un entorno aislado, exclusivo y sin intermediarios.",fo_sig:"Escribano Titular",
-est_eye:"90 AÑOS DE TRADICIÓN",est_h:"Tres generaciones\ncustodiando su patrimonio.",est_p1:"Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.",est_p2:"Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.",est_cap:"Mesa de acuerdos · Sede Microcentro · 1936",est_quote:"\"Una escritura bien hecha perdura por generaciones.\"",
-v1_t:"SEGURIDAD JURÍDICA",v1_d:"Control exhaustivo de títulos, inhibiciones y deudas. Estudio de 30 años.",
-v2_t:"DISCRECIÓN ABSOLUTA",v2_d:"Trato personal directo con el escribano titular. Sin intermediarios.",
-v3_t:"AGILIDAD NOTARIAL",v3_d:"Gestión integral ante registros. Usted solo firma. Nosotros hacemos el resto.",
-v4_t:"TRADICIÓN · MAT. 1847",v4_d:"Colegio de Escribanos CABA desde 1936. Tres generaciones.",
-close_eye:"NUESTRA SEDE",close_h:"Microcentro",close_p:"Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.",close_btn:"SOLICITAR TURNO →",
-cont_eye:"CONTACTO DIRECTO",cont_h:"Agende su turno",cont_info:"Atención con turno previo. Escribano titular.",cont_hor:"Lunes a Viernes 10 a 18hs",
-form_btn:"ENVIAR CONSULTA",
-foot_sub:"ESCRIBANÍA · MAT. 1847",foot_claim:"Tradición notarial con\nel respaldo de siempre.",
-foot_s1:"SERVICIOS NOTARIALES",foot_l1:"Compraventa y Escrituras",foot_l2:"Sociedades y Empresas",foot_l3:"Sucesiones y Familia",foot_l4:"Poderes y Actas",foot_l5:"Hipotecas y Fideicomisos",
-foot_s2:"MICROCENTRO",foot_at:"Atención con turno previo.",foot_tit:"Escribano Titular",foot_s3:"TURNOS",foot_cta:"Atención personalizada,\ndiscreta y sin demoras.",foot_btn:"SOLICITAR TURNO →",foot_col:"COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES"
-},
-en:{
-logo_sub:"NOTARY OFFICE",
-nav_serv:"SERVICES",nav_family:"FAMILY OFFICE",nav_estudio:"ABOUT",nav_contacto:"CONTACT",nav_turno:"BOOK APPOINTMENT",
-hero_eye:"Legal security · Buenos Aires",hero_h1:"RIGANTI",hero_h2:"Notary Office",hero_p:"90 years of notarial tradition in Buenos Aires. Technical rigor, absolute discretion and personal attention from the senior notary.",hero_btn:"BOOK APPOINTMENT →",
-s1_t:"Real Estate",s1_d:"Deeds, preliminary agreements and exhaustive title, lien and debt control.",
-s2_t:"Corporate",s2_d:"Incorporation, board minutes, powers of attorney and bylaw amendments.",
-s3_t:"Family & Estate",s3_d:"Donations, wills, homestead protection and heir declarations.",
-s4_t:"Certifications",s4_d:"Signature certification, certified copies, notarial minutes and bylaws.",
-fo_eye:"International Elite Division",fo_h:"Family Office \n& Wealth Governance",fo_main:"We design the legal structures necessary for preservation, smooth transition and strategic administration of large family estates.",fo_p2:"We understand that family assets require superior legal protection. Our approach combines the rigor of classical notarial practice with bespoke legal architecture for each business lineage.",
-fo_l1:"Family Protocols: Framework agreements to regulate continuity and decision-making in family businesses.",
-fo_l2:"Complex Estate Planning: Donations with usufruct reserve, public wills and future protection mandates.",
-fo_l3:"Shield Structures: Administration trusts, holding companies and investment vehicles.",
-fo_tag:"ABSOLUTE CONFIDENTIALITY",fo_box_t:"Private Attention",fo_box_p:"Family Office matters are handled in our private boardroom, ensuring an isolated, exclusive environment with no intermediaries.",fo_sig:"Senior Notary",
-est_eye:"90 YEARS OF TRADITION",est_h:"Three generations\nsafeguarding your assets.",est_p1:"We are heirs to a 90-year notarial tradition in Buenos Aires. We provide comprehensive advice combining technical rigor and absolute discretion.",est_p2:"Each deed is personally reviewed by the senior notary. We do not outsource legal security.",est_cap:"Boardroom · Downtown Office · 1936",est_quote:"\"A well-executed deed lasts for generations.\"",
-v1_t:"LEGAL SECURITY",v1_d:"Exhaustive control of titles, liens and debts. 30-year expertise.",
-v2_t:"ABSOLUTE DISCRETION",v2_d:"Direct personal dealing with the senior notary. No intermediaries.",
-v3_t:"NOTARIAL AGILITY",v3_d:"Comprehensive management before registries. You only sign. We do the rest.",
-v4_t:"TRADITION · LIC. 1847",v4_d:"Notaries Association of Buenos Aires since 1936. Three generations.",
-close_eye:"OUR OFFICE",close_h:"Downtown",close_p:"Maipú 497, 4th Floor. A palace that preserves the solemnity of classical notarial practice, with private and discreet service.",close_btn:"BOOK APPOINTMENT →",
-cont_eye:"DIRECT CONTACT",cont_h:"Book your appointment",cont_info:"By appointment only. Senior notary.",cont_hor:"Monday to Friday 10am to 6pm",
-form_btn:"SEND INQUIRY",
-foot_sub:"NOTARY OFFICE · LIC. 1847",foot_claim:"Notarial tradition with\nthe backing of always.",
-foot_s1:"NOTARIAL SERVICES",foot_l1:"Real Estate & Deeds",foot_l2:"Corporate & Companies",foot_l3:"Succession & Family",foot_l4:"Powers & Minutes",foot_l5:"Mortgages & Trusts",
-foot_s2:"DOWNTOWN",foot_at:"By appointment only.",foot_tit:"Senior Notary",foot_s3:"APPOINTMENTS",foot_cta:"Personalized,\ndiscreet and prompt service.",foot_btn:"BOOK APPOINTMENT →",foot_col:"NOTARIES ASSOCIATION OF BUENOS AIRES"
-}
-};
-function setLang(l){
-  localStorage.setItem('riganti_lang',l);
-  document.documentElement.lang=l;
-  document.getElementById('btn-es').classList.toggle('active',l==='es');
-  document.getElementById('btn-en').classList.toggle('active',l==='en');
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const k=el.getAttribute('data-i18n');
-    if(dict[l][k]) el.innerText=dict[l][k];
-  });
-  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
-    const k=el.getAttribute('data-i18n-ph');
-    const map={ph_name:{es:"Nombre y Apellido",en:"Full Name"},ph_tel:{es:"Teléfono",en:"Phone"},ph_msg:{es:"Cuéntenos su consulta...",en:"Tell us your inquiry..."}};
-    if(map[k]) el.placeholder=map[k][l];
-  });
-}
-setLang(localStorage.getItem('riganti_lang')||'es');
+const dict={es:{logo_sub:"ESCRIBANÍA",nav_serv:"SERVICIOS",nav_family:"FAMILY OFFICE",nav_estudio:"ESTUDIO",nav_contacto:"CONTACTO",nav_turno:"SOLICITAR TURNO",hero_eye:"Seguridad jurídica · CABA",hero_h1:"RIGANTI",hero_h2:"Escribanía",hero_p:"90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.",hero_btn:"SOLICITAR TURNO →",s1_t:"Compraventa",s1_d:"Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.",s2_t:"Sociedades",s2_d:"Constitución, actas de directorio, poderes y reformas estatutarias.",s3_t:"Familia y Sucesiones",s3_d:"Donaciones, testamentos, protección de vivienda y declaratorias.",s4_t:"Certificaciones",s4_d:"Firmas, copias certificadas, actas de constatación y reglamentos.",fo_eye:"Área de Élite Internacional",fo_h:"Family Office \n& Gobierno Patrimonial",fo_main:"Diseñamos las estructuras jurídicas necesarias para la preservación, transición fluida y administración estratégica de los grandes patrimonios familiares.",fo_p2:"Entendemos que los activos familiares requieren un blindaje legal superior. Nuestro enfoque combina el rigor del notariado clásico con soluciones de arquitectura jurídica a la medida de cada linaje empresarial.",fo_l1:"Protocolos Familiares: Acuerdos marco para regular la continuidad y toma de decisiones en empresas familiares.",fo_l2:"Planificación Sucesoria Compleja: Donaciones con reserva de usufructo, testamentos por acto público y mandatos de protección futura.",fo_l3:"Estructuras de Blindaje: Constitución de fideicomisos de administración, sociedades holding y vehículos de inversión.",fo_tag:"CONFIDENCIALIDAD ABSOLUTA",fo_box_t:"Atención Privada",fo_box_p:"Los asuntos de Family Office se atienden en nuestro salón de acuerdos privado, garantizando un entorno aislado, exclusivo y sin intermediarios.",fo_sig:"Escribano Titular",est_eye:"90 AÑOS DE TRADICIÓN",est_h:"Tres generaciones\ncustodiando su patrimonio.",est_p1:"Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.",est_p2:"Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.",est_cap:"Mesa de acuerdos · Sede Microcentro · 1936",est_quote:"\"Una escritura bien hecha perdura por generaciones.\"",v1_t:"SEGURIDAD JURÍDICA",v1_d:"Control exhaustivo de títulos, inhibiciones y deudas. Estudio de 30 años.",v2_t:"DISCRECIÓN ABSOLUTA",v2_d:"Trato personal directo con el escribano titular. Sin intermediarios.",v3_t:"AGILIDAD NOTARIAL",v3_d:"Gestión integral ante registros. Usted solo firma. Nosotros hacemos el resto.",v4_t:"TRADICIÓN · MAT. 1847",v4_d:"Colegio de Escribanos CABA desde 1936. Tres generaciones.",close_eye:"NUESTRA SEDE",close_h:"Microcentro",close_p:"Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.",close_btn:"SOLICITAR TURNO →",cont_eye:"CONTACTO DIRECTO",cont_h:"Agende su turno",cont_info:"Atención con turno previo. Escribano titular.",cont_hor:"Lunes a Viernes 10 a 18hs",form_btn:"ENVIAR CONSULTA",foot_sub:"ESCRIBANÍA · MAT. 1847",foot_claim:"Tradición notarial con\nel respaldo de siempre.",foot_s1:"SERVICIOS NOTARIALES",foot_l1:"Compraventa y Escrituras",foot_l2:"Sociedades y Empresas",foot_l3:"Sucesiones y Familia",foot_l4:"Poderes y Actas",foot_l5:"Hipotecas y Fideicomisos",foot_s2:"MICROCENTRO",foot_at:"Atención con turno previo.",foot_tit:"Escribano Titular",foot_s3:"TURNOS",foot_cta:"Atención personalizada,\ndiscreta y sin demoras.",foot_btn:"SOLICITAR TURNO →",foot_col:"COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES"},en:{logo_sub:"NOTARY OFFICE",nav_serv:"SERVICES",nav_family:"FAMILY OFFICE",nav_estudio:"ABOUT",nav_contacto:"CONTACT",nav_turno:"BOOK APPOINTMENT",hero_eye:"Legal security · Buenos Aires",hero_h1:"RIGANTI",hero_h2:"Notary Office",hero_p:"90 years of notarial tradition in Buenos Aires. Technical rigor, absolute discretion and personal attention from the senior notary.",hero_btn:"BOOK APPOINTMENT →",s1_t:"Real Estate",s1_d:"Deeds, preliminary agreements and exhaustive title, lien and debt control.",s2_t:"Corporate",s2_d:"Incorporation, board minutes, powers of attorney and bylaw amendments.",s3_t:"Family & Estate",s3_d:"Donations, wills, homestead protection and heir declarations.",s4_t:"Certifications",s4_d:"Signature certification, certified copies, notarial minutes and bylaws.",fo_eye:"International Elite Division",fo_h:"Family Office \n& Wealth Governance",fo_main:"We design the legal structures necessary for preservation, smooth transition and strategic administration of large family estates.",fo_p2:"We understand that family assets require superior legal protection. Our approach combines the rigor of classical notarial practice with bespoke legal architecture for each business lineage.",fo_l1:"Family Protocols: Framework agreements to regulate continuity and decision-making in family businesses.",fo_l2:"Complex Estate Planning: Donations with usufruct reserve, public wills and future protection mandates.",fo_l3:"Shield Structures: Administration trusts, holding companies and investment vehicles.",fo_tag:"ABSOLUTE CONFIDENTIALITY",fo_box_t:"Private Attention",fo_box_p:"Family Office matters are handled in our private boardroom, ensuring an isolated, exclusive environment with no intermediaries.",fo_sig:"Senior Notary",est_eye:"90 YEARS OF TRADITION",est_h:"Three generations\nsafeguarding your assets.",est_p1:"We are heirs to a 90-year notarial tradition in Buenos Aires. We provide comprehensive advice combining technical rigor and absolute discretion.",est_p2:"Each deed is personally reviewed by the senior notary. We do not outsource legal security.",est_cap:"Boardroom · Downtown Office · 1936",est_quote:"\"A well-executed deed lasts for generations.\"",v1_t:"LEGAL SECURITY",v1_d:"Exhaustive control of titles, liens and debts. 30-year expertise.",v2_t:"ABSOLUTE DISCRETION",v2_d:"Direct personal dealing with the senior notary. No intermediaries.",v3_t:"NOTARIAL AGILITY",v3_d:"Comprehensive management before registries. You only sign. We do the rest.",v4_t:"TRADITION · LIC. 1847",v4_d:"Notaries Association of Buenos Aires since 1936. Three generations.",close_eye:"OUR OFFICE",close_h:"Downtown",close_p:"Maipú 497, 4th Floor. A palace that preserves the solemnity of classical notarial practice, with private and discreet service.",close_btn:"BOOK APPOINTMENT →",cont_eye:"DIRECT CONTACT",cont_h:"Book your appointment",cont_info:"By appointment only. Senior notary.",cont_hor:"Monday to Friday 10am to 6pm",form_btn:"SEND INQUIRY",foot_sub:"NOTARY OFFICE · LIC. 1847",foot_claim:"Notarial tradition with\nthe backing of always.",foot_s1:"NOTARIAL SERVICES",foot_l1:"Real Estate & Deeds",foot_l2:"Corporate & Companies",foot_l3:"Succession & Family",foot_l4:"Powers & Minutes",foot_l5:"Mortgages & Trusts",foot_s2:"DOWNTOWN",foot_at:"By appointment only.",foot_tit:"Senior Notary",foot_s3:"APPOINTMENTS",foot_cta:"Personalized,\ndiscreet and prompt service.",foot_btn:"BOOK APPOINTMENT →",foot_col:"NOTARIES ASSOCIATION OF BUENOS AIRES"}};
+function setLang(l){localStorage.setItem('riganti_lang',l);document.documentElement.lang=l;document.getElementById('btn-es').classList.toggle('active',l==='es');document.getElementById('btn-en').classList.toggle('active',l==='en');document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(dict[l][k]) el.innerText=dict[l][k]});document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');const map={ph_name:{es:"Nombre y Apellido",en:"Full Name"},ph_tel:{es:"Teléfono",en:"Phone"},ph_msg:{es:"Cuéntenos su consulta...",en:"Tell us your inquiry..."}};if(map[k]) el.placeholder=map[k][l]});}setLang(localStorage.getItem('riganti_lang')||'es');
 </script>
 </body>
 </html>
