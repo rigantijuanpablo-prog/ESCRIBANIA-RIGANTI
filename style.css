@@ -193,3 +193,40 @@ body{
   .estudio-grid, .contenedor-grilla, .footer-inner-editorial{grid-template-columns:1fr; gap:40px}
   .barra-flotante-contacto.escribania{right:12px !important; top:42% !important}
 }
+.boceto-lateral-wrap{
+  margin: 36px 0;
+  border: 1px solid #E8E2D9;
+  padding: 12px;
+  background: white;
+}
+.boceto-lateral-img{
+  width:100%;
+  display:block;
+  opacity:0.75;
+  mix-blend-mode: multiply;
+  filter: grayscale(0.1);
+}
+.boceto-caption{
+  display:block;
+  margin-top:8px;
+  font-size:9px;
+  letter-spacing:2px;
+  opacity:0.4;
+  text-transform:uppercase;
+}
+
+.seccion-cierre-premium{
+  position:relative; height:72vh; 
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; background:#F9F6F1;
+}
+.capa-fondo-imagen{position:absolute; inset:0}
+.imagen-boceto-blur{
+  width:100%; height:100%; object-fit:cover;
+  opacity:0.32;
+}
+.overlay-marfil{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(249,246,241,0.15) 0%, rgba(249,246,241,0.9) 100%);
+}
+.contenido-cierre{position:relative; z-index:2; text-align:center; max-width:560px}
