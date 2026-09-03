@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escribanía Allende & Asociados - Escribanos | Buenos Aires</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #inicio { opacity: 0; }
+      html.fonts-loaded #inicio { opacity: 1; transition: opacity 0.6s ease; }
+      html.fonts-failed #inicio { opacity: 1; }
+    </style>
+    <script>
+      document.fonts.ready.then(function(){ document.documentElement.classList.add('fonts-loaded'); });
+      setTimeout(function(){ if(!document.documentElement.classList.contains('fonts-loaded')){ document.documentElement.classList.add('fonts-failed'); } }, 3000);
+    </script>
+</head>
+<body>
+
+<!-- CONTACTO FLOTANTE ESCRIBANÍA - SOBRIO -->
+<div class="barra-flotante-contacto escribania">
+    <a href="#contacto" class="item-flotante" title="Contacto">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+    </a>
+    <a href="tel:+541143215555" class="item-flotante" title="Llamar">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <a href="#contacto" class="item-flotante" title="Ubicación">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </a>
+    <!-- ACCESO CLIENTES -->
+    <a href="./app.html" class="item-flotante item-dorado" title="Acceso Clientes">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><rect x="3" y="11" width="18" height="10" rx="2.5"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><circle cx="12" cy="16" r="1" fill="currentColor"></circle></svg>
+    </a> 
+</div>
+
+<!-- CABECERA ESCRIBANÍA -->
+<header id="mainHeader">
+  <a href="index.html" class="marca-estudio">
+    <div class="logo-lockup">
+      <img src="logo-escribania.webp" alt="Escribanía Allende" class="header-logo-img">
+    </div>
+    <div class="nombre-estudio">
+      <span class="apellido-principal">ESCRIBANÍA ALLENDE</span>
+      <span class="apellido-secundario">& ASOCIADOS</span>
+    </div>
+  </a>
+
+  <!-- NAVEGACIÓN DESKTOP -->
+  <nav class="nav-desktop">
+    <ul>
+      <li><a href="#estudio">LA ESCRIBANÍA</a></li>
+      <li class="nav-item-mega">
+        <a href="#" id="triggerMega">SERVICIOS NOTARIALES</a>
+        <div class="mega-panel">
+          <div class="mega-left">
+            <span>ESCRIBANÍA / 2026</span>
+            <b>Servicios<br>Notariales</b>
+            <div class="mega-line"></div>
+            <p>Seguridad jurídica<br>con tradición.</p>
+          </div>
+          <div class="mega-grid-simple">
+            <a href="./compraventa.html">Compraventa y Escrituras <i>→</i></a>
+            <a href="./sociedades.html">Constitución de Sociedades <i>→</i></a>
+            <a href="./sucesiones.html">Sucesiones y Familia <i>→</i></a>
+            <a href="./poderes.html">Poderes y Actas <i>→</i></a>
+            <a href="./hipotecas.html">Hipotecas y Fideicomisos <i>→</i></a>
+            <a href="./certificaciones.html">Certificaciones y Legalizaciones <i>→</i></a>
+            <a href="./empresas.html">Asesoría a Empresas <i>→</i></a>
+            <a href="./internacional.html">Documentación Internacional <i>→</i></a>
+            <a href="./consultas.html">Consultas Notariales <i>→</i></a>
+          </div>
+        </div> 
+      </li>
+    </ul>
+  </nav>
+  <!-- GRUPO DE ACCIONES DERECHA -->
+  <div class="right-group">
+    <a href="turnos.html" class="btn-area-flex">SOLICITAR TURNO</a>
+    <a href="#contacto" class="btn-nav">CONTACTO →</a>
+    <a href="servicios.html" class="investment-pill" id="investmentPill">
+      <span class="pill-new">CABA</span>
+      <span class="pill-text">Escribanía 1936 ↗</span>
+    </a>
+    <button class="btn-burger" id="btnBurger" aria-label="Abrir Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE OVERLAY ESCRIBANÍA -->
+<div class="mobile-overlay" id="mobileMenu">
+  <div class="mobile-head">
+    <span class="mobile-brand-editorial">ALLENDE</span>
+    <button id="closeMobile" aria-label="Cerrar Menú">✕</button>
+  </div>
+  <ul class="mobile-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#estudio">La Escribanía</a></li>
+    <li class="mobile-accordion">
+      <button class="acc-btn-editorial" id="accAreas" aria-expanded="false">Servicios Notariales</button>
+      <div class="acc-panel" id="panelAreas">
+        <a href="./compraventa.html">Compraventa y Escrituras</a>
+        <a href="./sociedades.html">Sociedades y Empresas</a>
+        <a href="./sucesiones.html">Sucesiones y Familia</a>
+        <a href="./poderes.html">Poderes y Actas Notariales</a>
+        <a href="./hipotecas.html">Hipotecas y Fideicomisos</a>
+        <a href="./certificaciones.html">Certificaciones</a>
+        <a href="./internacional.html">Trámites Internacionales</a>
+      </div>
+    </li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li class="mobile-cta">
+      <a href="#contacto" class="btn-action-premium">SOLICITAR TURNO →</a>
+    </li>
+  </ul>
+</div>
+
+<!-- SECCIÓN HERO ESCRIBANÍA -->
+<section id="inicio" class="hero-principal">
+  <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+    <source src="hero-escribania-12s.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-contenedor-texto">
+    <span class="hero-eyebrow">ESCRIBANÍA ALLENDE · CABA · DESDE 1936</span>
+    <h1 class="hero-title-editorial">Tradición Notarial con el<br><i>Respaldo de Siempre</i></h1>
+    <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
+  </div>
+    
+  <!-- SELLO NOTARIAL FLOTANTE -->
+  <a href="servicios.html" class="investment-seal-link" id="investmentSeal">
+    <div class="investment-seal">
+      <div class="seal-ring"></div>
+      <div class="seal-ring-2"></div>
+      <div class="seal-content">
+        <span class="seal-year">1936</span>
+        <span class="seal-new">CABA</span>
+        <span class="seal-text">Escribanía<br>Mat. 1847</span>
+      </div>
+    </div>
+  </a>
+</section>
+
+<!-- SECCIÓN LA ESCRIBANÍA & MANIFIESTO -->
+<section id="estudio" class="section-estudio">
+  <div class="estudio-grid">
+    <div class="texto-estudio">
+      <span class="eyebrow">ALLENDE | SEGURIDAD JURÍDICA</span>
+      <p class="lead-serif">Brindamos asesoramiento notarial integral a familias, empresas y particulares, combinando rigor técnico, discreción absoluta y una atención estrictamente personalizada.</p>
+      <h2>Tres generaciones<br><i>custodiando su patrimonio.</i></h2>
+      <div class="linea-decorativa"></div>
+      <p>Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Elegimos mantener el modelo de escribanía boutique porque entendemos que cada escritura representa el patrimonio y la historia de una familia.</p>
+      <p><strong>Notariado de Confianza:</strong> cada acto es analizado en detalle, con la tranquilidad de saber que su documentación está en manos expertas.</p>
+      <blockquote>"Una escritura bien hecha perdura por generaciones. Es la garantía de que lo que hoy es suyo, mañana será de los suyos."</blockquote>
+      <p>Conjugamos la solemnidad del notariado clásico con procesos ágiles y digitales para que usted pueda escriturar, certificar o constituir su sociedad sin demoras ni sorpresas.</p>
+    </div>
+    <div class="valores-col">
+      <div class="tarjeta-valor"><h4>SEGURIDAD JURÍDICA</h4><p>Control exhaustivo de títulos, inhibiciones y deudas para una escritura perfecta.</p></div>
+      <div class="tarjeta-valor"><h4>DISCRECIÓN ABSOLUTA</h4><p>Confidencialidad y trato personal directo con el escribano titular en cada operación.</p></div>
+      <div class="tarjeta-valor"><h4>AGILIDAD NOTARIAL</h4><p>Gestión integral con registros, colegios y bancos. Usted solo firma.</p></div>
+      <div class="tarjeta-valor dark"><h4>TRADICIÓN</h4><p>Matrícula 1847. Miembros del Colegio de Escribanos de CABA desde 1936.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN CIERRE - OFICINA -->
+<section class="seccion-cierre-premium">
+  <div class="capa-fondo-imagen">
+    <img src="oficina-escribania.png" alt="Oficina Escribanía Allende" class="imagen-boceto-blur">
+  </div>
+  <div class="contenido-cierre">
+    <span class="eyebrow light">NUESTRA SEDE</span>
+    <h2>Recoleta</h2>
+    <p>Av. Callao y Quintana. Atención con turno previo. Estacionamiento y sala de reuniones privada.</p>
+    <a href="#contacto" class="f-btn-premium">CÓMO LLEGAR →</a>
+  </div>
+</section>
+<!-- SECCIÓN CONTACTO - ESCRIBANÍA -->
+<section id="contacto" class="seccion-contacto">
+  
+  <div class="cabecera-contacto">
+    <span class="tag-estrategico">CONTACTO NOTARIAL</span>
+    <h2 class="titulo-contacto">Contacto</h2>
+  </div>
+
+  <div class="contenedor-grilla">
+    <!-- COLUMNA IZQUIERDA: Información Sede -->
+    <div class="info-sede">
+      <div class="bloque-info">
+        <h3>SEDE RECOLETA</h3>
+        <p>Av. Callao 1234, Piso 2°<br>C1023AAR · CABA · Argentina<br>Atención con turno previo</p>
+      </div>
+      <div class="bloque-info">
+        <h3>TELÉFONO</h3>
+        <p>+54 (11) 4800-1234</p>
+      </div>
+      <div class="bloque-info">
+        <h3>EMAIL DIRECTO</h3>
+        <p><a href="mailto:escribania@allende.com.ar" class="f-email-protagonist">escribania@allende.com.ar</a></p>
+        <span class="subtexto-mail">Respuesta del escribano titular en el día</span>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: Formulario escribanía -->
+    <form class="formulario-contacto" action="https://formsubmit.co/escribania@allende.com.ar" method="POST">
+      
+      <input type="hidden" name="_next" value="https://allende.com.ar/gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nueva Consulta Notarial — Escribanía Allende">
+
+      <div class="fila-doble">
+        <div class="grupo-campo">
+          <label for="nombre">NOMBRE COMPLETO</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="grupo-campo">
+          <label for="email">TELÉFONO / EMAIL</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="empresa">TIPO DE TRÁMITE</label>
+        <select id="empresa" name="tramite" style="width:100%; background:transparent; border:none; border-bottom:1px solid #ccc; padding:12px 0; font-family:inherit;">
+          <option>Compraventa / Escritura</option>
+          <option>Sociedades</option>
+          <option>Poder / Acta</option>
+          <option>Sucesión</option>
+          <option>Certificación</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div class="grupo-campo">
+        <label for="consulta">DESCRIBA BREVEMENTE SU TRÁMITE</label>
+        <textarea id="consulta" name="consulta" rows="2" required placeholder="Ej: Escritura en CABA, departamento de 2 ambientes..."></textarea>
+      </div>
+
+      <div class="fila-accion">
+        <button type="submit" class="btn-enviar">SOLICITAR TURNO</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER ESCRIBANÍA PREMIUM -->
+<footer class="footer-rgm-premium escribania">
+  <div class="footer-inner-editorial">
+    
+    <div class="f-col brand-premium">
+      <div class="footer-logo-lockup-premium">
+        <div class="footer-logo-text-premium">ALL<span class="ma-gold">ENDE</span></div>
+        <img src="logo-escribania.webp" alt="Escribanía Allende" class="footer-isologo-premium">
+      </div>
+      <p class="f-claim-editorial">Tradición notarial con<br>el respaldo de siempre.</p>
+      <div class="f-line-premium"></div>
+      <div class="f-copy-brand-editorial">
+        <span>ESCRIBANÍA ALLENDE</span><br>
+        <span class="f-italic-editorial">& ASOCIADOS · MAT. 1847</span>
+      </div>
+    </div>
+        <!-- Columna 2: Servicios Notariales -->
+    <div class="f-col-editorial">
+      <span class="f-title-editorial">SERVICIOS NOTARIALES</span>
+      <a href="./compraventa.html" class="f-link-editorial">Compraventa y Escrituras</a>
+      <a href="./sociedades.html" class="f-link-editorial">Sociedades y Empresas</a>
+      <a href="./sucesiones.html" class="f-link-editorial">Sucesiones y Familia</a>
+      <a href="./poderes.html" class="f-link-editorial">Poderes y Actas</a>
+      <a href="./hipotecas.html" class="f-link-editorial">Hipotecas y Fideicomisos</a>
+      <a href="./certificaciones.html" class="f-link-editorial">Certificaciones</a>
+      <a href="./internacional.html" class="f-link-editorial">Trámites Internacionales</a>
+    </div>
+
+    <!-- Columna 3: Sede Recoleta -->
+    <div class="f-col-editorial">
+      <span class="f-title-editorial">RECOLETA</span>
+      <p class="f-address-protagonist">Av. Callao 1234, Piso 2°<br>C1023AAR · CABA<br>Atención con turno previo.</p>
+      <div class="f-contact-premium">
+        <p class="f-phone-premium">Escribano Titular</p>
+        <p class="f-phone-premium">+54 11 4800-1234</p>
+        <p><a href="mailto:escribania@allende.com.ar" class="f-email-protagonist">escribania@allende.com.ar</a></p>
+      </div>
+    </div>
+
+    <!-- Columna 4: Turnos -->
+    <div class="f-col-editorial">
+      <span class="f-title-editorial">TURNOS</span>
+      <p class="f-consulta-txt-editorial">Atención personalizada,<br>discreta y sin demoras.</p>
+      <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
+    </div>
+
+  </div>
+  <div class="f-bottom-editorial">
+    <p>© 2026 ESCRIBANÍA ALLENDE & ASOCIADOS · MAT. 1847 · CABA</p>
+    <p class="f-legal-small-editorial">Escribanía premium · Colegio de Escribanos de la Ciudad de Buenos Aires</p>
+  </div>
+</footer>
+
+<!-- BANNER COOKIES ESCRIBANÍA -->
+<div id="cookieBanner" class="cookie-banner-premium">
+  <div class="cookie-content-editorial">
+    <p>Utilizamos cookies para mejorar su experiencia. Al continuar, acepta nuestra <a href="./politica-privacidad.html" class="cookie-link-editorial">Política de Privacidad</a>.</p>
+    <button id="acceptCookies" class="cookie-btn-premium">ACEPTAR</button>
+  </div>
+</div>
+
+<!-- SISTEMA SCRIPT ESCRIBANÍA -->
+<script>
+const header = document.getElementById('mainHeader');
+const hero = document.querySelector('.hero-principal');
+const v = document.getElementById('heroVideo');
+
+v?.addEventListener('loadeddata', () => v.classList.add('is-loaded'));
+setTimeout(() => v?.classList.add('is-loaded'), 800);
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) { header.classList.add('shrink'); } 
+  else { header.classList.remove('shrink'); }
+  if(hero && window.scrollY > hero.offsetHeight - 150){ document.body.classList.add('pill-visible'); } 
+  else { document.body.classList.remove('pill-visible'); }
+}, {passive:true});
+
+const burger = document.getElementById('btnBurger');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobile = document.getElementById('closeMobile');
+const accBtn = document.getElementById('accAreas'); 
+const accPanel = document.getElementById('panelAreas');
+
+burger?.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow='hidden'; });
+closeMobile?.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow=''; });
+  accBtn?.addEventListener('click', () => {
+  const isOpen = accPanel.classList.toggle('open');
+  accBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  const i = accBtn.querySelector('i');
+  if(i) i.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+});
+
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { 
+  mobileMenu.classList.remove('open'); 
+  document.body.style.overflow=''; 
+}));
+
+// CONSENTIMIENTO COOKIES - ESCRIBANÍA
+window.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('acceptCookies');
+
+  if (!localStorage.getItem('allende_cookies_accepted')) {
+    setTimeout(() => {
+      banner?.classList.add('is-visible');
+    }, 1500);
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('allende_cookies_accepted', 'true');
+    banner?.classList.remove('is-visible');
+  });
+});
+</script>
+
+</body>
+</html>
