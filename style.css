@@ -1,0 +1,195 @@
+/* ESCRIBANÍA ALLENDE - PALETA PREMIUM RECOLETA */
+:root{
+  --azul-noche:#0E1A2B;
+  --dorado-champagne:#C9B896;
+  --dorado-suave: rgba(201,184,150,0.20);
+  --marfil:#F9F6F1;
+  --gris-texto:#4A4A4A;
+  --linea:#E8E2D9;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter', sans-serif;
+  background:var(--marfil);
+  color:var(--azul-noche);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ===== BARRA FLOTANTE ESCRIBANÍA - TRANSLÚCIDA PREMIUM ===== */
+.barra-flotante-contacto.escribania{
+  position:fixed !important;
+  right:20px !important;
+  top:40% !important;
+  transform:translateY(-50%) !important;
+  z-index:999999 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  gap:10px !important;
+  width:46px !important;
+  padding:10px 6px !important;
+  background: rgba(255,255,255,0.22) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border:1px solid rgba(255,255,255,0.30) !important;
+  border-radius:24px !important;
+  box-shadow: 0 8px 32px rgba(14,26,43,0.12) !important;
+}
+
+.barra-flotante-contacto .item-flotante{
+  width:42px !important;
+  height:42px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  background: rgba(255,255,255,0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  border:1px solid rgba(255,255,255,0.5) !important;
+  border-radius:50% !important;
+  color:#0E1A2B !important;
+  transition:all 0.35s ease !important;
+  text-decoration:none !important;
+}
+
+.barra-flotante-contacto .item-flotante:hover{
+  background: #0E1A2B !important;
+  color:white !important;
+  transform:scale(1.08);
+  border-color:#0E1A2B !important;
+}
+
+/* CANDADO DORADO TRANSLÚCIDO */
+.barra-flotante-contacto .item-flotante.item-dorado{
+  background: rgba(201,184,150,0.22) !important;
+  border-color: rgba(201,184,150,0.45) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.barra-flotante-contacto .item-flotante.item-dorado svg{
+  stroke:#C9B896 !important;
+  opacity:0.9;
+}
+
+.barra-flotante-contacto .item-flotante.item-dorado:hover{
+  background: #C9B896 !important;
+  border-color:#C9B896 !important;
+}
+
+.barra-flotante-contacto .item-flotante.item-dorado:hover svg{
+  stroke:white !important;
+}
+
+/* ===== HEADER ESCRIBANÍA ===== */
+#mainHeader{
+  position:fixed; top:0; left:0; right:0;
+  height:88px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 40px; background:rgba(249,246,241,0.92);
+  backdrop-filter:blur(12px); border-bottom:1px solid var(--linea);
+  z-index:1000; transition:all 0.4s ease;
+}
+#mainHeader.shrink{height:68px; background:rgba(249,246,241,0.98)}
+.marca-estudio{display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--azul-noche)}
+.header-logo-img{height:38px; width:auto}
+.nombre-estudio{display:flex; flex-direction:column; line-height:1}
+.apellido-principal{font-family:'Cormorant Garamond', serif; font-size:16px; letter-spacing:2px; font-weight:500}
+.apellido-secundario{font-family:'Cormorant Garamond', serif; font-size:14px; letter-spacing:2px; font-style:italic; opacity:0.7}
+
+/* NAV */
+.nav-desktop ul{display:flex; gap:36px; list-style:none}
+.nav-desktop a{font-size:11px; letter-spacing:2px; text-decoration:none; color:var(--azul-noche); opacity:0.7; transition:0.3s}
+.nav-desktop a:hover{opacity:1}
+
+/* MEGA MENU */
+.mega-panel{
+  position:absolute; top:100%; left:0; right:0; background:var(--marfil);
+  display:none; grid-template-columns:280px 1fr; padding:40px; border-top:1px solid var(--linea);
+}
+.nav-item-mega:hover .mega-panel{display:grid}
+.mega-left b{font-family:'Cormorant Garamond', serif; font-size:32px; line-height:0.9; display:block; margin:12px 0}
+.mega-line{width:40px; height:1px; background:var(--dorado-champagne); margin:16px 0}
+.mega-grid-simple{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.mega-grid-simple a{font-family:'Cormorant Garamond', serif; font-size:18px; border-bottom:1px solid var(--linea); padding:10px 0; display:flex; justify-content:space-between}
+
+.right-group{display:flex; align-items:center; gap:14px}
+.btn-area-flex{border:1px solid var(--azul-noche); padding:10px 18px; font-size:10px; letter-spacing:1.5px; text-decoration:none; color:var(--azul-noche)}
+.btn-nav{background:var(--azul-noche); color:white; padding:11px 20px; font-size:10px; letter-spacing:1.5px; text-decoration:none}
+.investment-pill{border:1px solid var(--linea); padding:8px 14px; border-radius:20px; text-decoration:none; display:flex; gap:8px; align-items:center}
+.pill-new{font-size:8px; background:var(--dorado-champagne); color:white; padding:2px 6px; border-radius:10px}
+.pill-text{font-size:10px; color:var(--azul-noche)}
+.btn-burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer}
+.btn-burger span{width:22px; height:1px; background:var(--azul-noche); display:block}
+
+/* HERO */
+.hero-principal{height:92vh; position:relative; overflow:hidden; display:flex; align-items:center; background:var(--azul-noche)}
+.hero-video{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1s ease}
+.hero-video.is-loaded{opacity:0.45}
+.hero-overlay{position:absolute; inset:0; background:linear-gradient(to bottom, rgba(14,26,43,0.3), rgba(14,26,43,0.8))}
+.hero-contenedor-texto{position:relative; z-index:2; padding:0 60px; max-width:900px}
+.hero-eyebrow{font-size:10px; letter-spacing:3px; color:var(--dorado-champagne); display:block; margin-bottom:24px}
+.hero-title-editorial{font-family:'Cormorant Garamond', serif; font-size:64px; line-height:0.95; color:white; font-weight:400; margin-bottom:32px}
+.hero-title-editorial i{font-style:italic; color:var(--dorado-champagne)}
+.f-btn-premium{display:inline-block; border:1px solid var(--dorado-champagne); color:white; padding:14px 28px; font-size:11px; letter-spacing:2px; text-decoration:none; transition:0.3s}
+.f-btn-premium:hover{background:var(--dorado-champagne); color:var(--azul-noche)}
+
+.investment-seal{position:absolute; right:60px; bottom:60px; width:120px; height:120px; border:1px solid rgba(201,184,150,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; z-index:3; text-decoration:none}
+.seal-content{color:white; font-size:10px; line-height:1.2; letter-spacing:1px}
+.seal-year{font-family:'Cormorant Garamond', serif; font-size:28px; display:block; color:var(--dorado-champagne)}
+
+/* ESTUDIO */
+.section-estudio{padding:120px 60px}
+.estudio-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:80px}
+.eyebrow{font-size:10px; letter-spacing:3px; color:var(--dorado-champagne)}
+.lead-serif{font-family:'Cormorant Garamond', serif; font-size:22px; line-height:1.4; margin:24px 0 40px}
+.texto-estudio h2{font-family:'Cormorant Garamond', serif; font-size:48px; line-height:0.95; font-weight:400; margin-bottom:24px}
+.linea-decorativa{width:60px; height:1px; background:var(--dorado-champagne); margin:24px 0}
+.texto-estudio p{line-height:1.8; color:var(--gris-texto); margin-bottom:18px; font-size:15px}
+.texto-estudio blockquote{font-family:'Cormorant Garamond', serif; font-size:20px; font-style:italic; border-left:1px solid var(--dorado-champagne); padding-left:20px; margin:32px 0; color:var(--azul-noche)}
+.valores-col{display:flex; flex-direction:column; gap:16px}
+.tarjeta-valor{border:1px solid var(--linea); padding:28px; background:white}
+.tarjeta-valor h4{font-size:10px; letter-spacing:2px; margin-bottom:10px}
+.tarjeta-valor p{font-size:13px; line-height:1.6; color:var(--gris-texto)}
+.tarjeta-valor.dark{background:var(--azul-noche); color:white}
+.tarjeta-valor.dark p{color:rgba(255,255,255,0.6)}
+
+/* CONTACTO */
+.seccion-contacto{padding:100px 60px; border-top:1px solid var(--linea)}
+.cabecera-contacto{margin-bottom:60px}
+.tag-estrategico{font-size:10px; letter-spacing:3px; color:var(--dorado-champagne)}
+.titulo-contacto{font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:400; margin-top:8px}
+.contenedor-grilla{display:grid; grid-template-columns:0.7fr 1.3fr; gap:80px}
+.bloque-info{margin-bottom:36px}
+.bloque-info h3{font-size:10px; letter-spacing:2px; margin-bottom:8px; opacity:0.5}
+.bloque-info p{font-size:15px; line-height:1.6}
+.f-email-protagonist{color:var(--azul-noche); text-decoration:none; border-bottom:1px solid var(--dorado-champagne)}
+.subtexto-mail{font-size:12px; opacity:0.5; display:block; margin-top:6px}
+.formulario-contacto{display:grid; gap:24px}
+.fila-doble{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.grupo-campo label{font-size:10px; letter-spacing:2px; opacity:0.5; display:block; margin-bottom:8px}
+.grupo-campo input, .grupo-campo textarea{width:100%; background:transparent; border:none; border-bottom:1px solid var(--linea); padding:12px 0; font-family:'Inter'; font-size:15px; outline:none}
+.btn-enviar{background:var(--azul-noche); color:white; border:none; padding:16px 32px; font-size:11px; letter-spacing:2px; cursor:pointer; transition:0.3s}
+.btn-enviar:hover{background:var(--dorado-champagne)}
+
+/* FOOTER */
+.footer-rgm-premium{background:var(--azul-noche); color:white; padding:80px 60px 40px}
+.footer-inner-editorial{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px}
+.footer-logo-text-premium{font-family:'Cormorant Garamond', serif; font-size:32px; letter-spacing:3px}
+.ma-gold{color:var(--dorado-champagne)}
+.f-claim-editorial{margin:16px 0; font-family:'Cormorant Garamond', serif; font-size:16px; line-height:1.3; opacity:0.7; font-style:italic}
+.f-line-premium{width:30px; height:1px; background:var(--dorado-champagne); margin:20px 0}
+.f-title-editorial{font-size:10px; letter-spacing:2px; opacity:0.4; display:block; margin-bottom:20px}
+.f-link-editorial{display:block; color:white; text-decoration:none; font-size:14px; margin-bottom:10px; opacity:0.7; transition:0.3s}
+.f-link-editorial:hover{opacity:1; color:var(--dorado-champagne)}
+.f-bottom-editorial{border-top:1px solid rgba(255,255,255,0.1); margin-top:60px; padding-top:20px; display:flex; justify-content:space-between; font-size:10px; letter-spacing:1px; opacity:0.4}
+
+/* MOBILE */
+@media(max-width:900px){
+  #mainHeader{padding:0 20px; height:70px}
+  .nav-desktop, .right-group .btn-area-flex, .right-group .investment-pill, .right-group .btn-nav{display:none}
+  .btn-burger{display:flex}
+  .hero-contenedor-texto{padding:0 24px}
+  .hero-title-editorial{font-size:38px}
+  .section-estudio, .seccion-contacto, .footer-rgm-premium{padding:60px 24px}
+  .estudio-grid, .contenedor-grilla, .footer-inner-editorial{grid-template-columns:1fr; gap:40px}
+  .barra-flotante-contacto.escribania{right:12px !important; top:42% !important}
+}
