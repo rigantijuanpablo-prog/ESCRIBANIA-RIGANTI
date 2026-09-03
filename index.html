@@ -59,24 +59,6 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 .fo-card-interior h3{font-size:32px;color:#F9F6F1;margin-bottom:16px}
 .fo-card-interior p{color:rgba(249,246,241,0.6);font-size:14px;line-height:1.7;font-weight:300;margin-bottom:28px}
 .fo-signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold)}
-</style>
-</head>
-<body>
-<header class="header-principal">
-<a href="#" class="logo"><img src="logo-pluma-riganti-transparente.webp" alt="RIGANTI"></a>
-<nav class="nav-principal">
-<a href="#servicios" class="nav-link" data-i18n="nav_serv">SERVICIOS</a>
-<a href="#family-office" class="nav-link" data-i18n="nav_fo">FAMILY OFFICE</a>
-<a href="#estudio" class="nav-link" data-i18n="nav_est">ESTUDIO</a>
-<a href="#contacto" class="nav-link" data-i18n="nav_cont">CONTACTO</a>
-<a href="#contacto" class="btn-header" data-i18n="btn_turno_header">SOLICITAR TURNO</a>
-<div class="lang-switch"><span id="btn-es" class="active" onclick="setLang('es')">ES</span><span class="sep">|</span><span id="btn-en" class="inactive" onclick="setLang('en')">EN</span></div>
-</nav>
-</header>
-<div class="barra-flotante-contacto"><a href="https://wa.me/5491148001234" class="item-flotante"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a><a href="tel:+541148001234" class="item-flotante"><i class="fa-solid fa-phone"></i></a><a href="#contacto" class="item-flotante item-dorado">→</a></div>
-<section class="hero"><div class="hero-wrapper"><span class="eyebrow" data-i18n="hero_eyebrow">Seguridad jurídica · CABA</span><h1 data-i18n="hero_title">RIGANTI<br><i>Escribanía</i></h1><p data-i18n="hero_sub">90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p><a href="#contacto" class="btn-hero" data-i18n="btn_turno">SOLICITAR TURNO →</a></div></section>
-<section id="servicios" class="seccion-servicios"><div class="grid-servicios"><div class="card-serv"><div class="card-num">01</div><h3 data-i18n="serv_compra_t">Compraventa</h3><p data-i18n="serv_compra_d">Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div><div class="card-serv"><div class="card-num">02</div><h3 data-i18n="serv_soc_t">Sociedades</h3><p data-i18n="serv_soc_d">Constitución, actas de directorio, poderes y reformas estatutarias.</p></div><div class="card-serv"><div class="card-num">03</div><h3 data-i18n="serv_fam_t">Familia y Sucesiones</h3><p data-i18n="serv_fam_d">Donaciones, testamentos, protección de vivienda y declaratorias.</p></div><div class="card-serv"><div class="card-num">04</div><h3 data-i18n="serv_cert_t">Certificaciones</h3><p data-i18n="serv_cert_d">Firmas, copias certificadas, actas de constatación y reglamentos.</p></div></div></section>
-<style>
 .section-estudio{padding:90px 48px;background:white}
 .estudio-main{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start}
 .valores-col{display:flex;flex-direction:column;gap:1px;background:var(--border-color);border:1px solid var(--border-color);height:fit-content}
@@ -97,16 +79,52 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
 .logo-footer-img{width:124px;height:auto;display:block;filter:brightness(0) invert(1);opacity:.9}
 
-/* === RIGANTI PARCHE FINAL DIAGONAL SIMETRICA 1920px === */
-.boceto-full-wrap,.imagen-hall-wrap { width:100%; overflow:hidden; background:#faf9f7; line-height:0; border:1px solid var(--border-color); }
-.boceto-full-img,.imagen-hall { width:100%; height:72vh; min-height:520px; max-height:760px; object-fit:cover; object-position:center; display:block; filter:contrast(1.02) brightness(1.02); }
+/* === RIGANTI ELITE - DIAGONAL 1920px + PAPELERIA + AIRE === */
+.boceto-full-wrap,.imagen-hall-wrap{width:100%;overflow:hidden;background:#faf9f7;line-height:0;border:1px solid var(--border-color)}
+.boceto-full-img,.imagen-hall{width:100%;height:72vh;min-height:520px;max-height:760px;object-fit:cover;object-position:center;display:block;filter:contrast(1.02) brightness(1.02)}
 .boceto-caption{display:block;padding:12px 16px;font-size:9px;letter-spacing:2px;opacity:.4;text-transform:uppercase;background:white;line-height:1.5}
-@media(min-width:1024px){
- .boceto-full-img,.imagen-hall { height:78vh; min-height:600px; max-height:820px; }
-}
-@media(max-width:900px){.header-principal,.hero,.section-estudio,.seccion-contacto,.footer-premium,.seccion-family-office,.seccion-cierre{padding-left:20px;padding-right:20px}.grid-servicios{grid-template-columns:1fr 1fr}.estudio-main,.grid-2,.footer-grid,.contacto-grid{grid-template-columns:1fr;gap:32px}.boceto-full-wrap,.boceto-full-img,.imagen-hall-wrap,.imagen-hall{height:52vh;min-height:380px;max-height:520px}.logo img{height:54px!important}.header-principal{height:68px!important;padding:4px 14px!important}}
-</style>
+.section-estudio,.seccion-contacto,.seccion-family-office{padding-top:120px;padding-bottom:120px}
+.form-contacto input,.form-contacto textarea{background:transparent!important;border:0!important;border-bottom:1px solid rgba(14,26,43,.12)!important;border-radius:0!important;padding:18px 0 14px 0!important}
+.form-contacto input:focus,.form-contacto textarea:focus{border-bottom-color:var(--gold-dark)!important;box-shadow:none!important}
+.btn-hero,.btn-header,.btn-enviar{transition:all.6s cubic-bezier(.25,1,.5,1)!important}
+.btn-hero:hover,.btn-enviar:hover{letter-spacing:2.6px}
 
+/* === ELITE MOBILE - REFINADO === */
+@media screen and (max-width: 768px){
+ body{background:#faf9f6;-webkit-font-smoothing:antialiased}
+ section,.section-estudio,.seccion-contacto,.seccion-family-office,.seccion-cierre,.footer-premium,.hero{padding-left:24px!important;padding-right:24px!important;padding-top:72px!important;padding-bottom:72px!important}
+.hero h1{font-size:42px!important;line-height:.92!important}
+.fo-texto h2,.section-estudio h2,.contacto-grid h2{font-size:36px!important;line-height:.95!important}
+.eyebrow{font-size:9px!important;letter-spacing:3.5px!important}
+.btn-hero,.btn-enviar{width:100%;text-align:center;justify-content:center;padding:20px 24px!important;border-radius:0!important}
+.grid-servicios{grid-template-columns:1fr!important;gap:0!important;border:0!important;background:transparent!important}
+.card-serv{border-bottom:1px solid #E8E2D9;padding:28px 0!important;background:transparent!important}
+.card-num{font-size:12px!important;letter-spacing:2px;opacity:.35}
+.boceto-full-wrap,.imagen-hall-wrap{border:0!important;margin:32px 0!important}
+.boceto-full-img,.imagen-hall{height:56vh!important;min-height:400px!important;max-height:520px!important}
+.header-principal{height:68px!important;padding:4px 16px!important}
+.logo img{height:52px!important}
+.nav-principal{gap:14px!important}
+.nav-principal a.nav-link{display:none}
+.grid-2,.estudio-main,.footer-grid,.contacto-grid{grid-template-columns:1fr!important;gap:32px!important}
+}
+</style>
+</head>
+<body>
+<header class="header-principal">
+<a href="#" class="logo"><img src="logo-pluma-riganti-transparente.webp" alt="RIGANTI"></a>
+<nav class="nav-principal">
+<a href="#servicios" class="nav-link" data-i18n="nav_serv">SERVICIOS</a>
+<a href="#family-office" class="nav-link" data-i18n="nav_fo">FAMILY OFFICE</a>
+<a href="#estudio" class="nav-link" data-i18n="nav_est">ESTUDIO</a>
+<a href="#contacto" class="nav-link" data-i18n="nav_cont">CONTACTO</a>
+<a href="#contacto" class="btn-header" data-i18n="btn_turno_header">SOLICITAR TURNO</a>
+<div class="lang-switch"><span id="btn-es" class="active" onclick="setLang('es')">ES</span><span class="sep">|</span><span id="btn-en" class="inactive" onclick="setLang('en')">EN</span></div>
+</nav>
+</header>
+<div class="barra-flotante-contacto"><a href="https://wa.me/5491148001234" class="item-flotante"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a><a href="tel:+541148001234" class="item-flotante"><i class="fa-solid fa-phone"></i></a><a href="#contacto" class="item-flotante item-dorado">→</a></div>
+<section class="hero"><div class="hero-wrapper"><span class="eyebrow" data-i18n="hero_eyebrow">Seguridad jurídica · CABA</span><h1 data-i18n="hero_title">RIGANTI<br><i>Escribanía</i></h1><p data-i18n="hero_sub">90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p><a href="#contacto" class="btn-hero" data-i18n="btn_turno">SOLICITAR TURNO →</a></div></section>
+<section id="servicios" class="seccion-servicios"><div class="grid-servicios"><div class="card-serv"><div class="card-num">01</div><h3 data-i18n="serv_compra_t">Compraventa</h3><p data-i18n="serv_compra_d">Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div><div class="card-serv"><div class="card-num">02</div><h3 data-i18n="serv_soc_t">Sociedades</h3><p data-i18n="serv_soc_d">Constitución, actas de directorio, poderes y reformas estatutarias.</p></div><div class="card-serv"><div class="card-num">03</div><h3 data-i18n="serv_fam_t">Familia y Sucesiones</h3><p data-i18n="serv_fam_d">Donaciones, testamentos, protección de vivienda y declaratorias.</p></div><div class="card-serv"><div class="card-num">04</div><h3 data-i18n="serv_cert_t">Certificaciones</h3><p data-i18n="serv_cert_d">Firmas, copias certificadas, actas de constatación y reglamentos.</p></div></div></section>
 <section id="estudio" class="section-estudio">
 <div class="estudio-main">
 <div>
@@ -114,7 +132,7 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 <h2 style="font-size:52px;line-height:.95" data-i18n="estudio_title">Tres generaciones<br><i style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-dark)">custodiando su patrimonio.</i></h2>
 <p style="margin-top:16px;opacity:.6;max-width:520px" data-i18n="estudio_p">Somos herederos de una tradición notarial de 90 años. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
 <div class="boceto-full-wrap">
-<img src="sala-escribania-mitad.jpg" class="boceto-full-img" alt="Mesa de acuerdos - mitad boceto mitad foto" loading="lazy">
+<img src="sala-escribania-mitad.webp" class="boceto-full-img" alt="Mesa de acuerdos - mitad boceto mitad foto" loading="lazy">
 <span class="boceto-caption">Mesa de acuerdos · Boceto → Realidad · Sede Microcentro</span>
 </div>
 <blockquote style="margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;opacity:.8" data-i18n="estudio_quote">"Una escritura bien hecha perdura por generaciones."</blockquote>
@@ -127,9 +145,8 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </div>
 </div>
 </section>
-
 <section class="seccion-cierre">
-<div style="position:absolute;inset:0" class="imagen-hall-wrap"><img src="hall-escribania-mitad.jpg" class="imagen-hall" alt="Hall escribanía - mitad foto mitad boceto" loading="lazy"><div class="overlay"></div></div>
+<div style="position:absolute;inset:0" class="imagen-hall-wrap"><img src="hall-escribania-mitad.webp" class="imagen-hall" alt="Hall escribanía - mitad foto mitad boceto" loading="lazy"><div class="overlay"></div></div>
 <div class="contenido-cierre">
 <span class="eyebrow" style="color:var(--gold);opacity:.9" data-i18n="sede_eyebrow">NUESTRA SEDE</span>
 <h2 style="font-size:58px;line-height:.9;font-family:'Cormorant Garamond',serif" data-i18n="sede_title">Microcentro</h2>
@@ -137,7 +154,6 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 <a href="#contacto" style="display:inline-block;margin-top:24px;background:white;color:var(--bg-dark);padding:16px 36px;text-decoration:none;font-size:11px;letter-spacing:2px" data-i18n="btn_turno">SOLICITAR TURNO →</a>
 </div>
 </section>
-
 <section id="contacto" class="seccion-contacto">
 <div class="contacto-grid">
 <div>
@@ -157,7 +173,6 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </form>
 </div>
 </section>
-
 <footer class="footer-premium">
 <div class="footer-grid">
 <div><img src="logo-pluma-riganti-transparente.webp" alt="RIGANTI" class="logo-footer-img"><p style="margin-top:12px;font-size:10px;letter-spacing:2px;opacity:.6;color:var(--gold)">ESCRIBANÍA · MAT. 1847</p><p style="margin-top:16px;font-size:13px;opacity:.5;font-style:italic">Tradición notarial con<br>el respaldo de siempre.</p></div>
@@ -167,7 +182,6 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </div>
 <div style="margin-top:80px;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;font-size:9px;opacity:.3"><span>© 2026 RIGANTI ESCRIBANÍA · REG. 2136 · CABA</span><span>COLEGIO DE ESCRIBANOS CABA</span></div>
 </footer>
-
 <script>
 document.fonts.ready.then(()=>{document.documentElement.classList.add('fonts-loaded')});
 setTimeout(()=>document.documentElement.classList.add('fonts-loaded'),1200);
@@ -217,4 +231,3 @@ s.style.display='block';s.style.color='#0E1A2B';s.textContent=(localStorage.getI
 </script>
 </body>
 </html>
-
