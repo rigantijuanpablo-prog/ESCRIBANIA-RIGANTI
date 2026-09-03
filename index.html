@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escribanía Riganti & Asociados | CABA - 90 Años</title>
-    
-    <!-- Fuentes Elegantes: Cormorant Garamond e Inter con todos sus pesos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
-    
-    <!-- Iconos de Línea Premium -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    
-    <style>
-        :root {
-            --bg-primary: #0a0f1d;       /* Azul noche corporativo profundo */
-            --bg-secondary: #111827;     /* Variación sutil para secciones */
-            --gold: #c5a880;             /* Dorado Champagne sofisticado (no chillón) */
-            --gold-hover: #e2cfa2;
-            --text-main: #f3f4f6;        /* Blanco marfil suave */
-            --text-muted: #9ca3af;       /* Gris elegante para descripciones */
-            --border-color: rgba(197, 168, 128, 0.15);
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escribanía Riganti & Asociados | CABA - 90 Años</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+--bg-primary:#F9F6F1;
+--bg-secondary:#FFFFFF;
+--bg-dark:#0E1A2B;
+--gold:#C9B896;
+--gold-dark:#b8a17a;
+--text-main:#0E1A2B;
+--text-muted:rgba(14,26,43,0.6);
+--border:rgba(14,26,43,0.08);
+--border-gold:rgba(201,184,150,0.25);
+--transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-main);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:0.02em}
+.eyebrow{font-size:10px;letter-spacing:4px;color:var(--text-main);opacity:0.5;text-transform:uppercase;display:block;margin-bottom:16px;font-weight:500}
+.eyebrow.gold{color:var(--gold-dark);opacity:1}
+.linea-decorativa{width:60px;height:1px;background:var(--gold);margin:28px 0}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* HEADER */
+.header-principal{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 48px;background:rgba(249,246,241,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-text{color:var(--text-main);font-family:'Cormorant Garamond',serif;letter-spacing:4px;font-size:18px;line-height:1}
+.logo-text span{font-family:'Inter';font-size:9px;letter-spacing:2px;opacity:0.5;display:block;margin-top:2px}
+.nav-principal{display:flex;gap:32px;align-items:center}
+.nav-principal a{text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--text-main);opacity:0.7;transition:var(--transition)}
+.nav-principal a:hover{opacity:1}
+.btn-header{border:1px solid var(--text-main);padding:11px 20px;opacity:1!important}
+.btn-header:hover{background:var(--bg-dark);color:white!important}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+/* BARRA FLOTANTE - PASTILLA TRANSLUCIDA SUTIL PERO VISIBLE */
+.barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90;background:rgba(255,255,255,0.42);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,0.45);border-radius:28px;padding:12px 7px;box-shadow:0 12px 32px rgba(14,26,43,0.1)}
+.item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.65);border-radius:50%;text-decoration:none;color:var(--text-main);font-size:14px;transition:var(--transition)}
+.item-flotante:hover{transform:scale(1.06);background:white}
+.item-flotante.item-dorado{background:rgba(201,184,150,0.28);border:1px solid rgba(201,184,150,0.35)}
 
-        h1, h2, h3, h4, .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            letter-spacing: 0.02em;
-        }
+/* HERO */
+.hero{min-height:90vh;padding:160px 48px 80px;display:flex;align-items:center;background:radial-gradient(circle at 85% 30%,rgba(201,184,150,0.12) 0%,transparent 55%)}
+.hero-wrapper{max-width:800px}
+.hero h1{font-size:72px;line-height:0.95;margin-bottom:28px}
+.hero h1 i{font-style:italic;color:var(--gold-dark)}
+.hero p{max-width:520px;color:var(--text-muted);font-size:16px;margin-bottom:8px}
+.btn-hero{display:inline-block;margin-top:32px;background:var(--bg-dark);color:white;padding:16px 32px;text-decoration:none;font-size:11px;letter-spacing:2px;transition:var(--transition)}
+.btn-hero:hover{background:#1a2d4a;transform:translateY(-1px)}
 
-        .eyebrow {
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: var(--gold);
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
+/* SERVICIOS */
+.seccion-servicios{padding:0 48px 80px}
+.grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E8E2D9;border:1px solid #E8E2D9}
+.card-serv{background:white;padding:36px 32px;transition:var(--transition);position:relative}
+.card-serv:hover{background:#F9F6F1;transform:translateY(-2px)}
+.card-num{font-family:'Cormorant Garamond',serif;font-size:22px;color:rgba(201,184,150,0.5);margin-bottom:16px}
+.card-serv h3{margin-bottom:10px;font-size:22px}
+.card-serv p{font-size:13px;opacity:0.6;line-height:1.6}
 
-        /* Utilidades Premium */
-        .section-padding { padding: 140px 48px; }
-        .max-width-container { max-width: 1300px; margin: 0 auto; }
-        .linea-decorativa { width: 60px; height: 1px; background: var(--gold); margin: 28px 0; opacity: 0.6; }
+/* ESTUDIO */
+.section-estudio{padding:80px 48px;background:white}
+.estudio-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;max-width:1300px;margin:0 auto}
+.texto-estudio h2{font-size:52px;line-height:0.95;margin-bottom:24px}
+.texto-estudio>p{color:var(--text-muted);margin-bottom:16px;max-width:520px;font-size:15px}
+.boceto-lateral-wrap{margin:36px 0;border:1px solid var(--border);padding:12px;background:var(--bg-primary);max-width:380px}
+.boceto-lateral-img{width:100%;display:block;opacity:0.92;mix-blend-mode:multiply;filter:contrast(1.08)}
+.boceto-caption{display:block;margin-top:10px;font-size:9px;letter-spacing:2px;opacity:0.4;text-transform:uppercase}
+blockquote{margin-top:36px;border-left:2px solid var(--gold);padding-left:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;opacity:0.8;line-height:1.2}
+.valores-col{display:flex;flex-direction:column;gap:1px;background:#E8E2D9;border:1px solid #E8E2D9;height:fit-content}
+.tarjeta-valor{background:#F9F6F1;padding:28px}
+.tarjeta-valor.dark{background:var(--bg-dark);color:#F9F6F1}
+.tarjeta-valor h4{font-size:11px;letter-spacing:2px;margin-bottom:8px}
+.tarjeta-valor p{font-size:13px;opacity:0.7;line-height:1.4}
 
-        @media (max-width: 900px) {
-            .section-padding { padding: 90px 24px; }
-        }
-    </style>
+/* CIERRE - SUTIL PERO QUE SE VE 0.42 */
+.seccion-cierre-premium{position:relative;height:76vh;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-primary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.capa-fondo-imagen{position:absolute;inset:0}
+.imagen-boceto-blur{width:100%;height:100%;object-fit:cover;opacity:0.42;display:block;filter:contrast(1.1) brightness(1.02)}
+.overlay-marfil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(249,246,241,0.15) 0%,rgba(249,246,241,0.88) 85%)}
+.contenido-cierre{position:relative;z-index:2;text-align:center;max-width:560px;padding:24px}
+.contenido-cierre h2{font-size:56px;margin-bottom:12px}
+.contenido-cierre p{opacity:0.6;margin-bottom:28px;font-size:15px}
+.f-btn-premium{display:inline-block;background:var(--bg-dark);color:white;padding:14px 32px;text-decoration:none;font-size:11px;letter-spacing:2px;border:1px solid var(--bg-dark);transition:var(--transition)}
+.f-btn-premium:hover{background:transparent;color:var(--text-main)}
+
+/* CONTACTO */
+.seccion-contacto{padding:80px 48px;background:white}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1200px;margin:0 auto}
+.contacto-grid h2{font-size:46px;margin-bottom:16px}
+.form-premium{display:flex;flex-direction:column;gap:16px}
+.form-premium input,.form-premium textarea{border:1px solid #E8E2D9;padding:14px 16px;background:var(--bg-primary);font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:var(--transition)}
+.form-premium input:focus,.form-premium textarea:focus{border-color:var(--gold);background:white}
+.form-premium textarea{min-height:120px;resize:vertical}
+.form-premium button{background:var(--bg-dark);color:white;border:0;padding:16px;letter-spacing:2px;font-size:11px;cursor:pointer;transition:var(--transition)}
+.form-premium button:hover{background:#1a2d4a}
+
+/* FOOTER SIN COOKIES */
+.footer-premium{background:var(--bg-dark);color:#F9F6F1;padding:80px 48px 24px}
+.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
+.logo-footer{font-family:'Cormorant Garamond',serif;font-weight:300;letter-spacing:6px;color:var(--gold);margin:0;font-size:28px}
+.sub-logo{font-size:11px;letter-spacing:2px;margin-top:8px;opacity:0.6;color:var(--gold)}
+.claim-footer{font-size:13px;opacity:0.5;margin-top:16px;font-style:italic;line-height:1.4}
+.footer-eyebrow{font-size:9px;letter-spacing:2.5px;opacity:0.4;display:block;margin-bottom:20px;color:var(--gold)}
+.col-links a{display:block;font-size:13px;opacity:0.6;margin-bottom:10px;text-decoration:none;color:white;transition:var(--transition)}
+.col-links a:hover{opacity:1;padding-left:4px;color:var(--gold)}
+.btn-footer{display:inline-block;margin-top:16px;border:1px solid rgba(201,184,150,0.4);padding:12px 24px;font-size:10px;letter-spacing:2px;color:var(--gold);text-decoration:none;transition:var(--transition)}
+.btn-footer:hover{background:var(--gold);color:var(--bg-dark)}
+.footer-bottom{margin-top:80px;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;opacity:0.3;max-width:1300px;margin-left:auto;margin-right:auto}
+#cookies-banner,.cookies-premium,div[class*="cookie"],div[id*="cookie"]{display:none!important}
+
+@media(max-width:900px){
+.header-principal,.hero,.seccion-servicios,.section-estudio,.seccion-contacto,.footer-premium{padding-left:20px;padding-right:20px}
+.grid-servicios{grid-template-columns:1fr 1fr}
+.estudio-grid,.contacto-grid,.footer-grid{grid-template-columns:1fr;gap:40px}
+.hero h1{font-size:48px}
+.barra-flotante-contacto{right:10px}
+}
+</style>
 </head>
 <body>
-<!-- HEADER PRINCIPAL PREMIUM -->
+
 <header class="header-principal">
   <div class="logo">
-    <!-- Tu hermoso SVG adaptado con el color dorado corporativo variable -->
     <svg width="32" height="36" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="var(--gold)" stroke-width="1.3" fill="none"/>
-      <path d="M27 22 L53 22" stroke="var(--gold)" stroke-width="1.3"/>
-      <circle cx="40" cy="48" r="3.5" stroke="var(--gold)" stroke-width="1" fill="none"/>
-      <path d="M40 51 L40 67" stroke="var(--gold)" stroke-width="0.8"/>
-      <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8 C 58 6, 50 7, 46 12 C 42 18, 40 26, 40 32" stroke="var(--gold)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-      <path d="M40 32 C 44 28, 52 20, 58 19" stroke="var(--gold)" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+      <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.3" fill="none"/>
+      <path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.3"/>
+      <circle cx="40" cy="48" r="3.5" stroke="#C9B896" stroke-width="1" fill="none"/>
+      <path d="M40 51 L40 67" stroke="#C9B896" stroke-width="0.8"/>
+      <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8 C 58 6, 50 7, 46 12 C 42 18, 40 26, 40 32" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/>
     </svg>
     <div class="logo-text">RIGANTI <span>ESCRIBANÍA & ASOCIADOS</span></div>
   </div>
@@ -88,740 +144,104 @@
   </nav>
 </header>
 
-<!-- BARRA FLOTANTE TRANSLÚCIDA PREMIUM -->
-<div class="barra-flotante-contacto escribania">
+<div class="barra-flotante-contacto">
   <a href="#" class="item-flotante" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <a href="#" class="item-flotante" title="Email"><i class="fa-regular fa-envelope"></i></a>
   <a href="#" class="item-flotante" title="Teléfono"><i class="fa-solid fa-phone"></i></a>
   <a href="#contacto" class="item-flotante item-dorado">→</a>
 </div>
 
-<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-wrapper">
     <span class="eyebrow">Seguridad jurídica · CABA</span>
     <h1>Escribanía Riganti<br><i>& Asociados</i></h1>
     <p>90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p>
-    <a href="#contacto" class="btn-hero">SOLICITAR TURNO &nbsp;→</a>
+    <a href="#contacto" class="btn-hero">SOLICITAR TURNO →</a>
   </div>
 </section>
 
-<!-- AGREGAMOS ESTILOS ADICIONALES ESPECÍFICOS PARA ESTA TANDA -->
-<style>
-/* Estilos Avanzados Header */
-.header-principal {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 8%;
-    background: rgba(10, 15, 29, 0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border-color);
-}
-.logo-text {
-    color: var(--text-main);
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 4px;
-    font-size: 19px;
-    line-height: 1;
-}
-.logo-text span {
-    font-family: 'Inter', sans-serif;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    display: block;
-    margin-top: 4px;
-}
-.nav-principal { display: flex; gap: 35px; align-items: center; }
-.nav-principal a {
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    transition: var(--transition);
-}
-.nav-principal a:hover { color: var(--gold); }
-.btn-header {
-    border: 1px solid var(--gold);
-    color: var(--gold) !important;
-    padding: 12px 24px;
-    transition: var(--transition);
-}
-.btn-header:hover {
-    background: var(--gold);
-    color: var(--bg-primary) !important;
-}
-
-/* Barra Flotante de Contacto */
-.barra-flotante-contacto {
-    position: fixed;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 90;
-    background: rgba(17, 24, 39, 0.45);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    padding: 16px 8px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-.item-flotante {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-    text-decoration: none;
-    color: var(--text-main);
-    font-size: 14px;
-    transition: var(--transition);
-}
-.item-flotante:hover {
-    transform: scale(1.08);
-    background: var(--gold);
-    color: var(--bg-primary);
-    border-color: var(--gold);
-}
-.item-flotante.item-dorado {
-    background: rgba(197, 168, 128, 0.15);
-    border: 1px solid var(--gold);
-    color: var(--gold);
-}
-.item-flotante.item-dorado:hover {
-    background: var(--gold);
-    color: var(--bg-primary);
-}
-
-/* Hero Moderno */
-.hero {
-    min-height: 95vh;
-    padding: 180px 8% 100px;
-    display: flex;
-    align-items: center;
-    background: radial-gradient(circle at 85% 30%, rgba(197, 168, 128, 0.07) 0%, transparent 55%);
-}
-.hero-wrapper { max-width: 780px; }
-.hero h1 {
-    font-size: 68px;
-    line-height: 1.1;
-    margin-bottom: 28px;
-    color: var(--text-main);
-}
-.hero h1 i {
-    font-style: italic;
-    color: var(--gold);
-}
-.hero p {
-    max-width: 540px;
-    color: var(--text-muted);
-    font-size: 17px;
-    font-weight: 300;
-    margin-bottom: 12px;
-}
-.btn-hero {
-    display: inline-block;
-    margin-top: 36px;
-    background: var(--gold);
-    color: var(--bg-primary);
-    padding: 16px 36px;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: var(--transition);
-    box-shadow: 0 10px 25px rgba(197, 168, 128, 0.15);
-}
-.btn-hero:hover {
-    background: var(--gold-hover);
-    transform: translateY(-2px);
-}
-
-@media(max-width:900px){
-    .header-principal { padding: 18px 24px; }
-    .nav-principal { display: none; } /* En responsive se simplifica */
-    .hero h1 { font-size: 44px; }
-    .barra-flotante-contacto { right: 12px; padding: 12px 6px; }
-    .item-flotante { width: 36px; height: 36px; font-size: 12px; }
-}
-</style>
-<!-- SECCIÓN SERVICIOS -->
 <section id="servicios" class="seccion-servicios">
   <div class="grid-servicios">
-    <div class="card-serv">
-      <div class="card-num">01</div>
-      <h3>Compraventa</h3>
-      <p>Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas líquidas.</p>
-    </div>
-    <div class="card-serv">
-      <div class="card-num">02</div>
-      <h3>Sociedades</h3>
-      <p>Constitución, actas de directorio, estructuras de poderes y reformas estatutarias mercantiles.</p>
-    </div>
-    <div class="card-serv">
-      <div class="card-num">03</div>
-      <h3>Familia y Sucesiones</h3>
-      <p>Donaciones, planificación de testamentos, protección de vivienda institucional y declaratorias.</p>
-    </div>
-    <div class="card-serv">
-      <div class="card-num">04</div>
-      <h3>Certificaciones</h3>
-      <p>Firmas, copias debidamente certificadas, actas de constatación directa y reglamentos complejos.</p>
-    </div>
+    <div class="card-serv"><div class="card-num">01</div><h3>Compraventa</h3><p>Escrituras, boletos y control exhaustivo de títulos, inhibiciones y deudas.</p></div>
+    <div class="card-serv"><div class="card-num">02</div><h3>Sociedades</h3><p>Constitución, actas de directorio, poderes y reformas estatutarias.</p></div>
+    <div class="card-serv"><div class="card-num">03</div><h3>Familia y Sucesiones</h3><p>Donaciones, testamentos, protección de vivienda y declaratorias.</p></div>
+    <div class="card-serv"><div class="card-num">04</div><h3>Certificaciones</h3><p>Firmas, copias certificadas, actas de constatación y reglamentos.</p></div>
   </div>
 </section>
 
-<!-- ESTILOS ESPECÍFICOS PARA LA TANDA 3 -->
-<style>
-.seccion-servicios {
-    padding: 60px 8% 120px;
-    background: var(--bg-primary);
-}
-.grid-servicios {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    background: transparent;
-    border: none;
-}
-.card-serv {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    padding: 48px 36px;
-    position: relative;
-    transition: var(--transition);
-}
-.card-serv:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    background: rgba(197, 168, 128, 0.02);
-}
-.card-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    color: rgba(197, 168, 128, 0.25);
-    margin-bottom: 24px;
-}
-.card-serv h3 {
-    margin-bottom: 14px;
-    font-size: 24px;
-    color: var(--text-main);
-    font-weight: 400;
-}
-.card-serv p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-weight: 300;
-}
-
-@media(max-width:1024px){
-    .grid-servicios { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-}
-@media(max-width:640px){
-    .grid-servicios { grid-template-columns: 1fr; }
-}
-</style>
-<!-- SECCIÓN ESTUDIO / TRAYECTORIA -->
 <section id="estudio" class="section-estudio">
   <div class="estudio-grid">
     <div class="texto-estudio">
-      <span class="eyebrow">90 AÑOS DE TRADICIÓN</span>
+      <span class="eyebrow gold">90 AÑOS DE TRADICIÓN</span>
       <h2>Tres generaciones<br><i>custodiando su patrimonio.</i></h2>
       <div class="linea-decorativa"></div>
       <p>Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
       <p>Cada escritura es revisada personalmente por el titular. No tercerizamos la seguridad jurídica.</p>
-      
-      <!-- Bloque de boceto adaptado a marco premium -->
       <div class="boceto-lateral-wrap">
         <img src="boceto-mujer.jpg" alt="Detalle Escribanía Riganti" class="boceto-lateral-img">
         <span class="boceto-caption">DETALLE · SEDE RECOLETA · ARCHIVO 1936</span>
       </div>
-
       <blockquote>"Una escritura bien hecha perdura por generaciones."</blockquote>
     </div>
-    
-    <!-- Columna de Atributos Notariales -->
     <div class="valores-col">
-      <div class="tarjeta-valor">
-        <h4>SEGURIDAD JURÍDICA</h4>
-        <p>Control exhaustivo de títulos, inhibiciones y deudas. Estudio retrospectivo de 30 años.</p>
-      </div>
-      <div class="tarjeta-valor">
-        <h4>DISCRECIÓN ABSOLUTA</h4>
-        <p>Trato personal directo con el escribano titular. Absoluta confidencialidad sin intermediarios.</p>
-      </div>
-      <div class="tarjeta-valor">
-        <h4>AGILIDAD NOTARIAL</h4>
-        <p>Gestión integral y eficiente ante los registros. Usted solo firma, nosotros hacemos el resto.</p>
-      </div>
-      <div class="tarjeta-valor dark">
-        <h4>TRADICIÓN · MAT. 1847</h4>
-        <p>Miembros del Colegio de Escribanos CABA desde 1936. Tres generaciones de respaldo.</p>
-      </div>
+      <div class="tarjeta-valor"><h4>SEGURIDAD JURÍDICA</h4><p>Control exhaustivo de títulos, inhibiciones y deudas. Estudio de 30 años.</p></div>
+      <div class="tarjeta-valor"><h4>DISCRECIÓN ABSOLUTA</h4><p>Trato personal directo con el escribano titular. Sin intermediarios.</p></div>
+      <div class="tarjeta-valor"><h4>AGILIDAD NOTARIAL</h4><p>Gestión integral ante registros. Usted solo firma. Nosotros hacemos el resto.</p></div>
+      <div class="tarjeta-valor dark"><h4>TRADICIÓN · MAT. 1847</h4><p>Colegio de Escribanos CABA desde 1936. Tres generaciones.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SECCIÓN CIERRE / PALACIO MICROCENTRO -->
 <section class="seccion-cierre-premium">
   <div class="capa-fondo-imagen">
     <img src="boceto-pasillo-sin-arbolito.jpg" alt="Palacio Riganti" class="imagen-boceto-blur">
     <div class="overlay-marfil"></div>
   </div>
   <div class="contenido-cierre">
-    <span class="eyebrow">NUESTRA SEDE</span>
+    <span class="eyebrow gold">NUESTRA SEDE</span>
     <h2>Microcentro</h2>
-    <p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, estructurado para brindar atención en un marco privado y discreto.</p>
-    <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO &nbsp;→</a>
+    <p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.</p>
+    <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
   </div>
 </section>
 
-<!-- ESTILOS ESPECÍFICOS PARA LA TANDA 4 -->
-<style>
-.section-estudio {
-    padding: 120px 8%;
-    background: var(--bg-secondary);
-}
-.estudio-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 80px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.texto-estudio h2 {
-    font-size: 54px;
-    line-height: 1.1;
-    margin-bottom: 24px;
-    color: var(--text-main);
-}
-.texto-estudio h2 i {
-    font-style: italic;
-    color: var(--gold);
-}
-.texto-estudio > p {
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    max-width: 540px;
-    font-size: 15px;
-    font-weight: 300;
-}
-.boceto-lateral-wrap {
-    margin: 40px 0;
-    border: 1px solid var(--border-color);
-    padding: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    max-width: 400px;
-}
-.boceto-lateral-img {
-    width: 100%;
-    display: block !important;
-    opacity: 0.8;
-}
-.boceto-caption {
-    display: block;
-    margin-top: 12px;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--gold);
-    opacity: 0.7;
-    text-transform: uppercase;
-}
-blockquote {
-    margin-top: 40px;
-    border-left: 2px solid var(--gold);
-    padding-left: 24px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 26px;
-    color: var(--text-main);
-    opacity: 0.9;
-    line-height: 1.3;
-}
-.valores-col {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: transparent;
-    border: none;
-    height: fit-content;
-}
-.tarjeta-valor {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    padding: 32px;
-    transition: var(--transition);
-}
-.tarjeta-valor:hover {
-    border-color: var(--gold);
-    background: rgba(197, 168, 128, 0.02);
-}
-.tarjeta-valor.dark {
-    background: var(--bg-primary);
-    border-color: var(--gold);
-}
-.tarjeta-valor h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: var(--gold);
-}
-.tarjeta-valor p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-weight: 300;
-}
-
-/* Estilos de Fondo de Cierre Palacio */
-.seccion-cierre-premium {
-    position: relative;
-    height: 70vh;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-.capa-fondo-imagen { position: absolute; inset: 0; }
-.imagen-boceto-blur {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.18; /* Atenuado para casar con el diseño premium oscuro */
-    display: block !important;
-}
-.overlay-marfil {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(10, 15, 29, 0.4) 0%, var(--bg-primary) 90%);
-}
-.contenido-cierre {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 600px;
-    padding: 24px;
-}
-.contenido-cierre h2 {
-    font-size: 58px;
-    margin-bottom: 16px;
-    color: var(--text-main);
-}
-.contenido-cierre p {
-    color: var(--text-muted);
-    margin-bottom: 36px;
-    font-size: 16px;
-    font-weight: 300;
-}
-.f-btn-premium {
-    display: inline-block;
-    background: transparent;
-    color: var(--gold);
-    padding: 16px 36px;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-    border: 1px solid var(--gold);
-    transition: var(--transition);
-    opacity: 1 !important;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-.f-btn-premium:hover {
-    background: var(--gold);
-    color: var(--bg-primary);
-}
-
-@media(max-width:900px){
-    .estudio-grid { grid-template-columns: 1fr; gap: 40px; }
-    .texto-estudio h2 { font-size: 40px; }
-    .contenido-cierre h2 { font-size: 42px; }
-}
-</style>
-<!-- SECCIÓN CONTACTO Y TURNOS -->
 <section id="contacto" class="seccion-contacto">
   <div class="contacto-grid">
     <div>
-      <span class="eyebrow">CONTACTO DIRECTO</span>
+      <span class="eyebrow gold">CONTACTO DIRECTO</span>
       <h2>Agende su turno</h2>
-      <p class="contacto-info-texto">
-        Atención con turno previo. Escribano titular.<br><br>
-        <strong>Maipú 497, 4° Piso</strong><br>
-        C1023AAR · CABA<br><br>
-        <i class="fa-solid fa-phone text-gold-inline"></i> +54 11 4800-1234<br>
-        <i class="fa-regular fa-envelope text-gold-inline"></i> info@riganti.com.ar<br><br>
-        Lunes a Viernes 10 a 18hs
-      </p>
+      <p style="margin-top:16px;opacity:0.6;line-height:1.6">Atención con turno previo. Escribano titular.<br><br><strong>Maipú 497, 4° Piso</strong><br>C1023AAR · CABA<br><br><i class="fa-solid fa-phone" style="color:var(--gold)"></i> +54 11 4800-1234<br><i class="fa-regular fa-envelope" style="color:var(--gold)"></i> info@riganti.com.ar<br><br>Lunes a Viernes 10 a 18hs</p>
     </div>
-    
-    <!-- Formulario de Consulta Notarial -->
-    <form class="form-premium" onsubmit="event.preventDefault(); alert('Gracias por comunicarse con Escribanía Riganti. Nos contactaremos a la brevedad.');">
+    <form class="form-premium" onsubmit="event.preventDefault();alert('Gracias, nos contactaremos.');">
       <input type="text" placeholder="Nombre y Apellido" required>
       <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Teléfono de Contacto">
-      <textarea placeholder="Cuéntenos su consulta patrimonial o societaria..." required></textarea>
+      <input type="tel" placeholder="Teléfono">
+      <textarea placeholder="Cuéntenos su consulta..." required></textarea>
       <button type="submit">ENVIAR CONSULTA</button>
     </form>
   </div>
 </section>
 
-<!-- PIE DE PÁGINA INSTITUCIONAL PREMIUM -->
 <footer class="footer-premium">
   <div class="footer-grid">
     <div class="col-marca">
-      <div class="footer-logo-wrap">
-        <!-- Logo SVG adaptado al entorno del footer -->
-        <svg width="28" height="32" viewBox="0 0 80 100" fill="none" xmlns="http://w3.org">
-          <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
-          <path d="M27 22 L53 22" stroke="var(--gold)" stroke-width="1.2"/>
-          <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8" stroke="var(--gold)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+        <svg width="28" height="32" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 20 L26 45 Q32 55 40 68 Q48 55 54 45 L40 20 Z" stroke="#C9B896" stroke-width="1.2" fill="none"/>
+          <path d="M27 22 L53 22" stroke="#C9B896" stroke-width="1.2"/>
+          <path d="M41 52 C 36 42, 34 28, 42 18 C 46 12, 54 6, 62 8" stroke="#C9B896" stroke-width="0.9" fill="none" stroke-linecap="round"/>
         </svg>
         <h2 class="logo-footer">RIGANTI</h2>
       </div>
       <p class="sub-logo">ESCRIBANÍA & ASOCIADOS · MAT. 1847</p>
       <p class="claim-footer"><i>Tradición notarial con<br>el respaldo de siempre.</i></p>
     </div>
-    
-    <div class="col-links">
-      <span class="footer-eyebrow">SERVICIOS NOTARIALES</span>
-      <a>Compraventa y Escrituras</a>
-      <a>Sociedades y Empresas</a>
-      <a>Sucesiones y Familia</a>
-      <a>Poderes y Actas</a>
-      <a>Hipotecas y Fideicomisos</a>
-    </div>
-    
-    <div class="col-dire">
-      <span class="footer-eyebrow">MICROCENTRO</span>
-      <p class="footer-text-muted">
-        Maipú 497, 4° Piso<br>
-        C1023AAR · CABA<br>
-        Atención con turno previo.<br>
-        Escribano Titular<br>
-        +54 11 4800-1234
-      </p>
-    </div>
-    
-    <div class="col-cta">
-      <span class="footer-eyebrow">TURNOS</span>
-      <p class="footer-text-muted">Atención personalizada,<br>discreta y sin demoras.</p>
-      <a href="#contacto" class="btn-footer">SOLICITAR TURNO &nbsp;→</a>
-    </div>
+    <div class="col-links"><span class="footer-eyebrow">SERVICIOS NOTARIALES</span><a>Compraventa y Escrituras</a><a>Sociedades y Empresas</a><a>Sucesiones y Familia</a><a>Poderes y Actas</a><a>Hipotecas y Fideicomisos</a></div>
+    <div class="col-dire"><span class="footer-eyebrow">MICROCENTRO</span><p style="font-size:13px;opacity:0.6;line-height:1.6">Maipú 497, 4° Piso<br>C1023AAR · CABA<br>Atención con turno previo.<br>Escribano Titular<br>+54 11 4800-1234</p></div>
+    <div class="col-cta"><span class="footer-eyebrow">TURNOS</span><p style="font-size:13px;opacity:0.6">Atención personalizada,<br>discreta y sin demoras.</p><a href="#contacto" class="btn-footer">SOLICITAR TURNO →</a></div>
   </div>
-  
-  <div class="footer-bottom">
-    <span>© 2026 ESCRIBANÍA RIGANTI & ASOCIADOS · REG. 2136 · CABA</span>
-    <span>COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES</span>
-  </div>
+  <div class="footer-bottom"><span>© 2026 ESCRIBANÍA RIGANTI & ASOCIADOS · REG. 2136 · CABA</span><span>COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES</span></div>
 </footer>
-
-<!-- ESTILOS ESPECÍFICOS PARA LA TANDA 5 (FORMULARIO, FOOTER Y EXTINCIÓN DE COOKIES) -->
-<style>
-.seccion-contacto {
-    padding: 120px 8%;
-    background: var(--bg-primary);
-}
-.contacto-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.contacto-grid h2 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin-bottom: 24px;
-    color: var(--text-main);
-}
-.contacto-info-texto {
-    color: var(--text-muted);
-    font-size: 16px;
-    line-height: 1.7;
-    font-weight: 300;
-}
-.contacto-info-texto strong {
-    color: var(--text-main);
-}
-.text-gold-inline {
-    color: var(--gold);
-    margin-right: 8px;
-}
-.form-premium {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.form-premium input, .form-premium textarea {
-    border: 1px solid var(--border-color);
-    padding: 16px 20px;
-    background: var(--bg-secondary);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: var(--text-main);
-    outline: none;
-    transition: var(--transition);
-}
-.form-premium input:focus, .form-premium textarea:focus {
-    border-color: var(--gold);
-    background: rgba(255, 255, 255, 0.02);
-}
-.form-premium textarea {
-    min-height: 140px;
-    resize: vertical;
-}
-.form-premium button {
-    background: var(--gold);
-    color: var(--bg-primary);
-    border: 0;
-    padding: 18px;
-    letter-spacing: 2px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: var(--transition);
-}
-.form-premium button:hover {
-    background: var(--gold-hover);
-    transform: translateY(-1px);
-}
-
-/* Footer Premium Oscuro */
-.footer-premium {
-    background: #060913;
-    color: var(--text-main);
-    padding: 100px 8% 32px;
-    border-top: 1px solid var(--border-color);
-}
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1fr;
-    gap: 48px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.footer-logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-.logo-footer {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    letter-spacing: 6px;
-    color: var(--text-main);
-    margin: 0;
-    font-size: 30px;
-}
-.sub-logo {
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-top: 8px;
-    color: var(--gold);
-    font-weight: 500;
-}
-.claim-footer {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 20px;
-    line-height: 1.5;
-}
-.footer-eyebrow {
-    font-size: 10px;
-    letter-spacing: 2.5px;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 24px;
-    font-weight: 600;
-}
-.col-links a {
-    display: block;
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    text-decoration: none;
-    transition: var(--transition);
-    font-weight: 300;
-}
-.col-links a:hover {
-    color: var(--gold);
-    padding-left: 4px;
-}
-.footer-text-muted {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    font-weight: 300;
-}
-.btn-footer {
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid var(--gold);
-    padding: 12px 28px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--gold);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: var(--transition);
-}
-.btn-footer:hover {
-    background: var(--gold);
-    color: var(--bg-primary);
-}
-.footer-bottom {
-    margin-top: 100px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 24px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ELIMINAR SECCIONES DE COOKIES DE FORMA INMEDIATA Y DEFINITIVA */
-#cookies-banner, .cookies-premium, .cookies-banner, div[class*="cookie"], div[id*="cookie"] {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
-/* CONTROL RESPONSIVE FINAL */
-@media(max-width:900px){
-    .contacto-grid, .footer-grid { grid-template-columns: 1fr; gap: 48px; }
-    .contacto-grid h2 { font-size: 38px; }
-    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-}
-</style>
 
 </body>
 </html>
