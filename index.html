@@ -1,164 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escribanía Riganti & Asociados - Escribanos | Buenos Aires</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-      #inicio { opacity: 0; }
-      html.fonts-loaded #inicio { opacity: 1; transition: opacity 0.6s ease; }
-      html.fonts-failed #inicio { opacity: 1; }
-    </style>
-    <script>
-      document.fonts.ready.then(function(){ document.documentElement.classList.add('fonts-loaded'); });
-      setTimeout(function(){ if(!document.documentElement.classList.contains('fonts-loaded')){ document.documentElement.classList.add('fonts-failed'); } }, 3000);
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escribanía Riganti & Asociados | CABA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- CONTACTO FLOTANTE ESCRIBANÍA - SOBRIO -->
-<div class="barra-flotante-contacto escribania">
-    <a href="#contacto" class="item-flotante" title="Contacto">
-      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-    </a>
-    <a href="tel:+541143215555" class="item-flotante" title="Llamar">
-      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    </a>
-    <a href="#contacto" class="item-flotante" title="Ubicación">
-      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.3" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    </a>
-    <!-- ACCESO CLIENTES -->
-    <a href="./app.html" class="item-flotante item-dorado" title="Acceso Clientes">
-      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><rect x="3" y="11" width="18" height="10" rx="2.5"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path><circle cx="12" cy="16" r="1" fill="currentColor"></circle></svg>
-    </a> 
-</div>
-
-<!-- CABECERA ESCRIBANÍA -->
-<header id="mainHeader">
-  <a href="index.html" class="marca-estudio">
-    <div class="logo-lockup">
-      <img src="logo-escribania.webp" alt="Escribanía Riganti" class="header-logo-img">
-    </div>
-    <div class="nombre-estudio">
-      <span class="apellido-principal">ESCRIBANÍA RIGANTI</span>
-      <span class="apellido-secundario">& ASOCIADOS</span>
-    </div>
-  </a>
-
-  <!-- NAVEGACIÓN DESKTOP -->
-  <nav class="nav-desktop">
-    <ul>
-      <li><a href="#estudio">LA ESCRIBANÍA</a></li>
-      <li class="nav-item-mega">
-        <a href="#" id="triggerMega">SERVICIOS NOTARIALES</a>
-        <div class="mega-panel">
-          <div class="mega-left">
-            <span>ESCRIBANÍA / 2026</span>
-            <b>Servicios<br>Notariales</b>
-            <div class="mega-line"></div>
-            <p>Seguridad jurídica<br>con tradición.</p>
-          </div>
-          <div class="mega-grid-simple">
-            <a href="./compraventa.html">Compraventa y Escrituras <i>→</i></a>
-            <a href="./sociedades.html">Constitución de Sociedades <i>→</i></a>
-            <a href="./sucesiones.html">Sucesiones y Familia <i>→</i></a>
-            <a href="./poderes.html">Poderes y Actas <i>→</i></a>
-            <a href="./hipotecas.html">Hipotecas y Fideicomisos <i>→</i></a>
-            <a href="./certificaciones.html">Certificaciones y Legalizaciones <i>→</i></a>
-            <a href="./empresas.html">Asesoría a Empresas <i>→</i></a>
-            <a href="./internacional.html">Documentación Internacional <i>→</i></a>
-            <a href="./consultas.html">Consultas Notariales <i>→</i></a>
-          </div>
-        </div> 
-      </li>
-    </ul>
+<!-- HEADER LIMPIO -->
+<header class="header-principal">
+  <div class="logo">RIGANTI <span>ESCRIBANÍA & ASOCIADOS</span></div>
+  <nav class="nav-principal">
+    <a href="#servicios">SERVICIOS</a>
+    <a href="#estudio">ESTUDIO</a>
+    <a href="#contacto">CONTACTO</a>
+    <a href="#contacto" class="btn-header">SOLICITAR TURNO</a>
   </nav>
-  <!-- GRUPO DE ACCIONES DERECHA -->
-  <div class="right-group">
-    <a href="turnos.html" class="btn-area-flex">SOLICITAR TURNO</a>
-    <a href="#contacto" class="btn-nav">CONTACTO →</a>
-    <a href="servicios.html" class="investment-pill" id="investmentPill">
-      <span class="pill-new">CABA</span>
-      <span class="pill-text">Escribanía 1936 ↗</span>
-    </a>
-    <button class="btn-burger" id="btnBurger" aria-label="Abrir Menú">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
 </header>
 
-<!-- MOBILE OVERLAY ESCRIBANÍA -->
-<div class="mobile-overlay" id="mobileMenu">
-  <div class="mobile-head">
-    <span class="mobile-brand-editorial">RIGANTI</span>
-    <button id="closeMobile" aria-label="Cerrar Menú">✕</button>
-  </div>
-  <ul class="mobile-links">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#estudio">La Escribanía</a></li>
-    <li class="mobile-accordion">
-      <button class="acc-btn-editorial" id="accAreas" aria-expanded="false">Servicios Notariales</button>
-      <div class="acc-panel" id="panelAreas">
-        <a href="./compraventa.html">Compraventa y Escrituras</a>
-        <a href="./sociedades.html">Sociedades y Empresas</a>
-        <a href="./sucesiones.html">Sucesiones y Familia</a>
-        <a href="./poderes.html">Poderes y Actas Notariales</a>
-        <a href="./hipotecas.html">Hipotecas y Fideicomisos</a>
-        <a href="./certificaciones.html">Certificaciones</a>
-        <a href="./internacional.html">Trámites Internacionales</a>
-      </div>
-    </li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li class="mobile-cta">
-      <a href="#contacto" class="btn-action-premium">SOLICITAR TURNO →</a>
-    </li>
-  </ul>
+<!-- BARRA FLOTANTE TRANSLUCIDA PREMIUM -->
+<div class="barra-flotante-contacto escribania">
+  <a href="#" class="item-flotante" title="WhatsApp">W</a>
+  <a href="#" class="item-flotante" title="Mail">M</a>
+  <a href="#" class="item-flotante" title="Tel">T</a>
+  <a href="#contacto" class="item-flotante item-dorado" title="Turno">→</a>
 </div>
 
-<!-- SECCIÓN HERO ESCRIBANÍA -->
-<section id="inicio" class="hero-principal">
-  <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
-    <source src="hero-escribania-12s.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-contenedor-texto">
-    <span class="hero-eyebrow">ESCRIBANÍA RIGANTI · CABA · DESDE 1936</span>
-    <h1 class="hero-title-editorial">Tradición Notarial con el<br><i>Respaldo de Siempre</i></h1>
-    <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
-  </div>
-    
-  <!-- SELLO NOTARIAL FLOTANTE -->
-  <a href="servicios.html" class="investment-seal-link" id="investmentSeal">
-    <div class="investment-seal">
-      <div class="seal-ring"></div>
-      <div class="seal-ring-2"></div>
-      <div class="seal-content">
-        <span class="seal-year">1936</span>
-        <span class="seal-new">CABA</span>
-        <span class="seal-text">Escribanía<br>Mat. 1847</span>
-      </div>
-    </div>
-  </a>
+<!-- HERO -->
+<section class="hero">
+  <span class="eyebrow">ALLENDE | SEGURIDAD JURÍDICA</span>
+  <h1>Escribanía Riganti<br><i>& Asociados</i></h1>
+  <p>90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada.</p>
+  <a href="#contacto" class="btn-hero">SOLICITAR TURNO →</a>
 </section>
 
-<!-- SECCIÓN LA ESCRIBANÍA & MANIFIESTO -->
+<!-- SERVICIOS -->
+<section id="servicios" class="seccion-servicios">
+  <div class="grid-servicios">
+    <div class="card-serv"><h3>Compraventa</h3><p>Escrituras, boletos y control de títulos.</p></div>
+    <div class="card-serv"><h3>Sociedades</h3><p>Constitución, actas y poderes.</p></div>
+    <div class="card-serv"><h3>Familia</h3><p>Sucesiones, donaciones y protección.</p></div>
+    <div class="card-serv"><h3>Certificaciones</h3><p>Firmas, copias y actas notariales.</p></div>
+  </div>
+</section>
+
+<!-- ESTUDIO CON BOCETO MUJER -->
 <section id="estudio" class="section-estudio">
   <div class="estudio-grid">
     <div class="texto-estudio">
-      <span class="eyebrow">RIGANTI | SEGURIDAD JURÍDICA</span>
-      <p class="lead-serif">Brindamos asesoramiento notarial integral a familias, empresas y particulares, combinando rigor técnico, discreción absoluta y una atención estrictamente personalizada.</p>
+      <span class="eyebrow">90 AÑOS DE TRADICIÓN</span>
       <h2>Tres generaciones<br><i>custodiando su patrimonio.</i></h2>
       <div class="linea-decorativa"></div>
-      <p>Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires.</p>
+      <p>Somos herederos de una tradición notarial de 90 años en la Ciudad de Buenos Aires. Brindamos asesoramiento integral combinando rigor técnico y discreción absoluta.</p>
       
-      <!-- BOCETO 2 - DETALLE CUADRO -->
       <div class="boceto-lateral-wrap">
-        <img src="boceto-mujer.png" alt="Detalle Escribanía Riganti" class="boceto-lateral-img">
-        <span class="boceto-caption">Detalle de nuestra sede · Maipú 497 · 1936</span>
+        <img src="boceto-mujer.jpg" alt="Escribanía Riganti" class="boceto-lateral-img">
+        <span class="boceto-caption">DETALLE · SEDE RECOLETA · 1936</span>
       </div>
 
       <blockquote>"Una escritura bien hecha perdura por generaciones."</blockquote>
@@ -173,201 +73,67 @@
   </div>
 </section>
 
+<!-- CIERRE PREMIUM CON BOCETO PASILLO -->
 <section class="seccion-cierre-premium">
   <div class="capa-fondo-imagen">
-    <img src="boceto-pasillo-sin-arbolito.png" alt="Boceto Palacio Riganti" class="imagen-boceto-blur">
+    <img src="boceto-pasillo-sin-arbolito.jpg" alt="Palacio Riganti" class="imagen-boceto-blur">
     <div class="overlay-marfil"></div>
   </div>
   <div class="contenido-cierre">
     <span class="eyebrow light">NUESTRA SEDE</span>
     <h2>Microcentro</h2>
-    <p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico.</p>
+    <p>Maipú 497, 4° Piso. Un palacio que conserva la solemnidad del notariado clásico, con atención privada y discreta.</p>
     <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
   </div>
 </section>
-<!-- SECCIÓN CONTACTO - ESCRIBANÍA -->
+
+<!-- CONTACTO -->
 <section id="contacto" class="seccion-contacto">
-  
-  <div class="cabecera-contacto">
-    <span class="tag-estrategico">CONTACTO NOTARIAL</span>
-    <h2 class="titulo-contacto">Contacto</h2>
-  </div>
-
-  <div class="contenedor-grilla">
-    <!-- COLUMNA IZQUIERDA: Información Sede -->
-    <div class="info-sede">
-      <div class="bloque-info">
-        <h3>SEDE RECOLETA</h3>
-        <p>Av. Callao 1234, Piso 2°<br>C1023AAR · CABA · Argentina<br>Atención con turno previo</p>
-      </div>
-      <div class="bloque-info">
-        <h3>TELÉFONO</h3>
-        <p>+54 (11) 4800-1234</p>
-      </div>
-      <div class="bloque-info">
-        <h3>EMAIL DIRECTO</h3>
-        <p><a href="mailto:escribania@riganti.com.ar" class="f-email-protagonist">escribania@riganti.com.ar</a></p>
-        <span class="subtexto-mail">Respuesta del escribano titular en el día</span>
-      </div>
+  <div class="contacto-grid">
+    <div>
+      <span class="eyebrow">CONTACTO DIRECTO</span>
+      <h2>Agende su turno</h2>
+      <p>Atención con turno previo. Escribano titular.<br><br>Maipú 497, 4° Piso - CABA<br>+54 11 4800-1234<br>info@riganti.com.ar</p>
     </div>
-
-    <!-- COLUMNA DERECHA: Formulario escribanía -->
-    <form class="formulario-contacto" action="https://formsubmit.co/escribania@riganti.com.ar" method="POST">
-      
-      <input type="hidden" name="_next" value="https://riganti.com.ar/gracias.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Nueva Consulta Notarial — Escribanía Riganti">
-
-      <div class="fila-doble">
-        <div class="grupo-campo">
-          <label for="nombre">NOMBRE COMPLETO</label>
-          <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="grupo-campo">
-          <label for="email">TELÉFONO / EMAIL</label>
-          <input type="text" id="email" name="email" required>
-        </div>
-      </div>
-
-      <div class="grupo-campo">
-        <label for="empresa">TIPO DE TRÁMITE</label>
-        <select id="empresa" name="tramite" style="width:100%; background:transparent; border:none; border-bottom:1px solid #ccc; padding:12px 0; font-family:inherit;">
-          <option>Compraventa / Escritura</option>
-          <option>Sociedades</option>
-          <option>Poder / Acta</option>
-          <option>Sucesión</option>
-          <option>Certificación</option>
-          <option>Otro</option>
-        </select>
-      </div>
-
-      <div class="grupo-campo">
-        <label for="consulta">DESCRIBA BREVEMENTE SU TRÁMITE</label>
-        <textarea id="consulta" name="consulta" rows="2" required placeholder="Ej: Escritura en CABA, departamento de 2 ambientes..."></textarea>
-      </div>
-
-      <div class="fila-accion">
-        <button type="submit" class="btn-enviar">SOLICITAR TURNO</button>
-      </div>
+    <form class="form-premium">
+      <input type="text" placeholder="Nombre y Apellido">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Consulta"></textarea>
+      <button type="submit">ENVIAR CONSULTA</button>
     </form>
-
   </div>
 </section>
 
-<!-- FOOTER ESCRIBANÍA PREMIUM -->
-<footer class="footer-rgm-premium escribania">
-  <div class="footer-inner-editorial">
-    
-    <div class="f-col brand-premium">
-      <div class="footer-logo-lockup-premium">
-        <div class="footer-logo-text-premium">ALL<span class="ma-gold">ENDE</span></div>
-        <img src="logo-escribania.webp" alt="Escribanía riganti" class="footer-isologo-premium">
-      </div>
-      <p class="f-claim-editorial">Tradición notarial con<br>el respaldo de siempre.</p>
-      <div class="f-line-premium"></div>
-      <div class="f-copy-brand-editorial">
-        <span>ESCRIBANÍA RIGANTI</span><br>
-        <span class="f-italic-editorial">& ASOCIADOS · MAT. 1847</span>
-      </div>
+<!-- FOOTER LIMPIO SIN COOKIES -->
+<footer class="footer-premium">
+  <div class="footer-grid">
+    <div class="col-marca">
+      <h2 class="logo-footer">RIGANTI</h2>
+      <p class="sub-logo">ESCRIBANÍA & ASOCIADOS · MAT. 1847</p>
+      <p class="claim-footer"><i>Tradición notarial con<br>el respaldo de siempre.</i></p>
     </div>
-        <!-- Columna 2: Servicios Notariales -->
-    <div class="f-col-editorial">
-      <span class="f-title-editorial">SERVICIOS NOTARIALES</span>
-      <a href="./compraventa.html" class="f-link-editorial">Compraventa y Escrituras</a>
-      <a href="./sociedades.html" class="f-link-editorial">Sociedades y Empresas</a>
-      <a href="./sucesiones.html" class="f-link-editorial">Sucesiones y Familia</a>
-      <a href="./poderes.html" class="f-link-editorial">Poderes y Actas</a>
-      <a href="./hipotecas.html" class="f-link-editorial">Hipotecas y Fideicomisos</a>
-      <a href="./certificaciones.html" class="f-link-editorial">Certificaciones</a>
-      <a href="./internacional.html" class="f-link-editorial">Trámites Internacionales</a>
+    <div class="col-links">
+      <span class="footer-eyebrow">SERVICIOS</span>
+      <a>Compraventa y Escrituras</a>
+      <a>Sociedades y Empresas</a>
+      <a>Sucesiones y Familia</a>
+      <a>Poderes y Actas</a>
     </div>
-
-    <!-- Columna 3: Sede Recoleta -->
-    <div class="f-col-editorial">
-      <span class="f-title-editorial">MICROCENTRO</span>
-      <p class="f-address-protagonist">Maipú 497, 4° Piso<br>C1023AAR · CABA<br>Atención con turno previo.</p>
-      <div class="f-contact-premium">
-        <p class="f-phone-premium">Escribano Titular</p>
-        <p class="f-phone-premium">+54 11 4800-1234</p>
-        <p><a href="mailto:escribania@riganti.com.ar" class="f-email-protagonist">escribania@riganti.com.ar</a></p>
-      </div>
+    <div class="col-dire">
+      <span class="footer-eyebrow">MICROCENTRO</span>
+      <p>Maipú 497, 4° Piso<br>C1023AAR · CABA<br>Atención con turno previo.</p>
     </div>
-
-    <!-- Columna 4: Turnos -->
-    <div class="f-col-editorial">
-      <span class="f-title-editorial">TURNOS</span>
-      <p class="f-consulta-txt-editorial">Atención personalizada,<br>discreta y sin demoras.</p>
-      <a href="#contacto" class="f-btn-premium">SOLICITAR TURNO →</a>
+    <div class="col-cta">
+      <span class="footer-eyebrow">TURNOS</span>
+      <p>Atención personalizada.</p>
+      <a href="#contacto" class="btn-footer">SOLICITAR TURNO →</a>
     </div>
-
   </div>
-  <div class="f-bottom-editorial">
-    <p>© 2026 ESCRIBANÍA RIGANTI & ASOCIADOS · REG. 2136 · CABA</p>
-    <p class="f-legal-small-editorial">Escribanía premium · Colegio de Escribanos de la Ciudad de Buenos Aires</p>
+  <div class="footer-bottom">
+    <span>© 2026 ESCRIBANÍA RIGANTI & ASOCIADOS · REG. 2136 · CABA</span>
+    <span>COLEGIO DE ESCRIBANOS CABA</span>
   </div>
 </footer>
-
-<!-- BANNER COOKIES ESCRIBANÍA -->
-<div id="cookieBanner" class="cookie-banner-premium">
-  <div class="cookie-content-editorial">
-    <p>Utilizamos cookies para mejorar su experiencia. Al continuar, acepta nuestra <a href="./politica-privacidad.html" class="cookie-link-editorial">Política de Privacidad</a>.</p>
-    <button id="acceptCookies" class="cookie-btn-premium">ACEPTAR</button>
-  </div>
-</div>
-
-<!-- SISTEMA SCRIPT ESCRIBANÍA -->
-<script>
-const header = document.getElementById('mainHeader');
-const hero = document.querySelector('.hero-principal');
-const v = document.getElementById('heroVideo');
-
-v?.addEventListener('loadeddata', () => v.classList.add('is-loaded'));
-setTimeout(() => v?.classList.add('is-loaded'), 800);
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 80) { header.classList.add('shrink'); } 
-  else { header.classList.remove('shrink'); }
-  if(hero && window.scrollY > hero.offsetHeight - 150){ document.body.classList.add('pill-visible'); } 
-  else { document.body.classList.remove('pill-visible'); }
-}, {passive:true});
-
-const burger = document.getElementById('btnBurger');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMobile = document.getElementById('closeMobile');
-const accBtn = document.getElementById('accAreas'); 
-const accPanel = document.getElementById('panelAreas');
-
-burger?.addEventListener('click', () => { mobileMenu.classList.add('open'); document.body.style.overflow='hidden'; });
-closeMobile?.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow=''; });
-  accBtn?.addEventListener('click', () => {
-  const isOpen = accPanel.classList.toggle('open');
-  accBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  const i = accBtn.querySelector('i');
-  if(i) i.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-});
-
-mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { 
-  mobileMenu.classList.remove('open'); 
-  document.body.style.overflow=''; 
-}));
-
-// CONSENTIMIENTO COOKIES - ESCRIBANÍA
-window.addEventListener('DOMContentLoaded', () => {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('acceptCookies');
-
-  if (!localStorage.getItem('riganti_cookies_accepted')) {
-    setTimeout(() => {
-      banner?.classList.add('is-visible');
-    }, 1500);
-  }
-
-  acceptBtn?.addEventListener('click', () => {
-    localStorage.setItem('riganti_cookies_accepted', 'true');
-    banner?.classList.remove('is-visible');
-  });
-});
-</script>
 
 </body>
 </html>
