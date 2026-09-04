@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | RIGANTI Escribanía</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12);--card:#FFFFFF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+
+/* SIDEBAR 37% con tu foto adaptada */
+.sidebar{flex:0 0 37%;height:100vh;position:sticky;top:0;background:#F9F6F0;overflow:hidden}
+.sidebar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.sidebar-overlay{position:absolute;inset:0;background:linear-gradient(to bottom, rgba(14,26,43,0.1), rgba(14,26,43,0.0) 40%);padding:32px}
+.sidebar-logo{height:42px;filter:brightness(0) invert(1)}
+
+/* MAIN 63% */
+.main{flex:0 0 63%;padding:48px 56px;overflow-y:auto}
+.main-header h1{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300} .main-header h1 i{font-style:italic;color:var(--gold)}
+.main-header p{font-size:12px;letter-spacing:1px;color:rgba(14,26,43,0.5);margin-top:6px;text-transform:uppercase}
+
+.quick-actions{display:flex;gap:12px;margin:32px 0}
+.btn-quick{flex:1;height:46px;border:1px solid var(--line);background:var(--card);font-size:10px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.2s}
+.btn-quick.primary{background:var(--text);color:#fff;border-color:var(--text)}
+.btn-quick:hover{border-color:var(--text)}
+
+/* CARDS TRAMITES */
+.tramite-card{background:var(--card);border:1px solid var(--line);padding:28px;margin-bottom:18px}
+.tramite-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+.tramite-top h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400}
+.tramite-top span{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(140,115,66,0.1);color:var(--gold);padding:6px 10px}
+.progress{display:flex;gap:0;margin-top:10px}
+.progress-step{flex:1;position:relative;padding-top:18px;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:rgba(14,26,43,0.35)}
+.progress-step::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--line)}
+.progress-step.active{color:var(--text);font-weight:500}
+.progress-step.active::before{background:var(--text)}
+.progress-step.done::before{background:var(--gold)}
+.status{font-size:10px;color:var(--gold);letter-spacing:1.2px;margin-top:12px;display:flex;align-items:center;gap:6px}
+
+@media(max-width:900px){.sidebar{display:none}.main{flex:1 1 100%;padding:28px}}
+</style>
+</head>
+<body>
+<div class="sidebar"><img src="hall-portal-riganti-final.jpg" alt=""><div class="sidebar-overlay"><img src="logo-pluma-riganti-blanco-final.png" class="sidebar-logo"></div></div>
+<div class="main">
+  <div class="main-header"><h1>Hola, <i>Estudio López</i></h1><p>Entorno cifrado de seguridad jurídica confidencial — CUIT 30-71234567-8</p></div>
+  
+  <div class="quick-actions">
+    <button class="btn-quick primary"><i class="fa-solid fa-arrow-up-from-bracket"></i> Subir Papeles</button>
+    <button class="btn-quick"><i class="fa-regular fa-calendar"></i> Mis Turnos</button>
+    <button class="btn-quick"><i class="fa-solid fa-file-invoice-dollar"></i> Presupuestos</button>
+  </div>
+
+  <!-- TRAMITE 1 -->
+  <div class="tramite-card">
+    <div class="tramite-top"><h3>Escritura Compraventa - Matrícula 15-4321<br><small style="font-family:Inter;font-size:11px;color:rgba(14,26,43,0.5)">Av. Alvear 1890 - CABA</small></h3><span>En curso</span></div>
+    <div class="progress">
+      <div class="progress-step done">Documentación en Revisión</div>
+      <div class="progress-step active">Redacción de Matriz</div>
+      <div class="progress-step">Listo para Firma</div>
+      <div class="progress-step">Inscripción</div>
+    </div>
+    <div class="status"><i class="fa-solid fa-circle-info"></i> La escribana está redactando la minuta. Te avisaremos.</div>
+  </div>
+
+  <!-- TRAMITE 2 -->
+  <div class="tramite-card">
+    <div class="tramite-top"><h3>Poder General de Administración</h3><span style="background:rgba(14,26,43,0.08);color:var(--text)">Listo para firmar</span></div>
+    <div class="progress">
+      <div class="progress-step done">Revisión</div>
+      <div class="progress-step done">Redacción</div>
+      <div class="progress-step active">Listo para la Firma — 12/09 10:30hs</div>
+      <div class="progress-step">Inscripción</div>
+    </div>
+    <div class="status"><i class="fa-solid fa-lock"></i> Concurrir con DNI original y CUIT. Saldo: $ 420.000</div>
+  </div>
+</div>
+</body>
+</html>
