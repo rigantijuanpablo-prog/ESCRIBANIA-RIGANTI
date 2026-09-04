@@ -10,82 +10,52 @@
 <style>
   :root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex}
- .portal-container{display:flex;width:100vw;height:100vh;overflow:hidden}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+.portal-container{display:flex;width:100vw;height:100vh;overflow:hidden}
 
-  /* DISTRIBUCION EXACTA DE TU BOCETO */
- .portal-visual-side{flex:0 0 58.5%;position:relative;background:#EDE9E3;overflow:hidden}
- .portal-visual-side img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
- .portal-visual-side::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(14,26,43,0.06) 0%, rgba(14,26,43,0) 40%)}
+  /* 40% IZQUIERDA - BOCETO + REALIDAD COMPLETA */
+.portal-visual-side{flex:0 0 40%;height:100vh;background:#F2EDE6;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.portal-visual-side img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
 
- .portal-form-side{flex:0 0 41.5%;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:5vw}
- .portal-wrapper{width:100%;max-width:360px;text-align:center}
- .portal-logo{height:68px;margin:0 auto 28px;display:block}
- .portal-header h1{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:10px}
- .portal-header h1 i{font-style:italic;color:var(--gold)}
- .portal-header p{font-size:12.5px;color:rgba(14,26,43,0.55);letter-spacing:0.04em;line-height:1.5;margin-bottom:36px}
- .portal-form{display:flex;flex-direction:column;gap:28px;text-align:left}
- .form-group-privado{display:flex;flex-direction:column;position:relative}
- .form-group-privado label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
- .form-group-privado input{border:none;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-size:14.5px;outline:none}
- .toggle-password{position:absolute;right:0;bottom:10px;color:rgba(14,26,43,0.35);cursor:pointer;font-size:13px}
- .portal-asistencia{display:flex;justify-content:space-between;font-size:11.5px;margin-top:-10px}
- .portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none}
- .btn-ingreso-privado{margin-top:10px;background:var(--text);color:#fff;border:1px solid var(--text);height:46px;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
- .portal-footer{margin-top:48px;font-size:9.5px;letter-spacing:1px;color:rgba(14,26,43,0.35);text-transform:uppercase}
-  @media (max-width:900px){.portal-visual-side{display:none}.portal-form-side{flex:1 1 100%;background:#fff}}
+  /* 60% DERECHA - FORM */
+.portal-form-side{flex:0 0 60%;height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:4vw}
+.portal-wrapper{width:100%;max-width:380px;text-align:center}
+.portal-logo{height:68px;margin:0 auto 28px;display:block}
+.portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px}
+.portal-header h1 i{font-style:italic;color:var(--gold)}
+.portal-header p{font-size:12.5px;color:rgba(14,26,43,0.55);line-height:1.5;margin-bottom:36px}
+.portal-form{display:flex;flex-direction:column;gap:28px;text-align:left}
+.form-group-privado{display:flex;flex-direction:column;position:relative}
+.form-group-privado label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.form-group-privado input{border:none;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-size:14.5px;outline:none}
+.portal-asistencia{display:flex;justify-content:space-between;font-size:11.5px;margin-top:-10px}
+.portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none}
+.btn-ingreso-privado{margin-top:10px;background:var(--text);color:#fff;border:1px solid var(--text);height:46px;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.portal-footer{margin-top:48px;font-size:9.5px;letter-spacing:1px;color:rgba(14,26,43,0.35);text-transform:uppercase}
+  @media (max-width:900px){.portal-visual-side{display:none}.portal-form-side{flex:1 1 100%}}
 </style>
 </head>
 <body>
   <div class="portal-container">
-    <div class="portal-visual-side">
-      <img src="hall-portal-riganti.jpg" alt="Sede RIGANTI">
-    </div>
+    <div class="portal-visual-side"><img src="hall-portal-riganti-final.jpg" alt="Boceto RIGANTI"></div>
     <div class="portal-form-side">
       <div class="portal-wrapper">
         <img src="logo-pluma-riganti-blanco-final.png" class="portal-logo" alt="RIGANTI">
-        <div class="portal-header">
-          <h1 id="t-title">Portal de <i>Clientes</i></h1>
-          <p id="t-sub">Entorno cifrado de seguridad jurídica confidencial</p>
-        </div>
+        <div class="portal-header"><h1 id="t-title">Portal de <i>Clientes</i></h1><p id="t-sub">Entorno cifrado de seguridad jurídica confidencial</p></div>
         <form class="portal-form" action="#" method="POST">
-          <div class="form-group-privado">
-            <label id="t-user">Identificación / Usuario</label>
-            <input type="text" id="username" required placeholder="ej. apellido@empresa.com">
-          </div>
-          <div class="form-group-privado">
-            <label id="t-pass">Clave de Acceso</label>
-            <input type="password" id="password" required>
-            <i class="fa-regular fa-eye toggle-password" onclick="const i=document.getElementById('password');i.type=i.type==='password'?'text':'password'"></i>
-          </div>
-          <div class="portal-asistencia">
-            <a href="#" class="portal-link-secundario" id="t-forgot">¿Olvidó su contraseña?</a>
-            <a href="index.html" class="portal-link-secundario" id="t-back">← Volver</a>
-          </div>
-          <button class="btn-ingreso-privado"><span id="t-btn">Ingresar de forma segura</span> <i class="fa-solid fa-shield-halved" style="font-size:10px"></i></button>
+          <div class="form-group-privado"><label id="t-user">Identificación / Usuario</label><input type="text" id="username" required placeholder="ej. apellido@empresa.com"></div>
+          <div class="form-group-privado"><label id="t-pass">Clave de Acceso</label><input type="password" id="password" required></div>
+          <div class="portal-asistencia"><a href="#" class="portal-link-secundario" id="t-forgot">¿Olvidó su contraseña?</a><a href="index.html" class="portal-link-secundario" id="t-back">← Volver</a></div>
+          <button class="btn-ingreso-privado"><span id="t-btn">Ingresar de forma segura</span> <i class="fa-solid fa-shield-halved"></i></button>
         </form>
-        <div class="portal-footer" id="t-footer"><i class="fa-solid fa-lock"></i> Conexión encriptada SSL de un extremo a otro</div>
+        <div class="portal-footer" id="t-footer"><i class="fa-solid fa-lock"></i> Conexión encriptada SSL</div>
       </div>
     </div>
   </div>
 <script>
-  const dict={
-    es:{title:'Portal de <i>Clientes</i>',sub:'Entorno cifrado de seguridad jurídica confidencial',user:'Identificación / Usuario',pass:'Clave de Acceso',forgot:'¿Olvidó su contraseña?',back:'← Volver',btn:'Ingresar de forma segura',footer:'Conexión encriptada SSL de un extremo a otro',ph:'ej. apellido@empresa.com'},
-    en:{title:'Client <i>Portal</i>',sub:'Encrypted environment of confidential legal security',user:'Identification / User',pass:'Access Key',forgot:'Forgot your password?',back:'← Back',btn:'Secure Login',footer:'End-to-end SSL encrypted connection',ph:'e.g. surname@company.com'}
-  };
-  const lang=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('riganti_lang')||'es')==='en'?'en':'es';
-  const t=dict[lang];
-  document.documentElement.lang=lang;
-  document.getElementById('t-title').innerHTML=t.title;
-  document.getElementById('t-sub').innerText=t.sub;
-  document.getElementById('t-user').innerText=t.user;
-  document.getElementById('t-pass').innerText=t.pass;
-  document.getElementById('t-forgot').innerText=t.forgot;
-  document.getElementById('t-back').innerText=t.back;
-  document.getElementById('t-btn').innerText=t.btn;
-  document.getElementById('t-footer').innerHTML=`<i class="fa-solid fa-lock"></i> ${t.footer}`;
-  document.getElementById('username').placeholder=t.ph;
-  document.getElementById('t-back').href=lang==='en'?'index.html?lang=en':'index.html';
+  const dict={es:{title:'Portal de <i>Clientes</i>',sub:'Entorno cifrado de seguridad jurídica confidencial',user:'Identificación / Usuario',pass:'Clave de Acceso',forgot:'¿Olvidó su contraseña?',back:'← Volver',btn:'Ingresar de forma segura',footer:'Conexión encriptada SSL',ph:'ej. apellido@empresa.com'},en:{title:'Client <i>Portal</i>',sub:'Encrypted environment of confidential legal security',user:'Identification / User',pass:'Access Key',forgot:'Forgot your password?',back:'← Back',btn:'Secure Login',footer:'End-to-end SSL encrypted connection',ph:'e.g. surname@company.com'}};
+  const lang=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('riganti_lang')||'es')==='en'?'en':'es';const t=dict[lang];
+  document.getElementById('t-title').innerHTML=t.title;document.getElementById('t-sub').innerText=t.sub;document.getElementById('t-user').innerText=t.user;document.getElementById('t-pass').innerText=t.pass;document.getElementById('t-forgot').innerText=t.forgot;document.getElementById('t-back').innerText=t.back;document.getElementById('t-btn').innerText=t.btn;document.getElementById('t-footer').innerHTML=`<i class="fa-solid fa-lock"></i> ${t.footer}`;document.getElementById('username').placeholder=t.ph;document.getElementById('t-back').href=lang==='en'?'index.html?lang=en':'index.html';
 </script>
 </body>
 </html>
