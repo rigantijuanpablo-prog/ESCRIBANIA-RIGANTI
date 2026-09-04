@@ -199,6 +199,65 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 .footer-premium.footer-grid span{font-size:9px!important;letter-spacing:2.8px!important;color:rgba(255,255,255,.38)!important;}
 .footer-premium.footer-grid p{font-size:13.5px!important;line-height:2!important;color:rgba(249,246,241,.7)!important;}
 .footer-bottom,.footer-premium > div:last-child{max-width:1280px!important;margin:80px auto 0 auto!important;border-top:1px solid rgba(255,255,255,.07)!important;padding-top:24px!important;font-size:11px!important;color:rgba(255,255,255,.25)!important;letter-spacing:.5px!important;}
+/* === FIX ERROR CITA + TARJETA AZUL === */
+.estudio-main{
+  display:grid!important;
+  grid-template-columns:1.15fr 380px!important;
+  gap:80px!important;
+  align-items:start!important;
+  max-width:1280px!important;
+  margin:0 auto!important;
+}
+.valores-col{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:1px!important;
+  background:var(--border-color)!important;
+  border:1px solid var(--border-color)!important;
+  height:fit-content!important;
+  position:sticky!important;
+  top:120px!important;
+}
+.tarjeta-valor{
+  background:var(--bg-primary)!important;
+  padding:28px!important;
+  border:0!important;
+  border-bottom:0!important;
+}
+.tarjeta-valor.dark{
+  background:var(--bg-dark)!important;
+  color:#F9F6F1!important;
+  padding:32px 28px!important;
+}
+.tarjeta-valor.dark p{
+  color:rgba(249,246,241,.7)!important;
+  opacity:1!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+}
+.boceto-full-wrap{margin:24px 0 0 0!important;}
+.boceto-full-img{height:auto!important;min-height:0!important;aspect-ratio:16/10!important;}
+
+.section-estudio blockquote{
+  margin:56px 0 0 0!important;
+  padding-left:28px!important;
+  border-left:2px solid var(--gold)!important;
+  border-right:0!important;
+  text-align:left!important;
+  max-width:520px!important;
+  font-family:'Cormorant Garamond',serif!important;
+  font-style:italic!important;
+  font-size:26px!important;
+  line-height:1.35!important;
+  opacity:.8!important;
+}
+
+@media screen and (max-width: 900px){
+  .estudio-main{grid-template-columns:1fr!important;}
+  .valores-col{position:relative!important;top:0!important;}
+  .section-estudio blockquote{max-width:100%!important;margin:40px 0 0 0!important;}
+}
 </style>
 </head>
 <body>
