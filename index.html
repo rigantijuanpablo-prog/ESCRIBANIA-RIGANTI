@@ -156,6 +156,27 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
   transform: translateY(-2px);
   color: #ce2c35 !important; /* Se ilumina un poco más con el roce del cursor */
 }
+  /* ==========================================================================
+   RIGANTI ESCRIBANÍA - GHOST LINEAR PIN STYLE
+   ========================================================================== */
+
+.barra-flotante-contacto .item-flotante:first-child i {
+  color: transparent !important; /* Volvemos el relleno invisible */
+  
+  /* El secreto: Creamos un borde de vector (text-stroke) finísimo en rojo lacre */
+  -webkit-text-stroke: 1px #a8232a !important; 
+  
+  font-size: 16px !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* MICRO-INTERACCIÓN: Al pasar el mouse, el pin se rellena sutilmente de rojo traslúcido */
+.barra-flotante-contacto .item-flotante:first-child:hover i {
+  background: rgba(168, 35, 42, 0.1) !important; /* Un sutil vivo rojo dentro del cristal */
+  -webkit-text-stroke: 1px #ce2c35 !important;
+  transform: translateY(-2px);
+}
+
 
 </style>
 
@@ -208,7 +229,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
 <div class="barra-flotante-contacto">
   <!-- 🗺️ EL CAMBIO DE ELITE: Ubicación en Google Maps (Abre en pestaña nueva) -->
   <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="item-flotante">
-    <i class="fa-solid fa-map-marker-alt"></i>
+    <i class="fa-regular fa-map-marker-alt"></i>
   </a>
   
   <!-- Tus otros botones impecables con sus clases de Font Awesome 6 curadas -->
