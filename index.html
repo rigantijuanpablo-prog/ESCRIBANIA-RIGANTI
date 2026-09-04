@@ -349,6 +349,29 @@ header, .navbar{
     /* Pequeño ajuste fino manual si notas que se desfasa del menú */
     margin-top: 2px !important; 
 }
+ /* ==========================================================================
+   RIGANTI ESCRIBANÍA - AJUSTES FINALES CASTELLANO
+   ========================================================================== */
+
+/* 1. Centrado absoluto del botón superior 'SOLICITAR TURNO' */
+.nav-btn-appointment, 
+header a.btn {
+    display: inline-flex !important;
+    align-items: center !important;     /* Centrado vertical real */
+    justify-content: center !important;   /* Centrado horizontal real */
+    height: 40px !important;              /* Forzamos altura simétrica */
+    padding: 0 24px !important;           /* Equilibrio lateral */
+    line-height: 1 !important;            /* Limpiamos herencias tipográficas */
+}
+
+/* 2. Mantener la escala señorial y nítida del Isotipo */
+.logo-container img, 
+header a img {
+    height: 52px !important;
+    width: auto !important;
+    display: block;
+}
+
 
 </style>
 </head>
