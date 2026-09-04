@@ -11,31 +11,47 @@
   :root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12)}
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+<style>
 .portal-container{display:flex;width:100vw;height:100vh;overflow:hidden;background:#F9F6F0}
 
+/* IZQUIERDA: foto se pega a su ancho real, sin hueco */
 .portal-visual-side{
-  flex:0 0 45%; /* 45% como me pedís */
+  flex:0 0 auto;
   height:100vh;
   background:#F9F6F0;
   display:flex;
-  align-items:flex-start; /* lo pega arriba para que no corte arcada */
-  justify-content:center;
-  overflow:hidden;
 }
 .portal-visual-side img{
-  width:100%;
-  height:100%;
-  object-fit:contain; /* SE VE COMPLETA, no corta nada */
-  object-position:top center; /* prioriza mostrar la arcada de arriba */
-  background:#F9F6F0;
+  height:100vh;
+  width:auto; /* se ajusta sola, no deja hueco */
+  display:block;
+  object-fit:contain;
+  object-position:left top;
 }
 
+/* DERECHA: todo el resto, y el login CENTRADO en ese resto */
 .portal-form-side{
-  flex:0 0 55%; /* 55% login */
+  flex:1 1 auto;
   height:100vh;
   background:#FAF9F6;
-  display:flex;align-items:center;justify-content:center;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* CENTRADO EN TODO EL ESPACIO QUE QUEDA */
+  padding:0;
 }
+.portal-wrapper{width:100%;max-width:380px;text-align:center}
+</style>
+
+<div class="portal-container">
+  <div class="portal-visual-side">
+    <img src="hall-portal-riganti-final.jpg" alt="Boceto RIGANTI">
+  </div>
+  <div class="portal-form-side">
+    <div class="portal-wrapper">
+      <!-- tu login -->
+    </div>
+  </div>
+</div>
 .portal-wrapper{width:100%;max-width:380px;text-align:center}
 .portal-logo{height:68px;margin:0 auto 28px;display:block}
 .portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px}
