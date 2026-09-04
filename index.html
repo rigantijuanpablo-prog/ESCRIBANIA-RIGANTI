@@ -246,48 +246,56 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 /* ==========================================================
    FIX FINAL LOGOS RIGANTI - NO TOCA NADA MAS - PISA TODO
    ========================================================== */
-.header-principal{
-  height:84px!important;
-  padding:0 32px!important;
-  display:flex!important;
-  align-items:center!important;
+.header-principal {
+  height: 84px !important;
+  padding: 0 32px !important;
+  display: flex !important;
+  align-items: center !important;
 }
-.logo{
-  display:flex!important;
-  align-items:center!important;
+.logo {
+  display: flex !important;
+  align-items: center !important;
 }
-.logo img{
-  height:58px!important;
-  width:auto!important;
-  min-height:0!important;
-  max-height:58px!important;
-  display:block!important;
-  object-fit:contain!important;
-  mix-blend-mode:normal!important;
-  background:transparent!important;
-  border:0!important;
-  transform:none!important;
-  image-rendering:-webkit-optimize-contrast!important;
+.logo img {
+  height: 58px !important;
+  width: auto !important;
+  min-height: 0 !important;
+  max-height: 58px !important;
+  display: block !important;
+  object-fit: contain !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
+  border: 0 !important;
+  transform: none !important;
+  image-rendering: -webkit-optimize-contrast !important;
 }
-.logo-footer-img{
-  height:44px!important;
-  width:auto!important;
-  display:block!important;
-  filter:none!important;
-  opacity:1!important;
-  mix-blend-mode:normal!important;
+
+/* 🏆 REEMPLAZO DE ELITE: ADAPTADO PARA TU NUEVO LOGO COMPLETO VERTICAL */
+.logo-footer-img {
+  width: 130px !important;       /* Controlamos el ancho para que la tipografía respire */
+  height: auto !important;       /* EL SECRETO: El alto se adapta solo y jamás se deforma */
+  display: block !important;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  image-rendering: -webkit-optimize-contrast !important; /* Nitidez máxima sobre fondo azul */
+  margin-bottom: 20px !important; /* Separación elegante con los textos de abajo */
 }
-@media screen and (max-width: 768px){
- .header-principal{height:68px!important;padding:0 16px!important;}
- .logo img{height:44px!important;max-height:44px!important;}
- .logo-footer-img{height:38px!important;}
+
+@media screen and (max-width: 768px) {
+ .header-principal { height: 68px !important; padding: 0 16px !important; }
+ .logo img { height: 44px !important; max-height: 44px !important; }
+ 
+ /* Ajuste móvil fino para el logo del footer */
+ .logo-footer-img { width: 110px !important; height: auto !important; }
 }
+
  /* === FIX ELITE ISOLOGO + BARRA FLOTANTE - FINAL === */
-.header-principal{
+.header-principal {
   height: 88px !important;
   padding: 0 32px !important;
 }
-.logo img{
+.logo img {
   height: 72px !important;
   max-height: 72px !important;
   width: auto !important;
@@ -295,15 +303,9 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
   mix-blend-mode: normal !important;
   image-rendering: -webkit-optimize-contrast !important;
 }
-/* Footer un poco más grande también */
-.logo-footer-img{
-  height: 52px !important;
-  filter: none !important;
-  opacity: 1 !important;
-}
 
 /* Barra mármol - vuelve la visibilidad elite */
-.barra-flotante-contacto{
+.barra-flotante-contacto {
   background: radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,0.96) 0%, rgba(249,246,241,0.85) 60%, rgba(232,226,217,0.75) 100%) !important;
   backdrop-filter: blur(22px) saturate(160%) !important;
   -webkit-backdrop-filter: blur(22px) saturate(160%) !important;
@@ -314,18 +316,18 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
   border-radius: 28px !important;
   right: 18px !important;
 }
-.item-flotante{
+.item-flotante {
   opacity: .88 !important;
   width: 44px !important;
   height: 44px !important;
 }
-.item-flotante.item-dorado{
+.item-flotante.item-dorado {
   background: #0E1A2B !important;
   color: #C9B896 !important;
   opacity: 1 !important;
   box-shadow: 0 4px 14px rgba(14,26,43,0.28) !important;
 }
-</style>
+
 </head>
 <body>
 <header class="header-principal">
@@ -392,7 +394,7 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
 </section>
 <footer class="footer-premium">
 <div class="footer-grid">
-<div><img src="logo-pluma-riganti-blanco-final.png" alt="RIGANTI" class="logo-footer-img"><p style="margin-top:12px;font-size:10px;letter-spacing:2px;opacity:.6;color:var(--gold)">ESCRIBANÍA · MAT. 1847</p><p style="margin-top:16px;font-size:13px;opacity:.5;font-style:italic">Tradición notarial con<br>el respaldo de siempre.</p></div>
+<div><img src="logo-completo-pluma-transparente.png" alt="RIGANTI" class="logo-footer-img"><p style="margin-top:12px;font-size:10px;letter-spacing:2px;opacity:.6;color:var(--gold)">ESCRIBANÍA · MAT. 1847</p><p style="margin-top:16px;font-size:13px;opacity:.5;font-style:italic">Tradición notarial con<br>el respaldo de siempre.</p></div>
 <div><span id="footer-serv-title">SERVICIOS</span><p style="font-size:13px;opacity:.6;margin-top:16px;line-height:1.8">Compraventa<br>Sociedades<br>Sucesiones<br>Poderes</p></div>
 <div><span id="footer-sede-title">MICROCENTRO</span><p style="font-size:13px;opacity:.6;margin-top:16px">Maipú 497, 4° Piso<br>CABA</p></div>
 <div><span id="footer-turnos-title">TURNOS</span><p style="font-size:13px;opacity:.6;margin-top:16px">Atención personalizada</p><a href="#contacto" style="display:inline-block;margin-top:16px;border:1px solid rgba(201,184,150,.4);padding:12px 24px;font-size:10px;letter-spacing:2px;color:var(--gold);text-decoration:none" data-i18n="btn_turno">SOLICITAR TURNO →</a></div>
