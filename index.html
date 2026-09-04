@@ -98,6 +98,47 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
   transform: scale(1.1) translateY(-1px); /* El candado hace una sutil pulsación tridimensional */
 }
 
+/* ==========================================================================
+   RIGANTI ESCRIBANÍA - HEADER FIXED & PORTAL ULTRALUXE
+   ========================================================================== */
+
+/* 1. RESTAURAR EL LOGO (Fix definitivo para que no aparezca el link azul) */
+.logo img {
+  height: 72px !important;
+  max-height: 72px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+}
+
+/* 2. EFECTO HOVER EN EL CANDADO (Se enciende en oro de alta gama) */
+.nav-principal a.portal-link {
+  color: var(--text-main) !important;
+  opacity: 0.7;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Al apoyar el cursor (hover), el texto y el candado mutan juntos */
+.nav-principal a.portal-link:hover {
+  opacity: 1 !important;
+  color: #8C7342 !important; /* Tu oro corporativo satinado */
+}
+
+.nav-principal a.portal-link i {
+  transition: transform 0.3s ease !important;
+}
+
+.nav-principal a.portal-link:hover i {
+  transform: translateY(-1px) scale(1.1); /* El candado hace una sutil pulsación */
+}
+
+/* 3. FIX DE TRADUCCIÓN PARA EL BOTÓN EN INGLÉS */
+html[lang="en"] .btn-header,
+[data-current-lang="en"] .btn-header {
+  content: "BOOK APPOINTMENT" !important;
+}
+   
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Notary","name":"Escribanía Riganti","image":"https://github.io","address":{"@type":"PostalAddress","streetAddress":"Maipú 497, Piso 4","addressLocality":"San Nicolás, CABA","postalCode":"C1006","addressCountry":"AR"},"geo":{"@type":"GeoCoordinates","latitude":-34.6025,"longitude":-58.3779},"telephone":"+541143220174","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"18:00"}]}
