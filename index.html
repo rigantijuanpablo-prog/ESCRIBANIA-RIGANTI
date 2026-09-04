@@ -348,62 +348,379 @@ html.fonts-loaded.hero h1 {
   line-height: 1.6;
 }
 
-.fo-texto p{color:var(--text-muted);font-size:15px;font-weight:300;margin-bottom:20px}
-.fo-lista{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:18px}
-.fo-lista li{display:flex;gap:16px;align-items:start;font-size:14px;color:var(--text-muted);line-height:1.6;font-weight:300}
-.fo-lista li i{color:var(--gold);font-size:12px;margin-top:6px}
-.fo-lista li strong{color:var(--text-main);font-weight:500}
-.fo-visual-box{background:linear-gradient(135deg,#0d1527 0%,#060a14 100%);border:1px solid var(--border-color);padding:50px;min-height:460px;display:flex;align-items:center;justify-content:center}
-.fo-card-interior{border-left:2px solid var(--gold);padding-left:28px;max-width:440px}
-.fo-tag-studio{font-size:9px;letter-spacing:3px;color:var(--gold);display:block;margin-bottom:16px;font-weight:600}
-.fo-card-interior h3{font-size:32px;color:#F9F6F1;margin-bottom:16px}
-.fo-card-interior p{color:rgba(249,246,241,0.6);font-size:14px;line-height:1.7;font-weight:300;margin-bottom:28px}
-.fo-signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold)}
-.section-estudio{padding:90px 48px;background:white}
-.estudio-main{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start}
-.valores-col{display:flex;flex-direction:column;gap:1px;background:var(--border-color);border:1px solid var(--border-color);height:fit-content}
-.tarjeta-valor{background:var(--bg-primary);padding:28px}
-.tarjeta-valor.dark{background:var(--bg-dark);color:#F9F6F1}
-.seccion-cierre{position:relative;height:72vh;min-height:560px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg-dark)}
-.overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,43,.5),rgba(14,26,43,.15) 50%,rgba(14,26,43,.5))}
-.contenido-cierre{position:relative;z-index:2;text-align:center;color:white;max-width:620px}
-.seccion-contacto{padding:90px 48px;background:white;border-top:1px solid var(--border-color)}
-.contacto-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.form-contacto{display:flex;flex-direction:column;gap:14px}
-.form-contacto input,.form-contacto textarea{border:1px solid var(--border-color);padding:14px 16px;font-family:'Inter',sans-serif;font-size:14px;background:var(--bg-primary);outline:none;transition:.2s}
-.form-contacto input:focus,.form-contacto textarea:focus{border-color:var(--gold-dark)}
-.honeypot{display:none!important}
-.btn-enviar{background:var(--bg-dark);color:white;padding:16px;border:0;letter-spacing:2px;font-size:11px;cursor:pointer;transition:.2s}
-.btn-enviar:hover{background:#1a2a4a}
-.footer-premium{background:var(--bg-dark);color:#F9F6F1;padding:80px 48px 24px}
-.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px;max-width:1300px;margin:0 auto}
-.logo-footer-img{width:124px;height:auto;display:block;filter:brightness(0) invert(1);opacity:.9}
-.boceto-full-wrap,.imagen-hall-wrap{width:100%;overflow:hidden;background:#faf9f7;line-height:0;border:1px solid var(--border-color)}
-.boceto-full-img,.imagen-hall{width:100%;height:72vh;min-height:520px;max-height:760px;object-fit:cover;object-position:center;display:block;filter:contrast(1.02) brightness(1.02)}
-.boceto-caption{display:block;padding:12px 16px;font-size:9px;letter-spacing:2px;opacity:.4;text-transform:uppercase;background:white;line-height:1.5}
-.section-estudio,.seccion-contacto,.seccion-family-office{padding-top:120px;padding-bottom:120px}
-.form-contacto input,.form-contacto textarea{background:transparent!important;border:0!important;border-bottom:1px solid rgba(14,26,43,.12)!important;border-radius:0!important;padding:18px 0 14px 0!important}
-.form-contacto input:focus,.form-contacto textarea:focus{border-bottom-color:var(--gold-dark)!important;box-shadow:none!important}
-.btn-hero,.btn-header,.btn-enviar{transition:all.6s cubic-bezier(.25,1,.5,1)!important}
-.btn-hero:hover,.btn-enviar:hover{letter-spacing:2.6px}
-@media screen and (max-width: 768px){
- body{background:#faf9f6;-webkit-font-smoothing:antialiased}
- section,.section-estudio,.seccion-contacto,.seccion-family-office,.seccion-cierre,.footer-premium,.hero{padding-left:24px!important;padding-right:24px!important;padding-top:72px!important;padding-bottom:72px!important}
-.hero h1{font-size:42px!important;line-height:.92!important}
-.fo-texto h2,.section-estudio h2,.contacto-grid h2{font-size:36px!important;line-height:.95!important}
-.eyebrow{font-size:9px!important;letter-spacing:3.5px!important}
-.btn-hero,.btn-enviar{width:100%;text-align:center;justify-content:center;padding:20px 24px!important;border-radius:0!important}
-.grid-servicios{grid-template-columns:1fr!important;gap:0!important;border:0!important;background:transparent!important}
-.card-serv{border-bottom:1px solid #E8E2D9;padding:28px 0!important;background:transparent!important}
-.card-num{font-size:12px!important;letter-spacing:2px;opacity:.35}
-.boceto-full-wrap,.imagen-hall-wrap{border:0!important;margin:32px 0!important}
-.boceto-full-img,.imagen-hall{height:56vh!important;min-height:400px!important;max-height:520px!important}
-.header-principal{height:68px!important;padding:4px 16px!important}
-.logo img{height:52px!important}
-.nav-principal{gap:14px!important}
-.nav-principal a.nav-link{display:none}
-.grid-2,.estudio-main,.footer-grid,.contacto-grid{grid-template-columns:1fr!important;gap:32px!important}
+/* ==========================================================================
+   TANDA 2 CURADA: COMPONENTES EDITORIALES, FORMULARIO Y RESPONSIF ELITE
+   ========================================================================== */
+
+.fo-texto p {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
+
+.fo-lista {
+  list-style: none;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fo-lista li {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.fo-lista li i {
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.fo-lista li strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.fo-visual-box {
+  background: linear-gradient(135deg, #0d1527 0%, #060a14 100%);
+  border: 1px solid var(--border-color);
+  padding: 50px;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fo-card-interior {
+  border-left: 2px solid var(--gold);
+  padding-left: 28px;
+  max-width: 440px;
+}
+
+.fo-tag-studio {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.fo-card-interior h3 {
+  font-size: 32px;
+  color: #F9F6F1;
+  margin-bottom: 16px;
+}
+
+.fo-card-interior p {
+  color: rgba(249, 246, 241, 0.6);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+.fo-signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.section-estudio {
+  padding: 90px 48px;
+  background: white;
+}
+
+.estudio-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+}
+
+.valores-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  height: fit-content;
+}
+
+.tarjeta-valor {
+  background: var(--bg-primary);
+  padding: 28px;
+}
+
+.tarjeta-valor.dark {
+  background: var(--bg-dark);
+  color: #F9F6F1;
+}
+
+.seccion-cierre {
+  position: relative;
+  height: 72vh;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 26, 43, .5), rgba(14, 26, 43, .15) 50%, rgba(14, 26, 43, .5));
+}
+
+.contenido-cierre {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 620px;
+}
+
+.seccion-contacto {
+  padding: 90px 48px;
+  background: white;
+  border-top: 1px solid var(--border-color);
+}
+
+.contacto-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* 🖋️ FORMULARIO DE ALTA GAMA - ESTILO PAPELERÍA PAPEL FINO */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-contacto input, 
+.form-contacto textarea {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(14, 26, 43, .12) !important;
+  border-radius: 0 !important;
+  padding: 18px 0 14px 0 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.form-contacto input:focus, 
+.form-contacto textarea:focus {
+  border-bottom-color: var(--gold-dark) !important;
+  box-shadow: none !important;
+}
+
+.honeypot {
+  display: none !important;
+}
+
+/* BOTÓN DE ENVÍO CON CENTRADO GEOMÉTRICO EXACTO */
+.btn-enviar {
+  background: var(--bg-dark);
+  color: white;
+  padding: 16px;
+  border: 0;
+  letter-spacing: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1 !important;
+  transition: all 0.6s cubic-bezier(.25, 1, .5, 1) !important;
+}
+
+.btn-enviar:hover {
+  background: #1a2a4a;
+  letter-spacing: 2.6px;
+}
+
+/* 🏛️ SECCIÓN FOOTER INSTITUTIONAL */
+.footer-premium {
+  background: var(--bg-dark);
+  color: #F9F6F1;
+  padding: 80px 48px 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* DETALLES DE MAQUETACIÓN MULTIMEDIA Y CONTENEDORES */
+.boceto-full-wrap, 
+.imagen-hall-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #faf9f7;
+  line-height: 0;
+  border: 1px solid var(--border-color);
+}
+
+.boceto-full-img, 
+.imagen-hall {
+  width: 100%;
+  height: 72vh;
+  min-height: 520px;
+  max-height: 760px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.02) brightness(1.02);
+}
+
+.boceto-caption {
+  display: block;
+  padding: 12px 16px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  opacity: .4;
+  text-transform: uppercase;
+  background: white;
+  line-height: 1.5;
+}
+
+.section-estudio, 
+.seccion-contacto, 
+.seccion-family-office {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.btn-hero, 
+.btn-header {
+  transition: all 0.6s cubic-bezier(.25, 1, .5, 1) !important;
+}
+
+.btn-hero:hover {
+  letter-spacing: 2.6px;
+}
+
+/* ==========================================================================
+   MÓDULO DE ADAPTACIÓN PARA DISPOSITIVOS MÓVILES (MEDIA QUERY GLOBAL)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  body {
+    background: #faf9f6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  section, 
+  .section-estudio, 
+  .seccion-contacto, 
+  .seccion-family-office, 
+  .seccion-cierre, 
+  .footer-premium, 
+  .hero {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+  
+  .hero h1 {
+    font-size: 42px !important;
+    line-height: .92 !important;
+  }
+  
+  .fo-texto h2, 
+  .section-estudio h2, 
+  .contacto-grid h2 {
+    font-size: 36px !important;
+    line-height: .95 !important;
+  }
+  
+  .eyebrow {
+    font-size: 9px !important;
+    letter-spacing: 3.5px !important;
+  }
+  
+  .btn-hero, 
+  .btn-enviar {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 24px !important;
+    border-radius: 0 !important;
+  }
+  
+  .grid-servicios {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  
+  .card-serv {
+    border-bottom: 1px solid #E8E2D9;
+    padding: 28px 0 !important;
+    background: transparent !important;
+  }
+  
+  .card-num {
+    font-size: 12px !important;
+    letter-spacing: 2px;
+    opacity: .35;
+  }
+  
+  .boceto-full-wrap, 
+  .imagen-hall-wrap {
+    border: 0 !important;
+    margin: 32px 0 !important;
+  }
+  
+  .boceto-full-img, 
+  .imagen-hall {
+    height: 56vh !important;
+    min-height: 400px !important;
+    max-height: 520px !important;
+  }
+  
+  /* 📱 RESPONSIVE DE COMPONENTES DE MARCA CRÍTICOS */
+  .logo-footer-img {
+    width: 110px !important;
+    height: auto !important;
+  }
+  
+  .nav-principal a.nav-link {
+    display: none !important; /* Mantiene limpio el ecosistema móvil */
+  }
+  
+  .grid-2, 
+  .estudio-main, 
+  .footer-grid, 
+  .contacto-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
 /* === FIX DEFINITIVO SECCION CIERRE - HALL === */
 .seccion-cierre{
   position:relative;
