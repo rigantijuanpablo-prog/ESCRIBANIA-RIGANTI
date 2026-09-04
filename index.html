@@ -34,6 +34,34 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300}.eyebrow{font-size:
 .seccion-cierre{position:relative;height:82vh;min-height:640px;overflow:hidden;background:var(--dark);display:flex;align-items:center;justify-content:center}.imagen-hall-wrap{position:absolute;inset:0}.imagen-hall{width:100%;height:100%;object-fit:cover;object-position:center 38%}.overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,43,.65),rgba(14,26,43,.35) 50%,rgba(14,26,43,.65))}.contenido-cierre{position:relative;z-index:3;text-align:center;color:#fff;max-width:620px}.contenido-cierre h2{font-size:56px}
 .seccion-contacto{padding:120px 48px;background:#fff;border-top:1px solid var(--border)}.contacto-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}.form-contacto{display:flex;flex-direction:column;gap:28px}.form-contacto input,.form-contacto textarea{border:0;border-bottom:1px solid rgba(14,26,43,.12);padding:20px 0 16px 0;font-size:14px;background:transparent;outline:none}.form-contacto textarea{min-height:140px}.honeypot{display:none!important}.btn-enviar{background:var(--dark);color:#fff;height:56px;padding:0 32px;border:0;letter-spacing:2.5px;font-size:11px;cursor:pointer}
 .footer-premium{background:var(--dark);color:#F9F6F1;padding:96px 48px 32px}.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:80px}.logo-footer-img{width:130px;height:auto;display:block;margin-bottom:20px}.footer-bottom{max-width:1280px;margin:80px auto 0;border-top:1px solid rgba(255,255,255,.07);padding-top:24px;font-size:11px;color:rgba(255,255,255,.25);display:flex;justify-content:space-between}
+/* ==========================================================================
+   RIGANTI ESCRIBANÍA - REPARACIÓN QUIRÚRGICA: GEOLOCALIZADOR LACRE
+   ========================================================================== */
+
+/* 1. Forzar el color Rojo Lacre señorial en el primer icono de la barra */
+.barra-flotante-contacto a.item-flotante:first-child i,
+.barra-flotante-contacto a.item-flotante:first-child svg {
+  color: #a8232a !important; /* Tu rojo carmín/lacre corporativo profundo */
+  font-size: 16px !important;
+  opacity: 1 !important;
+  -webkit-text-stroke: 0px !important; /* Limpieza absoluta de trazos rotos anteriores */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Transición líquida */
+}
+
+/* 2. MICRO-INTERACCIÓN DE ALTA COSTURA: Animación y encendido al pasar el cursor */
+.barra-flotante-contacto a.item-flotante:first-child:hover i,
+.barra-flotante-contacto a.item-flotante:first-child:hover svg {
+  color: #ce2c35 !important; /* El rojo se ilumina sutilmente con el roce */
+  transform: translateY(-3px) scale(1.05) !important; /* El pin flota orgánicamente hacia arriba */
+}
+
+/* Forzar que el contenedor no corte la animación del icono */
+.barra-flotante-contacto a.item-flotante:first-child {
+  opacity: 1 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
 </style>
 </head>
 <body>
