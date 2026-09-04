@@ -19,37 +19,42 @@
     font-family:'Inter',sans-serif;
     background-color:var(--bg-portal);
     color:var(--text-main);
-    min-height:100vh;
-    display:flex;
-    overflow-x:hidden;
+    min-height:100vh;display:flex;overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
   }
   .portal-container{display:flex;width:100vw;min-height:100vh}
+
+  /* --- LADO FOTO CORREGIDO: NO CORTA --- */
   .portal-visual-side{
     flex:1;
-    background-image:url('hall-portal-riganti.jpg');
-    background-size:cover;
-    background-position:center 38%;
     position:relative;
+    overflow:hidden;
+    background-color:#EDE9E3;
   }
   .portal-visual-side::before{
     content:"";
     position:absolute;inset:0;
-    background:linear-gradient(135deg, rgba(14,26,43,0.18) 0%, rgba(14,26,43,0.06) 100%);
+    background-image:url('hall-portal-riganti-final.jpg');
+    background-size:cover;
+    background-position: 35% 100%;
+    background-repeat:no-repeat;
+    filter: brightness(1.05) contrast(0.95);
   }
+  .portal-visual-side::after{
+    content:"";
+    position:absolute;inset:0;
+    background: linear-gradient(135deg, rgba(14,26,43,0.10) 0%, rgba(14,26,43,0.02) 100%);
+  }
+
   .portal-form-side{
-    flex:1;
-    background-color:var(--bg-portal); 
+    flex:1;background-color:var(--bg-portal);
     display:flex;align-items:center;justify-content:center;
     padding:60px;position:relative;
   }
   .portal-wrapper{width:100%;max-width:380px;text-align:center;animation:fadeInPortal 0.8s cubic-bezier(0.25,1,0.5,1)}
   .portal-logo{height:72px;width:auto;object-fit:contain;margin-bottom:32px;display:block;margin-left:auto;margin-right:auto}
   .portal-header{margin-bottom:40px}
-  .portal-header h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:32px;font-weight:300;line-height:1.2;color:var(--text-main);margin-bottom:12px
-  }
+  .portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;line-height:1.2;color:var(--text-main);margin-bottom:12px}
   .portal-header h1 i{font-style:italic;color:var(--gold-dark)}
   .portal-header p{font-size:13px;color:rgba(14,26,43,0.55);letter-spacing:0.05em;line-height:1.5}
   .portal-form{display:flex;flex-direction:column;gap:32px;text-align:left}
@@ -62,10 +67,9 @@
     color:var(--text-main);outline:none;width:100%;transition:border-bottom-color 0.4s ease;
   }
   .form-group-privado input:focus{border-bottom-color:var(--text-main)!important}
-  .toggle-password{position:absolute;right:0;bottom:12px;font-size:14px;color:rgba(14,26,43,0.4);cursor:pointer;transition:color 0.3s ease}
-  .toggle-password:hover{color:var(--text-main)}
+  .toggle-password{position:absolute;right:0;bottom:12px;font-size:14px;color:rgba(14,26,43,0.4);cursor:pointer}
   .portal-asistencia{display:flex;justify-content:space-between;align-items:center;margin-top:-12px;font-size:12px}
-  .portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none;transition:color 0.3s ease}
+  .portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none}
   .portal-link-secundario:hover{color:var(--text-main)}
   .btn-ingreso-privado{
     margin-top:12px;background-color:var(--text-main);color:#FFFFFF;
@@ -103,7 +107,7 @@
           <div class="form-group-privado">
             <label for="password">Clave de Acceso</label>
             <input type="password" id="password" name="password" required autocomplete="current-password">
-            <i class="fa-regular fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
+            <i class="fa-regular fa-eye toggle-password" onclick="const i=document.getElementById('password');const t=this;i.type=i.type==='password'?'text':'password';t.classList.toggle('fa-eye');t.classList.toggle('fa-eye-slash')"></i>
           </div>
           <div class="portal-asistencia">
             <a href="#" class="portal-link-secundario">¿Olvidó su contraseña?</a>
@@ -119,13 +123,5 @@
       </div>
     </div>
   </div>
-  <script>
-    function togglePasswordVisibility(){
-      const input=document.getElementById('password');
-      const icon=document.querySelector('.toggle-password');
-      if(input.type==='password'){input.type='text';icon.classList.remove('fa-eye');icon.classList.add('fa-eye-slash')}
-      else{input.type='password';icon.classList.remove('fa-eye-slash');icon.classList.add('fa-eye')}
-    }
-  </script>
 </body>
 </html>
