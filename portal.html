@@ -10,67 +10,54 @@
 <style>
   :root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12)}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
-<style>
-.portal-container{display:flex;width:100vw;height:100vh;overflow:hidden;background:#F9F6F0}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
 
-/* IZQUIERDA: foto se pega a su ancho real, sin hueco */
-.portal-visual-side{
-  flex:0 0 auto;
-  height:100vh;
-  background:#F9F6F0;
-  display:flex;
-}
-.portal-visual-side img{
-  height:100vh;
-  width:auto; /* se ajusta sola, no deja hueco */
-  display:block;
-  object-fit:contain;
-  object-position:left top;
-}
+ .portal-container{display:flex;width:100vw;height:100vh;background:#F9F6F0}
 
-/* DERECHA: todo el resto, y el login CENTRADO en ese resto */
-.portal-form-side{
-  flex:1 1 auto;
-  height:100vh;
-  background:#FAF9F6;
-  display:flex;
-  align-items:center;
-  justify-content:center; /* CENTRADO EN TODO EL ESPACIO QUE QUEDA */
-  padding:0;
-}
-.portal-wrapper{width:100%;max-width:380px;text-align:center}
-</style>
+  /* IZQUIERDA: foto pegada, sin hueco, ancho auto = casa la divisoria */
+ .portal-visual-side{
+    flex:0 0 auto;
+    height:100vh;
+    background:#F9F6F0;
+    display:flex;
+  }
+ .portal-visual-side img{
+    height:100vh;
+    width:auto;
+    display:block;
+  }
 
-<div class="portal-container">
-  <div class="portal-visual-side">
-    <img src="hall-portal-riganti-final.jpg" alt="Boceto RIGANTI">
-  </div>
-  <div class="portal-form-side">
-    <div class="portal-wrapper">
-      <!-- tu login -->
-    </div>
-  </div>
-</div>
-.portal-wrapper{width:100%;max-width:380px;text-align:center}
-.portal-logo{height:68px;margin:0 auto 28px;display:block}
-.portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px}
-.portal-header h1 i{font-style:italic;color:var(--gold)}
-.portal-header p{font-size:12.5px;color:rgba(14,26,43,0.55);line-height:1.5;margin-bottom:36px}
-.portal-form{display:flex;flex-direction:column;gap:28px;text-align:left}
-.form-group-privado{display:flex;flex-direction:column;position:relative}
-.form-group-privado label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.form-group-privado input{border:none;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-size:14.5px;outline:none}
-.portal-asistencia{display:flex;justify-content:space-between;font-size:11.5px;margin-top:-10px}
-.portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none}
-.btn-ingreso-privado{margin-top:10px;background:var(--text);color:#fff;border:1px solid var(--text);height:46px;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
-.portal-footer{margin-top:48px;font-size:9.5px;letter-spacing:1px;color:rgba(14,26,43,0.35);text-transform:uppercase}
+  /* DERECHA: ocupa TODO lo que queda y centra el login */
+ .portal-form-side{
+    flex:1 1 auto;
+    height:100vh;
+    background:var(--bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:4vw;
+  }
+ .portal-wrapper{width:100%;max-width:380px;text-align:center}
+ .portal-logo{height:68px;margin:0 auto 28px;display:block}
+ .portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px}
+ .portal-header h1 i{font-style:italic;color:var(--gold)}
+ .portal-header p{font-size:12.5px;color:rgba(14,26,43,0.55);line-height:1.5;margin-bottom:36px}
+ .portal-form{display:flex;flex-direction:column;gap:28px;text-align:left}
+ .form-group-privado{display:flex;flex-direction:column;position:relative}
+ .form-group-privado label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+ .form-group-privado input{border:none;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-size:14.5px;outline:none}
+ .portal-asistencia{display:flex;justify-content:space-between;font-size:11.5px;margin-top:-10px}
+ .portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none}
+ .btn-ingreso-privado{margin-top:10px;background:var(--text);color:#fff;border:1px solid var(--text);height:46px;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;width:100%}
+ .portal-footer{margin-top:48px;font-size:9.5px;letter-spacing:1px;color:rgba(14,26,43,0.35);text-transform:uppercase}
   @media (max-width:900px){.portal-visual-side{display:none}.portal-form-side{flex:1 1 100%}}
 </style>
 </head>
 <body>
   <div class="portal-container">
-    <div class="portal-visual-side"><img src="hall-portal-riganti-final.jpg" alt="Boceto RIGANTI"></div>
+    <div class="portal-visual-side">
+      <img src="hall-portal-riganti-final.jpg" alt="Boceto RIGANTI">
+    </div>
     <div class="portal-form-side">
       <div class="portal-wrapper">
         <img src="logo-pluma-riganti-blanco-final.png" class="portal-logo" alt="RIGANTI">
