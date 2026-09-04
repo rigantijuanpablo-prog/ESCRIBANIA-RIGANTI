@@ -132,6 +132,31 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
     display: none !important;
   }
 }
+  /* ==========================================================================
+   RIGANTI ESCRIBANÍA - GEOLOCATION PIN ACCENT
+   ========================================================================== */
+
+/* 1. Seleccionamos el primer item flotante (el mapa) para darle la identidad transparente */
+.barra-flotante-contacto .item-flotante:first-child {
+  background: transparent !important;
+  border: none !important;
+  opacity: 1 !important; /* Forzamos que sea muy visible desde el inicio */
+}
+
+/* 2. El secreto: El color del icono del Pin de Mapa en un rojo lacre refinado */
+.barra-flotante-contacto .item-flotante:first-child i,
+.barra-flotante-contacto .item-flotante:first-child svg {
+  color: #a8232a !important; /* Un rojo carmín/lacre profundo y señorial, no chillón */
+  font-size: 16px !important; /* Le damos un toque más de escala para que se luzca */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* MICRO-INTERACCIÓN DE ELITE: Al pasar el mouse, el pin hace un leve salto orgánico hacia arriba */
+.barra-flotante-contacto .item-flotante:first-child:hover i {
+  transform: translateY(-2px);
+  color: #ce2c35 !important; /* Se ilumina un poco más con el roce del cursor */
+}
+
 </style>
 
 <!-- 🗺️ MICRODATOS DE GEOLOCALIZACIÓN PARA GOOGLE MAPS -->
