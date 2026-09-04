@@ -11,43 +11,343 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=block" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root{--bg-primary:#F9F6F1;--bg-dark:#0E1A2B;--gold:#C9B896;--gold-dark:#8C7342;--text-main:#0E1A2B;--text-muted:rgba(14,26,43,0.6);--border:rgba(14,26,43,0.08);--border-color:#E8E2D9}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-main);line-height:1.7}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300}
-.eyebrow{font-size:10px;letter-spacing:4px;opacity:0.5;text-transform:uppercase;display:block;margin-bottom:16px;font-weight:500}
-.eyebrow.gold{color:var(--gold-dark);opacity:1}
-.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;letter-spacing:-0.02em}
-html:not(.fonts-loaded).hero h1{visibility:hidden}
-html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
-.grid-2{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center}
-.header-principal{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:6px 32px;background:rgba(249,246,241,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:84px}
-.logo{display:flex;align-items:center;text-decoration:none}
-.logo img{height:72px;width:auto;object-fit:contain;background:transparent!important;border:0!important;display:block;mix-blend-mode:multiply}
-.nav-principal{display:flex;gap:26px;align-items:center}
-.nav-principal a.nav-link{text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--text-main);opacity:0.7}
-.btn-header{border:1px solid var(--text-main);padding:12px 22px;opacity:1!important;text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--text-main)}
-.lang-switch{margin-left:18px;border-left:1px solid rgba(14,26,43,0.15);padding-left:18px;display:flex;gap:8px;align-items:center;font-size:11px;letter-spacing:1px}
-.lang-switch.active{font-weight:700;color:var(--text-main)}.lang-switch.inactive{opacity:.35;cursor:pointer}.lang-switch.sep{opacity:.2}
-.barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90;background:rgba(255,255,255,0.42);backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,0.45);border-radius:28px;padding:12px 7px}
-.item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.65);border-radius:50%;text-decoration:none;color:var(--text-main);font-size:14px}
-.item-flotante.item-dorado{background:rgba(201,184,150,0.28);border:1px solid rgba(201,184,150,0.35)}
-.hero{min-height:90vh;padding:160px 48px 80px;display:flex;align-items:center}
-.hero-wrapper{max-width:820px}
-.hero h1{font-size:72px;line-height:0.92;margin-bottom:28px}
-.hero h1 i{font-style:italic;color:var(--gold-dark)}
-.hero p{max-width:560px;color:var(--text-muted);font-size:16px;margin-bottom:8px}
-.btn-hero{display:inline-block;margin-top:32px;background:var(--bg-dark);color:white;padding:16px 32px;text-decoration:none;font-size:11px;letter-spacing:2px}
-.seccion-servicios{padding:0 48px 80px}
-.grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E8E2D9;border:1px solid #E8E2D9}
-.card-serv{background:white;padding:36px 32px}
-.card-num{font-family:'Cormorant Garamond',serif;font-size:22px;color:rgba(140,115,66,0.45);margin-bottom:16px}
-.card-serv h3{margin-bottom:10px;font-size:22px}
-.card-serv p{font-size:13px;opacity:0.6;line-height:1.6}
-.seccion-family-office{padding:120px 48px;border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
-.fo-texto h2{font-size:52px;line-height:0.95;margin-bottom:24px}
-.fo-texto h2 i{font-style:italic;color:var(--gold-dark)}
-.fo-principal{font-size:18px!important;color:var(--text-main)!important;font-weight:400!important;margin-bottom:24px;line-height:1.6}
+/* ==========================================================================
+   TANDA 1 CURADA: ARQUITECTURA DE INTERFAZ - ELITE STYLE
+   ========================================================================== */
+
+:root {
+  --bg-primary: #F9F6F1;
+  --bg-dark: #0E1A2B;
+  --gold: #C9B896;
+  --gold-dark: #8C7342;
+  --text-main: #0E1A2B;
+  --text-muted: rgba(14,26,43,0.6);
+  --border: rgba(14,26,43,0.08);
+  --border-color: #E8E2D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.eyebrow.gold {
+  color: var(--gold-dark);
+  opacity: 1;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+html:not(.fonts-loaded).hero h1 {
+  visibility: hidden;
+}
+
+html.fonts-loaded.hero h1 {
+  visibility: visible;
+  transition: visibility 0s;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* 🏛️ CABECERA PREMIUM OPTIMIZADA */
+.header-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex !important;
+  justify-content: space-between !important; /* Separa simétricamente el logo de los links */
+  align-items: center !important;
+  padding: 0 48px !important; /* Aire lateral de alta gama */
+  background: rgba(249, 246, 241, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  height: 88px !important; /* Altura ideal unificada */
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 72px !important; /* Escala señorial senior verificada */
+  max-height: 72px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+  display: block !important;
+  mix-blend-mode: multiply !important;
+  image-rendering: -webkit-optimize-contrast !important;
+}
+
+.nav-principal {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-principal a.nav-link {
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.nav-principal a.nav-link:hover {
+  opacity: 1;
+}
+
+/* ✒️ BOTÓN SOLICITAR TURNO HEADER - CENTRADO PERFECTO */
+.btn-header {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid var(--text-main) !important;
+  height: 40px !important;
+  padding: 0 24px !important;
+  opacity: 1 !important;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  line-height: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-header:hover {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+}
+
+.lang-switch {
+  margin-left: 18px;
+  border-left: 1px solid rgba(14, 26, 43, 0.15);
+  padding-left: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.lang-switch.active { font-weight: 700; color: var(--text-main); }
+.lang-switch.inactive { opacity: .35; cursor: pointer; }
+.lang-switch.sep { opacity: .2; }
+
+/* 💎 TU MARAVILLOSA BARRA MÁRMOL FLOTANTE INTEGRADA Y CENTRADA */
+.barra-flotante-contacto {
+  position: fixed;
+  right: 18px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Centrado horizontal real de los items */
+  gap: 12px !important;
+  z-index: 90;
+  background: radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,0.96) 0%, rgba(249,246,241,0.85) 60%, rgba(232,226,217,0.75) 100%) !important;
+  backdrop-filter: blur(22px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(160%) !important;
+  border: 1px solid rgba(255,255,255,0.8) !important;
+  border-top: 1px solid rgba(255,255,255,1) !important;
+  box-shadow: 0 12px 36px rgba(14,26,43,0.14), 0 2px 10px rgba(14,26,43,0.08), inset 0 1px 0 rgba(255,255,255,1) !important;
+  padding: 14px 9px !important;
+  border-radius: 28px !important;
+}
+
+.barra-flotante-contacto::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: linear-gradient(105deg, transparent 40%, rgba(201,184,150,0.08) 50%, transparent 60%), linear-gradient(185deg, rgba(255,255,255,0.4) 0%, transparent 40%) !important;
+  pointer-events: none !important;
+}
+
+.item-flotante {
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  opacity: .72 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  color: var(--text-main);
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.item-flotante:hover {
+  opacity: 1 !important;
+}
+
+.item-flotante.item-dorado {
+  background: #0E1A2B !important;
+  color: #C9B896 !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 14px rgba(14,26,43,0.28), inset 0 1px 0 rgba(255,255,255,0.15) !important;
+  margin-top: 8px !important;
+}
+
+/* 🏆 REEMPLAZO DE ELITE: ADAPTADO PARA TU NUEVO LOGO COMPLETO VERTICAL DEL FOOTER */
+.logo-footer-img {
+  width: 130px !important;       /* El ancho controla la correcta lectura de la tipografía */
+  height: auto !important;       /* EL SECRETO: Permite que el alto vertical respire sin aplastarse */
+  display: block !important;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  image-rendering: -webkit-optimize-contrast !important; /* Nitidez máxima sobre fondo oscuro */
+  margin-bottom: 20px !important; 
+}
+
+/* SECCIÓN HERO */
+.hero {
+  min-height: 90vh;
+  padding: 160px 48px 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-wrapper {
+  max-width: 820px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  line-height: 0.92;
+  margin-bottom: 28px;
+}
+
+.hero h1 i {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 32px;
+  background: var(--bg-dark);
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* SECCIÓN SERVICIOS */
+.seccion-servicios {
+  padding: 0 48px 80px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;
+  background: #E8E2D9;
+  border: 1px solid #E8E2D9;
+}
+
+.card-serv {
+  background: white;
+  padding: 36px 32px;
+}
+
+.card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: rgba(140, 115, 66, 0.45);
+  margin-bottom: 16px;
+}
+
+.card-serv h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card-serv p {
+  font-size: 13px;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+/* SECCIÓN FAMILY OFFICE */
+.seccion-family-office {
+  padding: 120px 48px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fo-texto h2 {
+  font-size: 52px;
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.fo-texto h2 i {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.fo-principal {
+  font-size: 18px !important;
+  color: var(--text-main) !important;
+  font-weight: 400 !important;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
 .fo-texto p{color:var(--text-muted);font-size:15px;font-weight:300;margin-bottom:20px}
 .fo-lista{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:18px}
 .fo-lista li{display:flex;gap:16px;align-items:start;font-size:14px;color:var(--text-muted);line-height:1.6;font-weight:300}
