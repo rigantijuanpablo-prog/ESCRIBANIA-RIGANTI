@@ -18,42 +18,103 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300}.eyebrow{font-size:
 .lang-switch{margin-left:18px;border-left:1px solid rgba(14,26,43,.15);padding-left:18px;display:flex;gap:8px;font-size:11px;align-items:center}.active{font-weight:700}.inactive{opacity:.35;cursor:pointer}.sep{opacity:.2}
 .nav-principal a.portal-link{color:var(--dark)!important;opacity:.8;display:inline-flex;align-items:center;gap:6px;font-weight:500;transition:.3s}.nav-principal a.portal-link:hover{color:var(--gold-d)!important;opacity:1!important}.nav-principal a.portal-link i{font-size:10px;opacity:.65;transform:translateY(-1px)}
 
-/* === MARMOL CARRARA 0.72 ETEREO + FILETE PULIDO + LACRE FIX === */
-.barra-flotante-contacto{
-  position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:9999;
-  display:flex;flex-direction:column;align-items:center;gap:14px;
-  background:rgba(253,250,244,0.72)!important;
-  backdrop-filter:blur(22px) saturate(160%)!important;
-  -webkit-backdrop-filter:blur(22px) saturate(160%)!important;
-  border:1px solid rgba(201,184,150,0.32)!important;
-  border-top:1px solid rgba(255,255,255,0.8)!important;
+/* ==========================================================================
+   === MARMOL CARRARA 0.72 ETEREO + FILETE PULIDO + LACRE FIX + SHADOW ===
+   ========================================================================== */
+.barra-flotante-contacto {
+  position: fixed !important;
+  right: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 14px !important;
+  
+  /* 🏛️ EL FIX DE SILUETA: Restauramos la píldora perfecta con aire elegante */
+  border-radius: 28px !important;
+  padding: 14px 10px !important;
+  width: auto !important;
+  
+  /* Tu exquisita base Carrara traslúcida y densa */
+  background: rgba(253, 250, 244, 0.72) !important;
+  backdrop-filter: blur(22px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(160%) !important;
+  border: 1px solid rgba(201, 184, 150, 0.32) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
 
-
+  /* 🌌 LA MICRO-SOMBRA FANTASMA: Un suspiro de penumbra ultra-atenuado para despegar del blanco */
+  box-shadow: 
+    0 24px 64px rgba(14, 26, 43, 0.02),
+    0 4px 16px rgba(14, 26, 43, 0.01),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
 }
-.barra-flotante-contacto::before{
-  content:""!important;position:absolute!important;inset:-20%!important;border-radius:inherit!important;
-  background:radial-gradient(ellipse 180px 220px at 28% 18%, rgba(201,184,150,0.26) 0%, rgba(201,184,150,0.12) 35%, transparent 68%),
+
+/* Pseudo-elemento 1: Las nubes cromáticas de la piedra */
+.barra-flotante-contacto::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important; /* Corregido a 0 para que acompañe el contorno exacto de la píldora sin deformarse */
+  border-radius: inherit !important;
+  background: radial-gradient(ellipse 180px 220px at 28% 18%, rgba(201,184,150,0.26) 0%, rgba(201,184,150,0.12) 35%, transparent 68%),
              radial-gradient(ellipse 160px 200px at 72% 38%, rgba(140,115,66,0.16) 0%, transparent 65%),
              radial-gradient(ellipse 200px 140px at 45% 75%, rgba(201,184,150,0.20) 0%, transparent 60%),
-             radial-gradient(ellipse 120px 120px at 65% 82%, rgba(140,115,66,0.10) 0%, transparent 70%)!important;
-  filter:blur(8px)!important;pointer-events:none!important;z-index:0!important
+             radial-gradient(ellipse 120px 120px at 65% 82%, rgba(140,115,66,0.10) 0%, transparent 70%) !important;
+  filter: blur(8px) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
 }
-.barra-flotante-contacto::after{
-  content:""!important;position:absolute!important;inset:0!important;border-radius:inherit!important;
-  background:linear-gradient(100deg, transparent 30%, rgba(201,184,150,0.18) 32%, transparent 34%),
+
+/* Pseudo-elemento 2: Las vetas finas minerales */
+.barra-flotante-contacto::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: linear-gradient(100deg, transparent 30%, rgba(201,184,150,0.18) 32%, transparent 34%),
              linear-gradient(105deg, transparent 55%, rgba(140,115,66,0.14) 57%, transparent 59%),
-             linear-gradient(95deg, transparent 68%, rgba(201,184,150,0.12) 70%, transparent 72%)!important;
-  filter:blur(1.2px)!important;pointer-events:none!important;z-index:0!important
+             linear-gradient(95deg, transparent 68%, rgba(201,184,150,0.12) 70%, transparent 72%) !important;
+  filter: blur(1.2px) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
 }
-.item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--dark);text-decoration:none;position:relative;z-index:2;transition:all.3s cubic-bezier(.25,1,.5,1)}
-.item-flotante.item-dorado{background:var(--dark);color:var(--gold);border-radius:50%;margin-top:4px}
-/* LACRE - SELECTOR CORREGIDO */
-.barra-flotante-contacto a.item-flotante:first-child i{
-  color:#a8232a!important;font-size:16px!important;opacity:1!important;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1)!important;
+
+/* Iconos superiores (WhatsApp, sobre, teléfono) */
+.item-flotante {
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--dark) !important;
+  text-decoration: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transition: all 0.3s cubic-bezier(.25,1,.5,1) !important;
 }
-.barra-flotante-contacto a.item-flotante:first-child:hover i{
-  color:#ce2c35!important;transform:translateY(-3px) scale(1.05)!important;
+
+/* Botón inferior de acción azul noche */
+.item-flotante.item-dorado {
+  background: var(--dark) !important;
+  color: var(--gold) !important;
+  border-radius: 50% !important;
+  margin-top: 4px !important;
+  box-shadow: 0 4px 12px rgba(14,26,43,0.15) !important;
+}
+
+/* LACRE - SELECTOR CORREGIDO NATIVO */
+.barra-flotante-contacto a.item-flotante:first-child i {
+  color: #a8232a !important;
+  font-size: 16px !important;
+  opacity: 1 !important;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Micro-animación líquida en el pin rojo al apoyar el cursor */
+.barra-flotante-contacto a.item-flotante:first-child:hover i {
+  color: #ce2c35 !important;
+  transform: translateY(-3px) scale(1.05) !important;
 }
 
 .hero{min-height:90vh;padding:180px 48px 80px;display:flex;align-items:center}.hero-wrapper{max-width:820px}.hero h1{font-size:72px;line-height:.92;margin-bottom:28px}.hero h1 i{font-style:italic;color:var(--gold-d)}.hero p{max-width:560px;color:var(--muted)}
