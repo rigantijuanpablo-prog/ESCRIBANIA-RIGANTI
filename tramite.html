@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión Documental | RIGANTI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12);--card:#fff;--pend:#E9E6E1;--rev:#FFF3CD;--ap:#D1E7DD;--rej:#F8D7DA}
+*{margin:0;padding:0;box-sizing:border-box} body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+.sidebar{flex:0 0 37%;height:100vh;position:sticky;top:0;overflow:hidden;background:#F9F6F0} .sidebar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.main{flex:0 0 63%;padding:44px 52px;overflow-y:auto}
+.header h1{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300} .header h1 i{font-style:italic;color:var(--gold)} .header p{font-size:11px;letter-spacing:1px;color:rgba(14,26,43,0.5);text-transform:uppercase;margin-top:6px}
+.breadcrumb{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(14,26,43,0.4);margin-bottom:20px} .breadcrumb a{color:inherit;text-decoration:none}
+
+/* CHECKLIST */
+.checklist{margin:32px 0} .checklist h2{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.item{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);padding:16px 18px;margin-bottom:10px}
+.item-left{display:flex;align-items:center;gap:14px} .item-icon{width:32px;height:32px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px}
+.item-info h4{font-size:13.5px;font-weight:500} .item-info p{font-size:11px;color:rgba(14,26,43,0.5);margin-top:2px}
+.badge{font-size:8.5px;letter-spacing:1.2px;text-transform:uppercase;padding:6px 10px;border-radius:2px;font-weight:600}
+.badge-pend{background:var(--pend);color:var(--text)} .badge-rev{background:var(--rev);color:#664D03} .badge-ap{background:var(--ap);color:#0F5132} .badge-rej{background:var(--rej);color:#842029}
+.item.rej{border-color:rgba(132,32,41,0.25)} .obs{font-size:11px;color:#842029;background:rgba(248,215,218,0.4);padding:10px 14px;margin:-4px 0 14px 46px;border-left:2px solid #842029}
+
+/* UPLOAD */
+.upload-zone{border:1px dashed var(--gold);background:rgba(140,115,66,0.04);padding:36px;text-align:center;margin:28px 0;transition:.2s;cursor:pointer}
+.upload-zone.dragover{background:rgba(140,115,66,0.08);border-color:var(--text)}
+.upload-zone i{font-size:22px;color:var(--gold);margin-bottom:12px} .upload-zone h4{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500} .upload-zone p{font-size:11px;color:rgba(14,26,43,0.5);margin-top:6px}
+.file-list{margin-top:16px} .file-row{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);padding:12px 14px;margin-bottom:8px;font-size:12px}
+
+/* BOVEDA */
+.boveda{margin-top:48px;border-top:1px solid var(--line);padding-top:28px} .boveda-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.boveda-card{background:var(--card);border:1px solid var(--line);padding:18px} .boveda-card h4{font-family:'Cormorant Garamond',serif;font-size:16px} .boveda-card p{font-size:11px;color:rgba(14,26,43,0.5);margin:6px 0 12px} .btn-small{height:32px;padding:0 14px;border:1px solid var(--text);background:transparent;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer}
+@media(max-width:900px){.sidebar{display:none}.main{flex:1 1 100%;padding:24px}.boveda-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sidebar"><img src="hall-portal-riganti-final.jpg" alt="RIGANTI"></div>
+<div class="main">
+  <div class="breadcrumb"><a href="dashboard.html">← Dashboard</a> / Gestión Documental</div>
+  <div class="header"><h1>Escritura Compraventa <i>Mat. 15-4321</i></h1><p>Av. Alvear 1890 - Checklist de requisitos según acto</p></div>
+
+  <div class="checklist">
+    <h2>Requisitos solicitados por la escribanía</h2>
+    
+    <div class="item"><div class="item-left"><div class="item-icon"><i class="fa-regular fa-id-card"></i></div><div class="item-info"><h4>DNI frente y dorso - Comprador</h4><p>PDF o foto legible, no vencido</p></div></div><span class="badge badge-ap">Aprobado</span></div>
+
+    <div class="item"><div class="item-left"><div class="item-icon"><i class="fa-regular fa-file-lines"></i></div><div class="item-info"><h4>Constancia de CUIT / CUIL</h4><p>AFIP actualizada</p></div></div><span class="badge badge-ap">Aprobado</span></div>
+
+    <div class="item"><div class="item-left"><div class="item-icon"><i class="fa-solid fa-building-columns"></i></div><div class="item-info"><h4>Título de Propiedad Antecedente</h4><p>Escritura anterior del inmueble</p></div></div><span class="badge badge-rev">En revisión por escribano</span></div>
+
+    <div class="item rej"><div class="item-left"><div class="item-icon"><i class="fa-solid fa-receipt"></i></div><div class="item-info"><h4>Impuesto ABL / Rentas - Última boleta paga</h4><p>Debe verse la nomenclatura catastral completa</p></div></div><span class="badge badge-rej">Rechazado - Ver observación</span></div>
+    <div class="obs"><i class="fa-solid fa-circle-exclamation"></i> Observación escribana: La boleta está cortada. Por favor subir foto completa donde se lea partida 023-45678.</div>
+
+    <div class="item"><div class="item-left"><div class="item-icon"><i class="fa-regular fa-file-pdf"></i></div><div class="item-info"><h4>Estado de Dominio e Inhibiciones</h4><p>Será solicitado por la escribanía - a cargo del cliente</p></div></div><span class="badge badge-pend">Pendiente de entrega</span></div>
+  </div>
+
+  <div class="upload-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+    <i class="fa-solid fa-cloud-arrow-up"></i>
+    <h4>Arrastrar y soltar archivos aquí</h4>
+    <p>PDF, JPG, PNG hasta 15MB - Compresión automática para imágenes de celular</p>
+    <input type="file" id="fileInput" hidden multiple accept=".pdf,.jpg,.jpeg,.png">
+  </div>
+  <div class="file-list" id="fileList"></div>
+
+  <div class="boveda">
+    <h2 style="font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold)">Bóveda Digital — Mis Escrituras Anteriores</h2>
+    <div class="boveda-grid">
+      <div class="boveda-card"><h4>Acta Poder 2023</h4><p>Escritura N° 145 - 14/03/2023</p><button class="btn-small"><i class="fa-solid fa-download"></i> Copia Simple Digital</button></div>
+      <div class="boveda-card"><h4>Reglamento Co-propiedad</h4><p>Av. Alvear 1890 - 2019</p><button class="btn-small"><i class="fa-solid fa-download"></i> Copia Simple Digital</button></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const dropZone=document.getElementById('dropZone'), fileInput=document.getElementById('fileInput'), fileList=document.getElementById('fileList');
+['dragenter','dragover'].forEach(e=>dropZone.addEventListener(e,ev=>{ev.preventDefault();dropZone.classList.add('dragover')}));
+['dragleave','drop'].forEach(e=>dropZone.addEventListener(e,ev=>{ev.preventDefault();dropZone.classList.remove('dragover')}));
+dropZone.addEventListener('drop',ev=>{ handleFiles(ev.dataTransfer.files) });
+fileInput.addEventListener('change',()=>handleFiles(fileInput.files));
+
+function handleFiles(files){
+  [...files].forEach(f=>{
+    // Simulación compresión
+    const compressed = f.size > 2*1024*1024 ? (f.size*0.45/1024/1024).toFixed(1)+' MB (comprimido)' : (f.size/1024/1024).toFixed(1)+' MB';
+    const row=document.createElement('div'); row.className='file-row';
+    row.innerHTML=`<span><i class="fa-regular fa-file"></i> ${f.name} — ${compressed}</span><span style="color:var(--gold);font-size:10px;letter-spacing:1px">SUBIENDO...</span>`;
+    fileList.prepend(row);
+    setTimeout(()=>{row.innerHTML=`<span><i class="fa-solid fa-check" style="color:#0F5132"></i> ${f.name} — ${compressed}</span><span class="badge badge-rev">En revisión</span>`}, 1200);
+  });
+}
+</script>
+</body>
+</html>
