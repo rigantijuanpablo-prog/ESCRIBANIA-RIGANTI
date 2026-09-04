@@ -258,63 +258,25 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
   .valores-col{position:relative!important;top:0!important;}
   .section-estudio blockquote{max-width:100%!important;margin:40px 0 0 0!important;}
 }
- /* === FIX CITA + TARJETA AZUL + ESMERILADO === */
-.estudio-main{
-  display:grid!important;
-  grid-template-columns:1.15fr 380px!important;
-  gap:80px!important;
-  align-items:start!important;
-  max-width:1280px!important;
-  margin:0 auto!important;
-}
-.valores-col{
-  display:flex!important;
-  flex-direction:column!important;
-  gap:1px!important;
-  background:var(--border-color)!important;
-  border:1px solid var(--border-color)!important;
-  height:fit-content!important;
-  position:sticky!important;
-  top:120px!important;
-}
-.tarjeta-valor{background:var(--bg-primary)!important;padding:28px!important;}
-.tarjeta-valor.dark{background:var(--bg-dark)!important;padding:32px 28px!important;overflow:visible!important;}
-.tarjeta-valor.dark p{white-space:normal!important;overflow:visible!important;color:rgba(249,246,241,.7)!important;}
-.boceto-full-img{height:auto!important;min-height:0!important;aspect-ratio:16/10!important;}
-.section-estudio blockquote{
-  margin:56px 0 0 0!important;
-  padding-left:28px!important;
-  border-left:2px solid var(--gold)!important;
-  text-align:left!important;
-  max-width:520px!important;
-  font-family:'Cormorant Garamond',serif!important;
-  font-style:italic!important;
-  font-size:26px!important;
-  line-height:1.35!important;
-  opacity:.8!important;
-}
+/* === ESMERILADO DEFINITIVO RIGANTI === */
 .barra-flotante-contacto{
-  background: rgba(249,246,241,0.72) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  border: 1px solid rgba(14,26,43,0.08) !important;
-  box-shadow: 0 8px 32px rgba(14,26,43,0.06), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  background: rgba(249,246,241,0.82) !important;
+  backdrop-filter: blur(20px) saturate(170%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(170%) !important;
+  border: 1px solid rgba(14,26,43,0.10) !important;
+  box-shadow: 0 10px 36px rgba(14,26,43,0.08) !important;
+  border-radius: 28px !important;
 }
 .item-flotante{
-  background: rgba(255,255,255,0.6) !important;
-  border: 1px solid rgba(14,26,43,0.06) !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: #0E1A2B !important;
 }
 .item-flotante.item-dorado{
-  background: rgba(14,26,43,0.9) !important;
+  background: #0E1A2B !important;
   color: #F9F6F1 !important;
-  border-color: rgba(14,26,43,0.9) !important;
+  border-radius: 50% !important;
 }
-@media screen and (max-width: 900px){
-  .estudio-main{grid-template-columns:1fr!important;}
-  .valores-col{position:relative!important;top:0!important;}
-}
-
-/* === TU BLOQUE YA EXISTENTE ABAJO === */
 </style>
 </head>
 <body>
