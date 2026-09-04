@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turnos y Liquidación | RIGANTI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--bg:#FAF9F6;--text:#0E1A2B;--gold:#8C7342;--line:rgba(14,26,43,0.12);--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box} body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+.sidebar{flex:0 0 37%;height:100vh;position:sticky;top:0;overflow:hidden;background:#F9F6F0}.sidebar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.main{flex:0 0 63%;padding:44px 52px;overflow-y:auto}
+.breadcrumb{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(14,26,43,0.4);margin-bottom:20px}.breadcrumb a{color:inherit;text-decoration:none}
+.header h1{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300}.header h1 i{font-style:italic;color:var(--gold)}
+.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin:28px 0 24px}.tab{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:0 2px 14px;border-bottom:2px solid transparent;cursor:pointer;color:rgba(14,26,43,0.5)}.tab.active{color:var(--text);border-color:var(--text);font-weight:600}
+.panel{display:none}.panel.active{display:block}
+
+/* CALENDARIO */
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cal-day{background:var(--card);padding:12px 10px;min-height:78px;font-size:12px}.cal-day.head{background:var(--bg);min-height:auto;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(14,26,43,0.5);padding:8px 10px}
+.cal-day.disabled{color:rgba(14,26,43,0.25);background:#FAF9F6}
+.cal-day.free{cursor:pointer}.cal-day.free:hover{background:rgba(140,115,66,0.06)}
+.cal-day.selected{background:var(--text);color:#fff}.cal-day.selected.slot{color:#fff;border-color:rgba(255,255,255,0.3)}
+.slot{margin-top:6px;font-size:9px;border:1px solid var(--line);padding:4px 6px;display:block;text-align:center;letter-spacing:0.8px}
+.slot.taken{opacity:0.3;text-decoration:line-through;pointer-events:none}
+.alert-box{margin-top:18px;background:rgba(14,26,43,0.04);border-left:2px solid var(--gold);padding:14px 16px;font-size:11.5px;line-height:1.5}
+
+/* LIQUIDACION */
+.liquidacion{display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px}
+.liq-card{background:var(--card);border:1px solid var(--line);padding:22px}
+.liq-card h3{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.liq-row{display:flex;justify-content:space-between;font-size:12.5px;padding:10px 0;border-bottom:1px solid rgba(14,26,43,0.06)}.liq-row.total{font-weight:600;border-bottom:none;font-size:13.5px;padding-top:14px;margin-top:6px;border-top:1px solid var(--text)}
+.liq-row.saldo{font-weight:600;color:var(--gold)}
+.btn{height:44px;width:100%;background:var(--text);color:#fff;border:1px solid var(--text);font-size:10px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;margin-top:14px}
+.btn.outline{background:transparent;color:var(--text)}
+.bank{background:rgba(14,26,43,0.03);padding:14px;margin-top:14px;font-size:11px;line-height:1.6}
+.upload-comp{border:1px dashed var(--line);padding:14px;text-align:center;margin-top:12px;cursor:pointer;font-size:11px}
+@media(max-width:900px){.sidebar{display:none}.main{flex:1 1 100%;padding:24px}.liquidacion{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sidebar"><img src="hall-portal-riganti-final.jpg" alt="RIGANTI"></div>
+<div class="main">
+  <div class="breadcrumb"><a href="dashboard.html">← Dashboard</a> / Turnos y Liquidación</div>
+  <div class="header"><h1>Reserva y <i>Liquidación</i></h1></div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('turnos')">Agenda de Firmas</div>
+    <div class="tab" onclick="switchTab('liq')">Presupuesto y Estado de Cuenta</div>
+  </div>
+
+  <!-- PANEL TURNOS -->
+  <div id="panel-turnos" class="panel active">
+    <div class="cal-head">
+      <h3 style="font-size:13px;font-weight:500">Septiembre 2026 - Escritura Compraventa Mat. 15-4321</h3>
+      <div style="font-size:11px;color:rgba(14,26,43,0.5)"><i class="fa-regular fa-circle-dot" style="color:var(--text)"></i> Disponible &nbsp; <span style="opacity:0.3;text-decoration:line-through">Ocupado</span></div>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-day head">Lun</div><div class="cal-day head">Mar</div><div class="cal-day head">Mié</div><div class="cal-day head">Jue</div><div class="cal-day head">Vie</div><div class="cal-day head">Sáb</div><div class="cal-day head">Dom</div>
+      <div class="cal-day disabled">1</div><div class="cal-day disabled">2</div><div class="cal-day free">3 <span class="slot">09:30</span><span class="slot">11:00</span></div>
+      <div class="cal-day free">4 <span class="slot">10:00</span><span class="slot taken">15:00</span></div>
+      <div class="cal-day free selected">5 <span class="slot" style="background:var(--text);color:#fff">10:30 SELECCIONADO</span><span class="slot">16:00</span></div>
+      <div class="cal-day disabled">6</div><div class="cal-day disabled">7</div>
+      <div class="cal-day free">8 <span class="slot">09:30</span></div><div class="cal-day free">9 <span class="slot">11:00</span><span class="slot">14:30</span></div><div class="cal-day free">10 <span class="slot">10:00</span></div><div class="cal-day disabled">11</div><div class="cal-day disabled">12</div><div class="cal-day disabled">13</div><div class="cal-day disabled">14</div>
+    </div>
+    <div class="alert-box">
+      <strong><i class="fa-solid fa-circle-info" style="color:var(--gold)"></i> Requisitos para el día de la firma:</strong><br>
+      • Concurrir con DNI original en mano (no copia)<br>
+      • Constancia de CUIT y medios de pago acordados<br>
+      • Lectura del acto: duración estimada 45 min. Puntualidad obligatoria.<br>
+      <button class="btn" style="max-width:280px;margin-top:14px">Confirmar Turno - 5 Sept 10:30hs</button>
+    </div>
+  </div>
+
+  <!-- PANEL LIQUIDACION -->
+  <div id="panel-liq" class="panel">
+    <div class="liquidacion">
+      <div class="liq-card">
+        <h3>Apertura de cotización</h3>
+        <div class="liq-row"><span>Honorarios Profesionales (Arancel Notarial)</span><span>$ 1.850.000</span></div>
+        <div class="liq-row"><span>Aportes e Impuestos (Sellos, ITI, Ganancias)</span><span>$ 2.420.000</span></div>
+        <div class="liq-row"><span>Gastos Gestoría y Certificados<br><small style="color:rgba(14,26,43,0.5)">R. Propiedad, Catastro, Inhibiciones</small></span><span>$ 380.000</span></div>
+        <div class="liq-row total"><span>Monto Total Acto</span><span>$ 4.650.000</span></div>
+      </div>
+      <div class="liq-card">
+        <h3>Estado de cuenta</h3>
+        <div class="liq-row"><span>Total</span><span>$ 4.650.000</span></div>
+        <div class="liq-row"><span>Seña / Gastos adelantados</span><span style="color:#0F5132">- $ 800.000</span></div>
+        <div class="liq-row saldo"><span>Saldo pendiente de pago</span><span>$ 3.850.000</span></div>
+
+        <div class="bank">
+          <strong>Datos para transferencia - Cuenta Institucional</strong><br>
+          RIGANTI Escribanía - CUIT 30-XXXX<br>
+          CBU: 0070 1234 0000 0000 1234 56<br>
+          Alias: RIGANTI.ESCRIBANIA<br>
+          Comprobante: adjuntar abajo
+        </div>
+        <div class="upload-comp" onclick="alert('Abrir selector de comprobante')"><i class="fa-solid fa-paperclip"></i> Adjuntar comprobante de depósito</div>
+        <button class="btn"><i class="fa-solid fa-file-invoice"></i> Descargar Presupuesto PDF</button>
+        <button class="btn outline">Solicitar factura A</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(e=>e.classList.remove('active'));
+  if(t==='turnos'){document.querySelectorAll('.tab')[0].classList.add('active');document.getElementById('panel-turnos').classList.add('active')}
+  else{document.querySelectorAll('.tab')[1].classList.add('active');document.getElementById('panel-liq').classList.add('active')}
+}
+document.querySelectorAll('.cal-day.free.slot:not(.taken)').forEach(s=>s.addEventListener('click',e=>{
+  e.stopPropagation();
+  document.querySelectorAll('.cal-day').forEach(d=>d.classList.remove('selected'));
+  e.target.closest('.cal-day').classList.add('selected');
+  document.querySelectorAll('.slot').forEach(sl=>{if(sl.textContent.includes('SELECCIONADO')) sl.textContent=sl.textContent.replace(' SELECCIONADO','')});
+  e.target.textContent=e.target.textContent+' SELECCIONADO';
+  e.target.style.background='var(--text)';e.target.style.color='#fff';
+}));
+</script>
+</body>
+</html>
