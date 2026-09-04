@@ -258,24 +258,49 @@ html.fonts-loaded.hero h1{visibility:visible;transition:visibility 0s}
   .valores-col{position:relative!important;top:0!important;}
   .section-estudio blockquote{max-width:100%!important;margin:40px 0 0 0!important;}
 }
-/* === ESMERILADO DEFINITIVO RIGANTI === */
+/* === BOTON MARMOL TRANSPARENTE - ELITE === */
 .barra-flotante-contacto{
-  background: rgba(249,246,241,0.82) !important;
-  backdrop-filter: blur(20px) saturate(170%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(170%) !important;
-  border: 1px solid rgba(14,26,43,0.10) !important;
-  box-shadow: 0 10px 36px rgba(14,26,43,0.08) !important;
-  border-radius: 28px !important;
+  position: relative !important;
+  background: 
+    radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,0.9) 0%, rgba(249,246,241,0.65) 55%, rgba(232,226,217,0.55) 100%) !important;
+  backdrop-filter: blur(28px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+  border: 1px solid rgba(255,255,255,0.65) !important;
+  border-top: 1px solid rgba(255,255,255,0.9) !important;
+  box-shadow: 
+    0 16px 48px rgba(14,26,43,0.10),
+    0 2px 12px rgba(14,26,43,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 1px rgba(14,26,43,0.04) !important;
+  padding: 14px 9px !important;
+  right: 20px !important;
+}
+.barra-flotante-contacto::before{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: inherit !important;
+  background: 
+    linear-gradient(105deg, transparent 40%, rgba(201,184,150,0.08) 50%, transparent 60%),
+    linear-gradient(185deg, rgba(255,255,255,0.4) 0%, transparent 40%) !important;
+  pointer-events: none !important;
 }
 .item-flotante{
+  width: 44px !important;
+  height: 44px !important;
   background: transparent !important;
   border: 0 !important;
-  color: #0E1A2B !important;
+  opacity: .72 !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 .item-flotante.item-dorado{
   background: #0E1A2B !important;
-  color: #F9F6F1 !important;
-  border-radius: 50% !important;
+  box-shadow: 
+    0 4px 16px rgba(14,26,43,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.15) !important;
+  opacity: 1 !important;
+  margin-top: 8px !important;
 }
 </style>
 </head>
