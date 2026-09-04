@@ -12,31 +12,31 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
 
- .portal-container{display:flex;width:100vw;height:100vh;background:#F9F6F0}
+.portal-container{display:flex;width:100vw;height:100vh;background:#F9F6F0}
 
-  /* IZQUIERDA: foto pegada, sin hueco, ancho auto = casa la divisoria */
- .portal-visual-side{
-    flex:0 0 auto;
-    height:100vh;
-    background:#F9F6F0;
-    display:flex;
-  }
- .portal-visual-side img{
-    height:100vh;
-    width:auto;
-    display:block;
-  }
+.portal-visual-side{
+  flex:0 0 37%;
+  height:100vh;
+  overflow:hidden;
+  background:#F9F6F0;
+}
+.portal-visual-side img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:35% top;
+  display:block;
+}
 
-  /* DERECHA: ocupa TODO lo que queda y centra el login */
- .portal-form-side{
-    flex:1 1 auto;
-    height:100vh;
-    background:var(--bg);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:4vw;
-  }
+.portal-form-side{
+  flex:0 0 63%;
+  height:100vh;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:4vw;
+}
  .portal-wrapper{width:100%;max-width:380px;text-align:center}
  .portal-logo{height:68px;margin:0 auto 28px;display:block}
  .portal-header h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px}
