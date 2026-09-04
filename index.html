@@ -176,6 +176,30 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
   -webkit-text-stroke: 1px #ce2c35 !important;
   transform: translateY(-2px);
 }
+/* ==========================================================================
+   RIGANTI ESCRIBANÍA - PIN SÓLIDO ROJO (ELITE REFINEMENT)
+   ========================================================================== */
+
+/* 1. Limpieza y transparencia del contenedor del mapa */
+.barra-flotante-contacto .item-flotante:first-child {
+  background: transparent !important;
+  border: none !important;
+  opacity: 1 !important; /* Totalmente visible desde el inicio */
+}
+
+/* 2. Calibración geométrica y color del Pin Sólido */
+.barra-flotante-contacto .item-flotante:first-child i {
+  color: #a8232a !important; /* Rojo lacre señorial y corporativo */
+  font-size: 16px !important; /* Escala exacta para balancear la cápsula */
+  -webkit-text-stroke: 0px !important; /* EL FIX: Eliminamos por completo el trazo que rompía el icono */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* MICRO-INTERACCIÓN PREMIUM: Al pasar el cursor, el pin flota de forma orgánica */
+.barra-flotante-contacto .item-flotante:first-child:hover i {
+  color: #ce2c35 !important; /* Sutil destello de iluminación */
+  transform: translateY(-2px); /* Micro-movimiento líquido hacia arriba */
+}
 
 
 </style>
@@ -227,10 +251,11 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
 </header>
 
 <div class="barra-flotante-contacto">
-  <!-- 🗺️ EL CAMBIO DE ELITE: Ubicación en Google Maps (Abre en pestaña nueva) -->
+  <!-- 🗺️ Marcador de mapa lineal nativo perfecto -->
   <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="item-flotante">
-    <i class="fa-regular fa-map-marker-alt"></i>
+    <i class="fa-solid fa-location-dot" style="color: #a8232a !important;"></i>
   </a>
+
   
   <!-- Tus otros botones impecables con sus clases de Font Awesome 6 curadas -->
   <a href="mailto:info@riganti.com.ar" class="item-flotante">
