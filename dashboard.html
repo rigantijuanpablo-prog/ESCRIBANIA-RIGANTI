@@ -21,10 +21,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);displ
 .main-header h1{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300} .main-header h1 i{font-style:italic;color:var(--gold)}
 .main-header p{font-size:12px;letter-spacing:1px;color:rgba(14,26,43,0.5);margin-top:6px;text-transform:uppercase}
 
-.quick-actions{display:flex;gap:12px;margin:32px 0}
-.btn-quick{flex:1;height:46px;border:1px solid var(--line);background:var(--card);font-size:10px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.2s}
-.btn-quick.primary{background:var(--text);color:#fff;border-color:var(--text)}
-.btn-quick:hover{border-color:var(--text)}
+<div class="quick-actions">
+  <a href="tramite.html" class="btn-quick primary" style="text-decoration:none"><i class="fa-solid fa-arrow-up-from-bracket"></i> Subir Papeles</a>
+  <a href="boveda.html" class="btn-quick" style="text-decoration:none"><i class="fa-regular fa-calendar"></i> Mis Turnos</a>
+  <a href="boveda.html" onclick="localStorage.setItem('tab','liq')" class="btn-quick" style="text-decoration:none"><i class="fa-solid fa-file-invoice-dollar"></i> Presupuestos</a>
+</div>
+
+<!-- Y en cada tramite-card, hacé toda la card clickeable -->
+<a href="tramite.html" style="text-decoration:none;color:inherit"><div class="tramite-card">... tu card ...</div></a>
 
 /* CARDS TRAMITES */
 .tramite-card{background:var(--card);border:1px solid var(--line);padding:28px;margin-bottom:18px}
