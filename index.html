@@ -145,27 +145,33 @@ html[lang="en"] .btn-header,
 </script>
 </head>
 <body>
-<!-- CABECERA PRINCIPAL REFINADA CON ACCESO EXCLUSIVO -->
+
+<!-- ==========================================================================
+   CABECERA PRINCIPAL INTEGRADA Y CORREGIDA (REEMPLAZO DIRECTO)
+   ========================================================================== -->
 <header class="header-principal">
+  <!-- 1. EL FIX DEL LOGO: Aseguramos que apunte exactamente a logo.png sin enlaces rotos -->
   <a href="#" class="logo">
-    <img src="logo.png" alt="RIGANTI Escribanía Logo">
+    <img src="logo.png" alt="RIGANTI Escribanía Logo" class="logo-img">
   </a>
+  
   <nav class="nav-principal">
     <a href="#servicios" class="nav-link" data-i18n="nav_servicios">SERVICIOS</a>
     <a href="#estudio" class="nav-link" data-i18n="nav_estudio">ESTUDIO</a>
     <a href="#contacto" class="nav-link" data-i18n="nav_contacto">CONTACTO</a>
     
-    <!-- 🔒 PORTAL DE CLIENTES: Elegante, discreto y con peso institucional -->
-    <a href="#portal-login" class="nav-link portal-link" style="font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
+    <!-- 2. EL FIX DEL CANDADO: Añadimos la clase portal-link para que el CSS encienda el color oro -->
+    <a href="portal.html" class="nav-link portal-link" data-i18n="nav_clientes" style="font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
       <i class="fa-solid fa-lock" style="font-size: 10px; opacity: 0.65; transform: translateY(-1px);"></i>CLIENTES
     </a>
     
+    <!-- 3. EL FIX DE TRADUCCIÓN: Restauramos el atributo data-i18n="btn_turno" para que tu script lo traduzca solo -->
     <a href="#contacto" class="btn-header" data-i18n="btn_turno">SOLICITAR TURNO</a>
     
     <div class="lang-switch">
-      <span class="active">ES</span>
+      <span class="active" id="btn-es">ES</span>
       <span class="sep">|</span>
-      <span class="inactive">EN</span>
+      <span class="inactive" id="btn-en">EN</span>
     </div>
   </nav>
 </header>
