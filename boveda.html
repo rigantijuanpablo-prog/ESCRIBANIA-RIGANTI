@@ -111,6 +111,7 @@ function switchTab(t){
   if(t==='turnos'){document.querySelectorAll('.tab')[0].classList.add('active');document.getElementById('panel-turnos').classList.add('active')}
   else{document.querySelectorAll('.tab')[1].classList.add('active');document.getElementById('panel-liq').classList.add('active')}
 }
+  if(localStorage.getItem('tab')==='liq'){ switchTab('liq'); localStorage.removeItem('tab'); }
 document.querySelectorAll('.cal-day.free.slot:not(.taken)').forEach(s=>s.addEventListener('click',e=>{
   e.stopPropagation();
   document.querySelectorAll('.cal-day').forEach(d=>d.classList.remove('selected'));
