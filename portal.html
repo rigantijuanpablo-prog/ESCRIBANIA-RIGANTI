@@ -10,14 +10,13 @@
 
 <style>
   /* ==========================================================================
-     PORTAL DE ACCESO PRIVADO - ESTILO ALTA COSTURA DIGITAL
+     PORTAL DE ACCESO PRIVADO - ESTILO HIGH-END SPLIT SCREEN
      ========================================================================== */
   
   :root {
-    --bg-portal: #FAF9F6;      /* Un off-white texturado, cálido y elegante */
-    --text-main: #0E1A2B;      /* Tu azul noche institucional */
-    --gold: #C9B896;           /* El tono oro corporativo */
-    --gold-dark: #8C7342;
+    --bg-portal: #FAF9F6;      /* Tu marfil cálido institucional */
+    --text-main: #0E1A2B;      /* Azul noche corporativo */
+    --gold-dark: #8C7342;      /* Oro satinado de la firma */
     --border-line: rgba(14, 26, 43, 0.12);
   }
 
@@ -33,32 +32,62 @@
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Contenedor minimalista etéreo */
-  .portal-wrapper {
-    width: 100%;
-    max-width: 420px;
-    text-align: center;
-    animation: fadeInPortal 1s cubic-bezier(0.25, 1, 0.5, 1);
+  /* 🏛️ LA ARQUITECTURA DE PANTALLA DIVIDIDA (50/50) */
+  .portal-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
   }
 
-  /* Logotipo principal en el centro geométrico alto */
+  /* COLUMNA IZQUIERDA: Tu fotografía señorial de la sede */
+  .portal-visual-side {
+    flex: 1;
+    background-image: url('hall-sede.jpg'); /* REEMPLAZO: Guarda tu imagen con este nombre exacto */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  /* Un velo traslúcido azul noche finísimo sobre la foto para unificar tonos con la marca */
+  .portal-visual-side::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(14, 26, 43, 0.12) 0%, rgba(14, 26, 43, 0.05) 100%);
+  }
+
+  /* COLUMNA DERECHA: El bloque de interacción purista minimalista */
+  .portal-form-side {
+    flex: 1;
+    background-color: var(--bg-portal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+  }
+
+  .portal-wrapper {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: fadeInPortal 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
   .portal-logo {
     height: 76px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     mix-blend-mode: multiply;
   }
 
-  /* Encabezado editorial sofisticado */
   .portal-header {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   .portal-header h1 {
@@ -66,7 +95,6 @@
     font-size: 32px;
     font-weight: 300;
     line-height: 1.2;
-    letter-spacing: -0.01em;
     color: var(--text-main);
     margin-bottom: 12px;
   }
@@ -83,7 +111,7 @@
     line-height: 1.5;
   }
 
-  /* Formulario estilo papelería fina (Líneas puras, sin cajas rígidas) */
+  /* Formulario lineal estilo papelería fina */
   .portal-form {
     display: flex;
     flex-direction: column;
@@ -121,10 +149,9 @@
   }
 
   .form-group-privado input:focus {
-    border-bottom-color: var(--text-main) !important; /* La línea se oscurece con finura al tipear */
+    border-bottom-color: var(--text-main) !important;
   }
 
-  /* Ícono sutil de visibilidad para la contraseña */
   .toggle-password {
     position: absolute;
     right: 0;
@@ -135,11 +162,8 @@
     transition: color 0.3s ease;
   }
   
-  .toggle-password:hover {
-    color: var(--text-main);
-  }
+  .toggle-password:hover { color: var(--text-main); }
 
-  /* Enlaces de asistencia discretos */
   .portal-asistencia {
     display: flex;
     justify-content: space-between;
@@ -154,13 +178,10 @@
     transition: color 0.3s ease;
   }
 
-  .portal-link-secundario:hover {
-    color: var(--text-main);
-  }
+  .portal-link-secundario:hover { color: var(--text-main); }
 
-  /* Botón de ingreso sólido - Geometría pura y peso corporativo */
   .btn-ingreso-privado {
-    margin-top: 16px;
+    margin-top: 12px;
     background-color: var(--text-main);
     color: #FFFFFF;
     border: 1px solid var(--text-main);
@@ -181,91 +202,90 @@
   .btn-ingreso-privado:hover {
     background-color: transparent;
     color: var(--text-main);
-    letter-spacing: 3.5px; /* Micro-expansión líquida muy sofisticada */
+    letter-spacing: 3.5px;
   }
 
-  /* Pie de página con sello legal de resguardo */
   .portal-footer {
-    margin-top: 64px;
+    margin-top: 56px;
     font-size: 10px;
     letter-spacing: 1px;
     color: rgba(14, 26, 43, 0.35);
     text-transform: uppercase;
   }
 
-  .portal-footer i {
-    margin-right: 4px;
-  }
-
-  /* Animación orgánica de revelado inicial */
   @keyframes fadeInPortal {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Optimización para teléfonos móviles */
-  @media (max-width: 480px) {
-    body { padding: 16px; background-color: #FFFFFF; } /* En móvil se vuelve blanco puro para limpieza total */
+  /* 📱 ADAPTACIÓN DE RESPONSIVE MÓVIL CRÍTICA */
+  @media (max-width: 900px) {
+    .portal-visual-side {
+      display: none !important; /* En móviles se oculta la foto para dar espacio total al formulario */
+    }
+    .portal-form-side {
+      flex: 1;
+      padding: 32px 24px;
+      background-color: #FFFFFF; /* Blanco puro para una limpieza total en celulares */
+    }
     .portal-header h1 { font-size: 28px; }
-    .btn-ingreso-privado { padding: 20px; }
   }
 </style>
 </head>
 <body>
 
-  <div class="portal-wrapper">
+  <div class="portal-container">
     
-    <!-- Sello del Rombo e Isologo Dorado -->
-    <img src="logo.png" alt="RIGANTI Escribanía" class="portal-logo">
+    <!-- Bloque de Imagen Senior Esmerilada -->
+    <div class="portal-visual-side"></div>
     
-    <!-- Encabezado de la Plataforma -->
-    <div class="portal-header">
-      <h1>Portal de <i>Clientes</i></h1>
-      <p>Entorno cifrado de seguridad jurídica confidencial</p>
-    </div>
+    <!-- Bloque del Formulario Limpio -->
+    <div class="portal-form-side">
+      <div class="portal-wrapper">
+        
+        <!-- Sello de la Pluma y Rombo -->
+        <img src="logo.png" alt="RIGANTI Escribanía" class="portal-logo">
+        
+        <div class="portal-header">
+          <h1>Portal de <i>Clientes</i></h1>
+          <p>Entorno cifrado de seguridad jurídica confidencial</p>
+        </div>
 
-    <!-- Formulario de Credenciales -->
-    <form class="portal-form" action="#" method="POST">
-      
-      <!-- Campo Usuario / ID -->
-      <div class="form-group-privado">
-        <label for="username">Identificación / Usuario</label>
-        <input type="text" id="username" name="username" required autocomplete="username" placeholder="ej. apellido@empresa.com">
+        <form class="portal-form" action="#" method="POST">
+          <div class="form-group-privado">
+            <label for="username">Identificación / Usuario</label>
+            <input type="text" id="username" name="username" required autocomplete="username" placeholder="ej. apellido@empresa.com">
+          </div>
+
+          <div class="form-group-privado">
+            <label for="password">Clave de Acceso</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            <i class="fa-regular fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
+          </div>
+
+          <div class="portal-asistencia">
+            <a href="#" class="portal-link-secundario">¿Olvidó su contraseña?</a>
+            <a href="index.html" class="portal-link-secundario"><i class="fa-solid fa-arrow-left" style="font-size: 9px; margin-right: 4px;"></i> Volver</a>
+          </div>
+
+          <button type="submit" class="btn-ingreso-privado">
+            Ingresar de forma segura <i class="fa-solid fa-shield-halved" style="font-size: 10px; margin-left: 2px;"></i>
+          </button>
+        </form>
+
+        <div class="portal-footer">
+          <i class="fa-solid fa-lock"></i> Conexión encriptada SSL de un extremo a otro
+        </div>
+
       </div>
-
-      <!-- Campo Contraseña Privada -->
-      <div class="form-group-privado">
-        <label for="password">Clave de Acceso</label>
-        <input type="password" id="password" name="password" required autocomplete="current-password">
-        <i class="fa-regular fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
-      </div>
-
-      <!-- Enlaces de Asistencia de Credenciales -->
-      <div class="portal-asistencia">
-        <a href="#" class="portal-link-secundario">¿Olvidó su contraseña?</a>
-        <a href="index.html" class="portal-link-secundario"><i class="fa-solid fa-arrow-left" style="font-size: 9px; margin-right: 4px;"></i> Volver al sitio</a>
-      </div>
-
-      <!-- Botón de Envío Geométrico -->
-      <button type="submit" class="btn-ingreso-privado">
-        Ingresar de forma segura <i class="fa-solid fa-shield-halved" style="font-size: 10px; margin-left: 2px;"></i>
-      </button>
-
-    </form>
-
-    <!-- Sello de Privacidad de Cierre -->
-    <div class="portal-footer">
-      <i class="fa-solid fa-lock"></i> Conexión encriptada SSL de un extremo a otro
     </div>
 
   </div>
 
-  <!-- SCRIPT PARA INTERACCIÓN SOPHISTICATED DE CONTRASEÑA -->
   <script>
     function togglePasswordVisibility() {
       const passwordInput = document.getElementById('password');
       const toggleIcon = document.querySelector('.toggle-password');
-      
       if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
         toggleIcon.classList.remove('fa-eye');
