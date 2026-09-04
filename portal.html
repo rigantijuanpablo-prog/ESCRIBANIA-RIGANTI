@@ -4,299 +4,128 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Acceso Exclusivo Clientes | RIGANTI Escribanía</title>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link href="https://googleapis.com" rel="stylesheet">
-<link rel="stylesheet" href="https://cloudflare.com">
-
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  /* ==========================================================================
-     PORTAL DE ACCESO PRIVADO - ESTILO HIGH-END SPLIT SCREEN
-     ========================================================================== */
-  
   :root {
-    --bg-portal: #FAF9F6;      /* Tu marfil cálido institucional */
-    --text-main: #0E1A2B;      /* Azul noche corporativo */
-    --gold-dark: #8C7342;      /* Oro satinado de la firma */
+    --bg-portal: #FAF9F6;
+    --text-main: #0E1A2B;
+    --gold-dark: #8C7342;
     --border-line: rgba(14, 26, 43, 0.12);
   }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',sans-serif;
+    background-color:var(--bg-portal);
+    color:var(--text-main);
+    min-height:100vh;
+    display:flex;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
   }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-portal);
-    color: var(--text-main);
-    min-height: 100vh;
-    display: flex;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+  .portal-container{display:flex;width:100vw;min-height:100vh}
+  .portal-visual-side{
+    flex:1;
+    background-image:url('hall-escribania-mitad.jpg');
+    background-size:cover;
+    background-position:center 38%;
+    position:relative;
   }
-
-  /* 🏛️ LA ARQUITECTURA DE PANTALLA DIVIDIDA (50/50) */
-  .portal-container {
-    display: flex;
-    width: 100vw;
-    min-height: 100vh;
+  .portal-visual-side::before{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(135deg, rgba(14,26,43,0.18) 0%, rgba(14,26,43,0.06) 100%);
   }
-
-  /* COLUMNA IZQUIERDA: Tu fotografía señorial de la sede */
-  .portal-visual-side {
-    flex: 1;
-    background-image: url('hall-sede.jpg'); /* REEMPLAZO: Guarda tu imagen con este nombre exacto */
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  .portal-form-side{
+    flex:1;
+    background-color:var(--bg-portal);
+    display:flex;align-items:center;justify-content:center;
+    padding:60px;position:relative;
   }
-
-  /* Un velo traslúcido azul noche finísimo sobre la foto para unificar tonos con la marca */
-  .portal-visual-side::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(14, 26, 43, 0.12) 0%, rgba(14, 26, 43, 0.05) 100%);
+  .portal-wrapper{width:100%;max-width:380px;text-align:center;animation:fadeInPortal 0.8s cubic-bezier(0.25,1,0.5,1)}
+  .portal-logo{height:72px;width:auto;object-fit:contain;margin-bottom:32px;display:block;margin-left:auto;margin-right:auto}
+  .portal-header{margin-bottom:40px}
+  .portal-header h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;font-weight:300;line-height:1.2;color:var(--text-main);margin-bottom:12px
   }
-
-  /* COLUMNA DERECHA: El bloque de interacción purista minimalista */
-  .portal-form-side {
-    flex: 1;
-    background-color: var(--bg-portal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
-    position: relative;
+  .portal-header h1 i{font-style:italic;color:var(--gold-dark)}
+  .portal-header p{font-size:13px;color:rgba(14,26,43,0.55);letter-spacing:0.05em;line-height:1.5}
+  .portal-form{display:flex;flex-direction:column;gap:32px;text-align:left}
+  .form-group-privado{position:relative;display:flex;flex-direction:column}
+  .form-group-privado label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);font-weight:500;margin-bottom:6px}
+  .form-group-privado input{
+    background:transparent!important;border:none!important;
+    border-bottom:1px solid var(--border-line)!important;border-radius:0!important;
+    padding:10px 0!important;font-family:'Inter',sans-serif;font-size:15px;
+    color:var(--text-main);outline:none;width:100%;transition:border-bottom-color 0.4s ease;
   }
-
-  .portal-wrapper {
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-    animation: fadeInPortal 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  .form-group-privado input:focus{border-bottom-color:var(--text-main)!important}
+  .toggle-password{position:absolute;right:0;bottom:12px;font-size:14px;color:rgba(14,26,43,0.4);cursor:pointer;transition:color 0.3s ease}
+  .toggle-password:hover{color:var(--text-main)}
+  .portal-asistencia{display:flex;justify-content:space-between;align-items:center;margin-top:-12px;font-size:12px}
+  .portal-link-secundario{color:rgba(14,26,43,0.5);text-decoration:none;transition:color 0.3s ease}
+  .portal-link-secundario:hover{color:var(--text-main)}
+  .btn-ingreso-privado{
+    margin-top:12px;background-color:var(--text-main);color:#FFFFFF;
+    border:1px solid var(--text-main);padding:16px 18px;height:48px;
+    font-family:'Inter',sans-serif;font-size:11px;letter-spacing:2px;
+    text-transform:uppercase;font-weight:500;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    transition:all 0.5s cubic-bezier(0.25,1,0.5,1);
   }
-
-  .portal-logo {
-    height: 76px;
-    width: auto;
-    object-fit: contain;
-    margin-bottom: 32px;
-    mix-blend-mode: multiply;
-  }
-
-  .portal-header {
-    margin-bottom: 40px;
-  }
-
-  .portal-header h1 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 32px;
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--text-main);
-    margin-bottom: 12px;
-  }
-
-  .portal-header h1 i {
-    font-style: italic;
-    color: var(--gold-dark);
-  }
-
-  .portal-header p {
-    font-size: 13px;
-    color: rgba(14, 26, 43, 0.55);
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-  }
-
-  /* Formulario lineal estilo papelería fina */
-  .portal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    text-align: left;
-  }
-
-  .form-group-privado {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group-privado label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-
-  .form-group-privado input {
-    background: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid var(--border-line) !important;
-    border-radius: 0 !important;
-    padding: 10px 0 !important;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: var(--text-main);
-    outline: none;
-    width: 100%;
-    transition: border-bottom-color 0.4s ease;
-  }
-
-  .form-group-privado input:focus {
-    border-bottom-color: var(--text-main) !important;
-  }
-
-  .toggle-password {
-    position: absolute;
-    right: 0;
-    bottom: 12px;
-    font-size: 14px;
-    color: rgba(14, 26, 43, 0.4);
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .toggle-password:hover { color: var(--text-main); }
-
-  .portal-asistencia {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -12px;
-    font-size: 12px;
-  }
-
-  .portal-link-secundario {
-    color: rgba(14, 26, 43, 0.5);
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .portal-link-secundario:hover { color: var(--text-main); }
-
-  .btn-ingreso-privado {
-    margin-top: 12px;
-    background-color: var(--text-main);
-    color: #FFFFFF;
-    border: 1px solid var(--text-main);
-    padding: 18px;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  .btn-ingreso-privado:hover {
-    background-color: transparent;
-    color: var(--text-main);
-    letter-spacing: 3.5px;
-  }
-
-  .portal-footer {
-    margin-top: 56px;
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: rgba(14, 26, 43, 0.35);
-    text-transform: uppercase;
-  }
-
-  @keyframes fadeInPortal {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* 📱 ADAPTACIÓN DE RESPONSIVE MÓVIL CRÍTICA */
-  @media (max-width: 900px) {
-    .portal-visual-side {
-      display: none !important; /* En móviles se oculta la foto para dar espacio total al formulario */
-    }
-    .portal-form-side {
-      flex: 1;
-      padding: 32px 24px;
-      background-color: #FFFFFF; /* Blanco puro para una limpieza total en celulares */
-    }
-    .portal-header h1 { font-size: 28px; }
+  .btn-ingreso-privado:hover{background-color:transparent;color:var(--text-main);letter-spacing:2.5px}
+  .portal-footer{margin-top:56px;font-size:10px;letter-spacing:1px;color:rgba(14,26,43,0.35);text-transform:uppercase}
+  @keyframes fadeInPortal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  @media (max-width:900px){
+    .portal-visual-side{display:none!important}
+    .portal-form-side{flex:1;padding:32px 24px;background-color:#FFFFFF}
+    .portal-header h1{font-size:28px}
   }
 </style>
 </head>
 <body>
-
   <div class="portal-container">
-    
-    <!-- Bloque de Imagen Senior Esmerilada -->
     <div class="portal-visual-side"></div>
-    
-    <!-- Bloque del Formulario Limpio -->
     <div class="portal-form-side">
       <div class="portal-wrapper">
-        
-        <!-- Sello de la Pluma y Rombo -->
-        <img src="logo.png" alt="RIGANTI Escribanía" class="portal-logo">
-        
+        <img src="logo-pluma-riganti-blanco-final.png" alt="RIGANTI Escribanía" class="portal-logo">
         <div class="portal-header">
           <h1>Portal de <i>Clientes</i></h1>
           <p>Entorno cifrado de seguridad jurídica confidencial</p>
         </div>
-
         <form class="portal-form" action="#" method="POST">
           <div class="form-group-privado">
             <label for="username">Identificación / Usuario</label>
             <input type="text" id="username" name="username" required autocomplete="username" placeholder="ej. apellido@empresa.com">
           </div>
-
           <div class="form-group-privado">
             <label for="password">Clave de Acceso</label>
             <input type="password" id="password" name="password" required autocomplete="current-password">
             <i class="fa-regular fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
           </div>
-
           <div class="portal-asistencia">
             <a href="#" class="portal-link-secundario">¿Olvidó su contraseña?</a>
-            <a href="index.html" class="portal-link-secundario"><i class="fa-solid fa-arrow-left" style="font-size: 9px; margin-right: 4px;"></i> Volver</a>
+            <a href="index.html" class="portal-link-secundario"><i class="fa-solid fa-arrow-left" style="font-size:9px;margin-right:4px;"></i> Volver</a>
           </div>
-
           <button type="submit" class="btn-ingreso-privado">
-            Ingresar de forma segura <i class="fa-solid fa-shield-halved" style="font-size: 10px; margin-left: 2px;"></i>
+            Ingresar de forma segura <i class="fa-solid fa-shield-halved" style="font-size:10px;margin-left:2px;"></i>
           </button>
         </form>
-
         <div class="portal-footer">
           <i class="fa-solid fa-lock"></i> Conexión encriptada SSL de un extremo a otro
         </div>
-
       </div>
     </div>
-
   </div>
-
   <script>
-    function togglePasswordVisibility() {
-      const passwordInput = document.getElementById('password');
-      const toggleIcon = document.querySelector('.toggle-password');
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleIcon.classList.remove('fa-eye');
-        toggleIcon.classList.add('fa-eye-slash');
-      } else {
-        passwordInput.type = 'password';
-        toggleIcon.classList.remove('fa-eye-slash');
-        toggleIcon.classList.add('fa-eye');
-      }
+    function togglePasswordVisibility(){
+      const input=document.getElementById('password');
+      const icon=document.querySelector('.toggle-password');
+      if(input.type==='password'){input.type='text';icon.classList.remove('fa-eye');icon.classList.add('fa-eye-slash')}
+      else{input.type='password';icon.classList.remove('fa-eye-slash');icon.classList.add('fa-eye')}
     }
   </script>
-
 </body>
 </html>
