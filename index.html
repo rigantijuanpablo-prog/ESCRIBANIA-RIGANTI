@@ -1,94 +1,101 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RIGANTI Escribanía</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIGANTI Escribanía | CABA</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-:root{--bg:#F9F6F1;--dark:#0E1A2B;--gold:#C9B896;--gold-d:#8C7342;--border:#E8E2D9}
-body{font-family:Inter,sans-serif;background:var(--bg);margin:0}
+:root{--bg:#F9F6F1;--dark:#0E1A2B;--gold:#C9B896;--gold-d:#8C7342;--muted:rgba(14,26,43,.6);--border:#E8E2D9}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.7}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300}.eyebrow{font-size:10px;letter-spacing:4px;opacity:.5;text-transform:uppercase;display:block;margin-bottom:16px}.eyebrow.gold{color:var(--gold-d);opacity:1}
 .header-principal{position:fixed;top:0;left:0;right:0;z-index:1000;height:88px;display:flex;justify-content:space-between;align-items:center;padding:0 32px;background:rgba(249,246,241,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(14,26,43,.08)}
-.logo img{height:72px}.nav-principal{display:flex;gap:26px;align-items:center}
-.nav-principal a{font-size:11px;letter-spacing:2px;text-decoration:none;color:var(--dark);opacity:.7}
-.lang-switch{margin-left:18px;border-left:1px solid rgba(14,26,43,.15);padding-left:18px;display:flex;gap:8px;font-size:11px}.active{font-weight:700}.inactive{opacity:.35;cursor:pointer}
+.logo img{height:72px;width:auto;display:block}.nav-principal{display:flex;gap:26px;align-items:center}
+.nav-principal a.nav-link{text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--dark);opacity:.7}
+.btn-header{border:1px solid rgba(14,26,43,.22);padding:12px 22px;text-decoration:none;font-size:11px;letter-spacing:2px;color:var(--dark)}
+.lang-switch{margin-left:18px;border-left:1px solid rgba(14,26,43,.15);padding-left:18px;display:flex;gap:8px;font-size:11px;align-items:center}.active{font-weight:700}.inactive{opacity:.35;cursor:pointer}.sep{opacity:.2}
+.nav-principal a.portal-link{color:var(--dark)!important;opacity:.8;display:inline-flex;align-items:center;gap:6px;font-weight:500;transition:.3s}.nav-principal a.portal-link:hover{color:var(--gold-d)!important;opacity:1!important}.nav-principal a.portal-link i{font-size:10px;opacity:.65;transform:translateY(-1px)}
+/* MARMOL CARRARA ESFUMADO + PIN QUE SE ENCIENDE */
+.barra-flotante-contacto{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:9999;display:flex;flex-direction:column;align-items:center;gap:12px;background:rgba(253,250,244,0.88)!important;backdrop-filter:blur(18px) saturate(160%)!important;-webkit-backdrop-filter:blur(18px) saturate(160%)!important;border:1px solid rgba(201,184,150,0.32)!important;box-shadow:0 20px 60px rgba(14,26,43,.10),inset 0 1px 0 rgba(255,255,255,.95)!important;padding:14px 10px!important;border-radius:32px!important;overflow:hidden}
+.barra-flotante-contacto::before{content:""!important;position:absolute!important;inset:-20%!important;border-radius:inherit!important;background:radial-gradient(ellipse 180px 220px at 28% 18%, rgba(201,184,150,0.26) 0%, rgba(201,184,150,0.12) 35%, transparent 68%),radial-gradient(ellipse 160px 200px at 72% 38%, rgba(140,115,66,0.16) 0%, transparent 65%),radial-gradient(ellipse 200px 140px at 45% 75%, rgba(201,184,150,0.20) 0%, transparent 60%),radial-gradient(ellipse 120px 120px at 65% 82%, rgba(140,115,66,0.10) 0%, transparent 70%)!important;filter:blur(8px)!important;pointer-events:none!important;z-index:0!important}
+.barra-flotante-contacto::after{content:""!important;position:absolute!important;inset:0!important;border-radius:inherit!important;background:linear-gradient(100deg, transparent 30%, rgba(201,184,150,0.18) 32%, transparent 34%),linear-gradient(105deg, transparent 55%, rgba(140,115,66,0.14) 57%, transparent 59%),linear-gradient(95deg, transparent 68%, rgba(201,184,150,0.12) 70%, transparent 72%)!important;filter:blur(1.2px)!important;pointer-events:none!important;z-index:0!important}
+.item-flotante{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--dark);text-decoration:none;position:relative;z-index:2;transition:all.3s cubic-bezier(.25,1,.5,1)}
+.item-flotante.item-dorado{background:var(--dark);color:var(--gold);border-radius:50%;margin-top:4px}
+.barra-flotante-contacto.item-flotante:first-child i{color:#a8232a!important;font-size:17px!important;opacity:.95!important;transition:all.3s cubic-bezier(.25,1,.5,1)!important;filter:drop-shadow(0 1px 2px rgba(168,35,42,.15))}
+.barra-flotante-contacto.item-flotante:first-child:hover i{color:#d12a34!important;transform:scale(1.18) translateY(-2px)!important;filter:drop-shadow(0 4px 8px rgba(168,35,42,.35))!important;opacity:1!important}
+.hero{min-height:90vh;padding:180px 48px 80px;display:flex;align-items:center}.hero-wrapper{max-width:820px}.hero h1{font-size:72px;line-height:.92;margin-bottom:28px}.hero h1 i{font-style:italic;color:var(--gold-d)}.hero p{max-width:560px;color:var(--muted)}
+.btn-hero{display:inline-block;margin-top:32px;background:var(--dark);color:#fff;padding:16px 32px;text-decoration:none;font-size:11px;letter-spacing:2px}
+.seccion-servicios{padding:0 48px 120px}.grid-servicios{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}.card-serv{background:#fff;padding:36px 32px}.card-num{font-family:'Cormorant Garamond',serif;color:rgba(140,115,66,.45);margin-bottom:16px}
+.section-estudio{padding:120px 48px;background:#fff}.estudio-main{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.15fr 380px;gap:80px;align-items:start}.valores-col{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);position:sticky;top:120px}.tarjeta-valor{background:var(--bg);padding:28px}.tarjeta-valor.dark{background:var(--dark);color:#F9F6F1;padding:32px 28px}
+.boceto-full-wrap{width:100%;overflow:hidden;border:1px solid var(--border);margin-top:24px;line-height:0}.boceto-full-img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}.boceto-caption{display:block;padding:12px 16px;font-size:9px;letter-spacing:2px;opacity:.4;text-transform:uppercase;background:#fff}
+.section-estudio blockquote{margin:56px 0 0 0;padding-left:28px;border-left:2px solid var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;opacity:.8;max-width:520px}
+.seccion-cierre{position:relative;height:82vh;min-height:640px;overflow:hidden;background:var(--dark);display:flex;align-items:center;justify-content:center}.imagen-hall-wrap{position:absolute;inset:0}.imagen-hall{width:100%;height:100%;object-fit:cover;object-position:center 38%}.overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,26,43,.65),rgba(14,26,43,.35) 50%,rgba(14,26,43,.65))}.contenido-cierre{position:relative;z-index:3;text-align:center;color:#fff;max-width:620px}.contenido-cierre h2{font-size:56px}
+.seccion-contacto{padding:120px 48px;background:#fff;border-top:1px solid var(--border)}.contacto-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px}.form-contacto{display:flex;flex-direction:column;gap:28px}.form-contacto input,.form-contacto textarea{border:0;border-bottom:1px solid rgba(14,26,43,.12);padding:20px 0 16px 0;font-size:14px;background:transparent;outline:none}.form-contacto textarea{min-height:140px}.honeypot{display:none!important}.btn-enviar{background:var(--dark);color:#fff;height:56px;padding:0 32px;border:0;letter-spacing:2.5px;font-size:11px;cursor:pointer}
+.footer-premium{background:var(--dark);color:#F9F6F1;padding:96px 48px 32px}.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:80px}.logo-footer-img{width:130px;height:auto;display:block;margin-bottom:20px}.footer-bottom{max-width:1280px;margin:80px auto 0;border-top:1px solid rgba(255,255,255,.07);padding-top:24px;font-size:11px;color:rgba(255,255,255,.25);display:flex;justify-content:space-between}
+/* ==========================================================================
+   RIGANTI ESCRIBANÍA - REPARACIÓN QUIRÚRGICA: GEOLOCALIZADOR LACRE
+   ========================================================================== */
 
-/* === BARRA CORREGIDA - ESTA SI FUNCIONA === */
-.barra-flotante-contacto{
-  position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:9999;
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  width:62px;padding:12px 8px 10px 8px;
-  background: rgba(255,252,240,0.24)!important;
-  backdrop-filter: blur(10px) saturate(170%)!important;
-  -webkit-backdrop-filter: blur(10px) saturate(170%)!important;
-  border:1px solid rgba(201,184,150,0.52)!important;
-  border-radius:32px!important;
-  box-shadow: 0 18px 50px rgba(14,26,43,.13)!important;
-  overflow:hidden;
+/* 1. Forzar el color Rojo Lacre señorial en el primer icono de la barra */
+.barra-flotante-contacto a.item-flotante:first-child i,
+.barra-flotante-contacto a.item-flotante:first-child svg {
+  color: #a8232a !important; /* Tu rojo carmín/lacre corporativo profundo */
+  font-size: 16px !important;
+  opacity: 1 !important;
+  -webkit-text-stroke: 0px !important; /* Limpieza absoluta de trazos rotos anteriores */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Transición líquida */
 }
-.barra-flotante-contacto::before{
-  content:"";position:absolute;inset:0;border-radius:inherit;
-  background:
-    linear-gradient(102deg, transparent 12%, rgba(201,184,150,0.55) 14%, rgba(201,184,150,0.22) 15%, transparent 16%),
-    linear-gradient(98deg, transparent 38%, rgba(140,115,66,0.48) 40%, rgba(201,184,150,0.32) 41%, transparent 43%),
-    linear-gradient(108deg, transparent 62%, rgba(201,184,150,0.40) 64%, transparent 66%),
-    radial-gradient(ellipse 140px 90px at 30% 20%, rgba(201,184,150,0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 120px 110px at 70% 75%, rgba(140,115,66,0.24) 0%, transparent 65%);
-  filter: blur(0.4px);
-  pointer-events:none;z-index:0;
-  mix-blend-mode: multiply;
-}
-.barra-flotante-contacto a.item-flotante{
-  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
-  position:relative;z-index:5;text-decoration:none;transition: all.25s ease;
-  color: var(--dark);
-}
-.barra-flotante-contacto a.item-flotante.item-dorado{background:var(--dark);color:var(--gold);border-radius:50%;margin-top:6px}
 
-/* LACRE ROJO - SELECTOR CORRECTO AHORA */
-#pin-lacre i{
-  color:#a8232a!important;
-  font-size:20px!important;
-  filter: drop-shadow(0 2px 4px rgba(168,35,42,.35))!important;
-  transition: transform.35s cubic-bezier(.34,1.56,.64,1), color.25s ease, filter.25s ease!important;
+/* 2. MICRO-INTERACCIÓN DE ALTA COSTURA: Animación y encendido al pasar el cursor */
+.barra-flotante-contacto a.item-flotante:first-child:hover i,
+.barra-flotante-contacto a.item-flotante:first-child:hover svg {
+  color: #ce2c35 !important; /* El rojo se ilumina sutilmente con el roce */
+  transform: translateY(-3px) scale(1.05) !important; /* El pin flota orgánicamente hacia arriba */
 }
-#pin-lacre:hover i{
-  color:#ff2e3d!important;
-  transform: scale(1.32) translateY(-3px)!important;
-  filter: drop-shadow(0 8px 14px rgba(168,35,42,.55))!important;
+
+/* Forzar que el contenedor no corte la animación del icono */
+.barra-flotante-contacto a.item-flotante:first-child {
+  opacity: 1 !important;
+  background: transparent !important;
+  border: none !important;
 }
+
 </style>
 </head>
 <body>
 <header class="header-principal">
-<a class="logo"><img src="logo-pluma-riganti-blanco-final.png"></a>
+<a href="#" class="logo"><img src="logo-pluma-riganti-blanco-final.png" alt="RIGANTI"></a>
 <nav class="nav-principal">
-<a href="#servicios" data-i18n="nav_serv">SERVICIOS</a>
-<a href="#estudio" data-i18n="nav_est">ESTUDIO</a>
-<a href="#contacto" data-i18n="nav_cont">CONTACTO</a>
-<a href="#portal-login" data-i18n="nav_clientes"><i class="fa-solid fa-lock"></i> CLIENTES</a>
-<div class="lang-switch"><span id="btn-es" class="active" onclick="setLang('es')">ES</span><span>|</span><span id="btn-en" class="inactive" onclick="setLang('en')">EN</span></div>
+<a href="#servicios" class="nav-link" data-i18n="nav_serv">SERVICIOS</a>
+<a href="#estudio" class="nav-link" data-i18n="nav_est">ESTUDIO</a>
+<a href="#contacto" class="nav-link" data-i18n="nav_cont">CONTACTO</a>
+<a href="#portal-login" class="nav-link portal-link" data-i18n="nav_clientes"><i class="fa-solid fa-lock"></i>CLIENTES</a>
+<a href="#contacto" class="btn-header" data-i18n="btn_turno_header">SOLICITAR TURNO</a>
+<div class="lang-switch"><span id="btn-es" class="active" onclick="setLang('es')">ES</span><span class="sep">|</span><span id="btn-en" class="inactive" onclick="setLang('en')">EN</span></div>
 </nav>
 </header>
-
 <div class="barra-flotante-contacto">
-  <a id="pin-lacre" href="https://www.google.com/maps/place/Escriban%C3%ADa+Riganti/@-34.6024583,-58.3792124,682m" target="_blank" class="item-flotante"><i class="fa-solid fa-location-dot"></i></a>
-  <a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a>
-  <a href="tel:+541143220174" class="item-flotante"><i class="fa-solid fa-phone"></i></a>
-  <a href="#contacto" class="item-flotante item-dorado">→</a>
+<a href="https://www.google.com/maps/place/Escriban%C3%ADa+Riganti/@-34.6024583,-58.3792124,682m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95bccba231bf927d:0xa9496576cc417e6e!8m2!3d-34.6024627!4d-58.3766375!16s%2Fg%2F11rr2ff1bj?entry=ttu" target="_blank" class="item-flotante"><i class="fa-solid fa-location-dot"></i></a>
+<a href="mailto:info@riganti.com.ar" class="item-flotante"><i class="fa-regular fa-envelope"></i></a>
+<a href="tel:+541143220174" class="item-flotante"><i class="fa-solid fa-phone"></i></a>
+<a href="#contacto" class="item-flotante item-dorado">→</a>
 </div>
-
+<section class="hero"><div class="hero-wrapper"><span class="eyebrow" data-i18n="hero_eyebrow">Seguridad jurídica · CABA</span><h1 data-i18n="hero_title">RIGANTI<br><i>Escribanía</i></h1><p data-i18n="hero_sub">90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.</p><a href="#contacto" class="btn-hero" data-i18n="btn_turno">SOLICITAR TURNO →</a></div></section>
+<section id="servicios" class="seccion-servicios"><div class="grid-servicios"><div class="card-serv"><div class="card-num">01</div><h3 data-i18n="serv_compra_t">Compraventa</h3><p data-i18n="serv_compra_d">Escrituras, boletos y control exhaustivo de títulos.</p></div><div class="card-serv"><div class="card-num">02</div><h3 data-i18n="serv_soc_t">Sociedades</h3><p data-i18n="serv_soc_d">Constitución, actas de directorio, poderes y reformas.</p></div><div class="card-serv"><div class="card-num">03</div><h3 data-i18n="serv_fam_t">Familia y Sucesiones</h3><p data-i18n="serv_fam_d">Donaciones, testamentos, protección de vivienda.</p></div><div class="card-serv"><div class="card-num">04</div><h3 data-i18n="serv_cert_t">Certificaciones</h3><p data-i18n="serv_cert_d">Firmas, copias certificadas, actas de constatación.</p></div></div></section>
+<section id="estudio" class="section-estudio"><div class="estudio-main"><div><span class="eyebrow gold" data-i18n="estudio_eyebrow">90 AÑOS DE TRADICIÓN</span><h2 style="font-size:52px;line-height:.95" data-i18n="estudio_title">Tres generaciones<br><i style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-d)">custodiando su patrimonio.</i></h2><p style="margin-top:16px;opacity:.6;max-width:520px" data-i18n="estudio_p">Somos herederos de una tradición notarial de 90 años.</p><div class="boceto-full-wrap"><img src="sala-escribania-mitad.jpg" class="boceto-full-img" alt="Mesa" loading="lazy"><span class="boceto-caption">Mesa de acuerdos · Boceto → Realidad · Sede Microcentro</span></div><blockquote data-i18n="estudio_quote">"Una escritura bien hecha perdura por generaciones."</blockquote></div><div class="valores-col"><div class="tarjeta-valor"><h4 data-i18n="val_seg_t">SEGURIDAD JURÍDICA</h4><p data-i18n="val_seg_d">Control exhaustivo de títulos.</p></div><div class="tarjeta-valor"><h4 data-i18n="val_disc_t">DISCRECIÓN ABSOLUTA</h4><p data-i18n="val_disc_d">Trato directo con titular.</p></div><div class="tarjeta-valor"><h4 data-i18n="val_agil_t">AGILIDAD NOTARIAL</h4><p data-i18n="val_agil_d">Gestión integral ante registros.</p></div><div class="tarjeta-valor dark"><h4>TRADICIÓN · MAT. 1847</h4><p>Colegio de Escribanos CABA desde 1936.</p></div></div></div></section>
+<section class="seccion-cierre"><div class="imagen-hall-wrap"><img src="hall-escribania-mitad.jpg" class="imagen-hall" alt="Hall" loading="lazy"><div class="overlay"></div></div><div class="contenido-cierre"><span class="eyebrow" style="color:var(--gold)" data-i18n="sede_eyebrow">NUESTRA SEDE</span><h2 data-i18n="sede_title">Microcentro</h2><p style="margin-top:16px" data-i18n="sede_desc">Maipú 497, 4° Piso. Atención privada y discreta.</p><a href="#contacto" class="btn-hero" style="background:#fff;color:var(--dark)" data-i18n="btn_turno">SOLICITAR TURNO →</a></div></section>
+<section id="contacto" class="seccion-contacto"><div class="contacto-grid"><div><h2 style="font-size:46px;line-height:.95" data-i18n="contacto_title">Agende su<br><i style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-d)">turno privado</i></h2><p style="margin-top:16px;opacity:.6;line-height:1.9" data-i18n="contacto_info">Maipú 497, 4° Piso<br>C1023AAR · CABA<br>+54 11 4800-1234<br>info@riganti.com.ar</p></div><form class="form-contacto" id="formContacto"><input type="text" name="website" class="honeypot"><input type="text" name="nombre" data-i18n-placeholder="form_nombre" placeholder="Nombre y apellido *" required><input type="email" name="email" data-i18n-placeholder="form_email" placeholder="Email *" required><input type="tel" name="telefono" data-i18n-placeholder="form_tel" placeholder="Teléfono *" required><textarea name="mensaje" data-i18n-placeholder="form_msg" placeholder="Consulta *" required></textarea><button type="submit" class="btn-enviar" data-i18n="form_btn">ENVIAR CONSULTA →</button><p id="formStatus" style="font-size:12px;display:none"></p></form></div></section>
+<footer class="footer-premium"><div class="footer-grid"><div><img src="logo-completo-pluma-transparente.png" alt="RIGANTI" class="logo-footer-img"></div><div><span>SERVICIOS</span><p style="margin-top:16px;font-size:13px;opacity:.6">Compraventa<br>Sociedades<br>Sucesiones</p></div><div><span>MICROCENTRO</span><p style="margin-top:16px;font-size:13px;opacity:.6">Maipú 497, 4° Piso<br>CABA</p></div><div><span>TURNOS</span><p style="margin-top:16px;font-size:13px;opacity:.6">Atención personalizada</p></div></div><div class="footer-bottom"><span>© 2026 RIGANTI ESCRIBANÍA</span><span>COLEGIO DE ESCRIBANOS CABA</span></div></footer>
 <script>
 const T={
-es:{nav_serv:"SERVICIOS",nav_est:"ESTUDIO",nav_cont:"CONTACTO",nav_clientes:'<i class="fa-solid fa-lock"></i> CLIENTES'},
-en:{nav_serv:"SERVICES",nav_est:"ABOUT",nav_cont:"CONTACT",nav_clientes:'<i class="fa-solid fa-lock"></i> CLIENTS'}
+es:{nav_serv:"SERVICIOS",nav_est:"ESTUDIO",nav_cont:"CONTACTO",nav_clientes:'<i class="fa-solid fa-lock"></i>CLIENTES',btn_turno_header:"SOLICITAR TURNO",hero_eyebrow:"Seguridad jurídica · CABA",hero_title:"RIGANTI<br><i>Escribanía</i>",hero_sub:"90 años de tradición notarial en Buenos Aires. Rigor técnico, discreción absoluta y atención personalizada del escribano titular.",btn_turno:"SOLICITAR TURNO →",serv_compra_t:"Compraventa",serv_compra_d:"Escrituras, boletos y control exhaustivo de títulos.",serv_soc_t:"Sociedades",serv_soc_d:"Constitución, actas de directorio, poderes y reformas.",serv_fam_t:"Familia y Sucesiones",serv_fam_d:"Donaciones, testamentos, protección de vivienda.",serv_cert_t:"Certificaciones",serv_cert_d:"Firmas, copias certificadas, actas de constatación.",estudio_eyebrow:"90 AÑOS DE TRADICIÓN",estudio_title:'Tres generaciones<br><i style="font-family:\'Cormorant Garamond\',serif;font-style:italic;color:var(--gold-d)">custodiando su patrimonio.</i>',estudio_p:"Somos herederos de una tradición notarial de 90 años.",estudio_quote:'"Una escritura bien hecha perdura por generaciones."',val_seg_t:"SEGURIDAD JURÍDICA",val_seg_d:"Control exhaustivo de títulos.",val_disc_t:"DISCRECIÓN ABSOLUTA",val_disc_d:"Trato directo con titular.",val_agil_t:"AGILIDAD NOTARIAL",val_agil_d:"Gestión integral ante registros.",sede_eyebrow:"NUESTRA SEDE",sede_title:"Microcentro",sede_desc:"Maipú 497, 4° Piso. Atención privada y discreta.",contacto_title:'Agende su<br><i style="font-family:\'Cormorant Garamond\',serif;font-style:italic;color:var(--gold-d)">turno privado</i>',contacto_info:"Maipú 497, 4° Piso<br>C1023AAR · CABA<br>+54 11 4800-1234<br>info@riganti.com.ar",form_nombre:"Nombre y apellido *",form_email:"Email *",form_tel:"Teléfono / WhatsApp *",form_msg:"Consulta *",form_btn:"ENVIAR CONSULTA →"},
+en:{nav_serv:"SERVICES",nav_est:"ABOUT",nav_cont:"CONTACT",nav_clientes:'<i class="fa-solid fa-lock"></i>CLIENTS',btn_turno_header:"BOOK APPOINTMENT",hero_eyebrow:"Legal security · CABA",hero_title:"RIGANTI<br><i>Notary Office</i>",hero_sub:"90 years of notarial tradition in Buenos Aires. Technical rigor, absolute discretion.",btn_turno:"BOOK APPOINTMENT →",serv_compra_t:"Real Estate",serv_compra_d:"Deeds, title search and debt control.",serv_soc_t:"Corporate",serv_soc_d:"Incorporation, board minutes and powers.",serv_fam_t:"Family & Probate",serv_fam_d:"Donations, wills and homestead protection.",serv_cert_t:"Certifications",serv_cert_d:"Signature certification and notarial acts.",estudio_eyebrow:"90 YEARS OF TRADITION",estudio_title:'Three generations<br><i style="font-family:\'Cormorant Garamond\',serif;font-style:italic;color:var(--gold-d)">safeguarding your assets.</i>',estudio_p:"We are heirs to a 90-year notarial tradition.",estudio_quote:'"A well-drafted deed endures for generations."',val_seg_t:"LEGAL SECURITY",val_seg_d:"Exhaustive title search.",val_disc_t:"ABSOLUTE DISCRETION",val_disc_d:"Direct dealing with notary.",val_agil_t:"NOTARIAL AGILITY",val_agil_d:"Comprehensive management.",sede_eyebrow:"OUR OFFICE",sede_title:"Downtown",sede_desc:"Maipú 497, 4th Floor. Private attention.",contacto_title:'Book your<br><i style="font-family:\'Cormorant Garamond\',serif;font-style:italic;color:var(--gold-d)">private appointment</i>',contacto_info:"Maipú 497, 4th Floor<br>C1023AAR · CABA<br>+54 11 4800-1234<br>info@riganti.com.ar",form_nombre:"Full name *",form_email:"Email *",form_tel:"Phone / WhatsApp *",form_msg:"Inquiry *",form_btn:"SEND INQUIRY →"}
 };
-function setLang(l){
-  localStorage.setItem('riganti_lang',l);
-  document.getElementById('btn-es').className=l==='es'?'active':'inactive';
-  document.getElementById('btn-en').className=l==='en'?'active':'inactive';
-  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[l][k])el.innerHTML=T[l][k]});
-}
+function setLang(l){localStorage.setItem('riganti_lang',l);document.getElementById('btn-es').className=l==='es'?'active':'inactive';document.getElementById('btn-en').className=l==='en'?'active':'inactive';document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[l][k])el.innerHTML=T[l][k]});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder');if(T[l][k])el.placeholder=T[l][k]});document.documentElement.lang=l;}
 setLang(localStorage.getItem('riganti_lang')||'es');
+document.getElementById('formContacto').addEventListener('submit',function(e){e.preventDefault();if(this.website.value)return;const s=document.getElementById('formStatus');s.style.display='block';s.textContent=localStorage.getItem('riganti_lang')==='en'?'✓ Inquiry sent':'✓ Consulta enviada';this.reset()});
 </script>
 </body>
 </html>
